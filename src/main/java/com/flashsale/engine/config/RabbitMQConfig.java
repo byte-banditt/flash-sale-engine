@@ -124,9 +124,8 @@ public class RabbitMQConfig {
     }
     
     @Bean
-    public RabbitTemplate rabbitTemplateForRecovery( 
-        ConnectionFactory connectionFactory,MessageConverter messageConverter){
-        // TODO: inject ConnectionFactory (constructor or @Autowired) and pass it here —
+    public RabbitTemplate rabbitTemplateForRecovery( ConnectionFactory connectionFactory,MessageConverter messageConverter){
+        // inject ConnectionFactory (constructor or @Autowired) and pass it here —
         // left out so you wire it the way the rest of the class expects.
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setMessageConverter( messageConverter);
