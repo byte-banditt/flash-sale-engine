@@ -12,7 +12,7 @@ Learning/demo project; not production-ready commerce system.
 2. `POST /api/v1/orders` runs Redis Lua script to atomically check/decrement stock.
 3. Successful reservation publishes request to RabbitMQ, returns `202 Accepted` with generated order ID.
 4. RabbitMQ consumer stores `CONFIRMED` order in PostgreSQL.
-5. Consumer failures retry twice, delays two then four seconds. Exhausted retries republish to dead-letter queue; its consumer attempts Redis stock rollback and logs failure.
+5. Consumer failures retry twice, delays two then four seconds. Exhausted retries republish to dead-letter queue; its consumer restores Redis stock once per order ID.
 
 Order endpoint response means reservation accepted for async processing; not that order already exists in PostgreSQL.
 
@@ -69,23 +69,24 @@ curl -i -X POST http://localhost:8080/api/v1/orders \
 | `409 Conflict` / `NOT_FOUND` | Redis stock key uninitialized. |
 | `503 Service Unavailable` | AMQP publish threw; code attempts stock rollback. |
 | `200 OK` | Persisted order already uses supplied idempotency key. |
+| `400 Bad Request` | Missing or blank idempotency key, missing product ID, or nonpositive quantity. |
+
+Concurrent requests with the same key receive the existing reservation ID with `200 OK` while it is pending.
 
 ## Design notes
 
-- Redis Lua check/decrement runs atomically, so concurrent requests cannot both reserve same units in that key.
+- Redis Lua checks the idempotency key and decrements stock atomically. Concurrent requests with the same key reserve once.
 - RabbitMQ separates fast reservation from DB persistence.
-- `idempotencyKey` unique in PostgreSQL. Consumer checks it before save; duplicate delivery after persistence creates no second row.
+- `idempotencyKey` unique in PostgreSQL. Consumer checks it before save; duplicate delivery after persistence creates no second row. Redis keeps the reservation key until a failed order is rolled back.
+- Dead-letter rollback uses one Redis Lua script to mark an order ID and increment stock atomically. Duplicate delivery cannot increment stock twice.
 - Order queue durable; configured with dead-letter exchange/queue.
 
 ## Current limitations
 
-- No HTTP request validation: null, zero, negative quantities, missing idempotency keys not rejected at boundary.
 - Stock init unauthenticated, may overwrite Redis stock.
 - `products` entity/table unused for inventory initialization/validation; orders use Redis only.
-- Idempotency check sees persisted orders only. Duplicates before async persistence can reserve stock/publish more than once.
 - No RabbitMQ publisher confirms/outbox. Non-throwing publish not end-to-end durability guarantee.
-- Dead-letter rollback failure logged for manual intervention; no further recovery path.
-- No end-to-end, concurrency, load test impl. `scripts/seed_data.sql`, `scripts/load_test.js` empty.
+- No independent recovery path if Redis rollback keeps failing. `scripts/seed_data.sql` remains empty.
 
 ## Tests
 
@@ -93,4 +94,4 @@ curl -i -X POST http://localhost:8080/api/v1/orders \
 ./mvnw test
 ```
 
-Repo contains one Spring context-load test. It uses app's local PostgreSQL config, so PostgreSQL must run for test pass. No automated coverage for reservation/messaging flow.
+Tests use Testcontainers for PostgreSQL, Redis, and RabbitMQ; Docker must be running. They cover concurrent oversell, same-key reservations, DLQ redelivery, and publish failure. Run `k6 run scripts/load_test.js` against a running stack for load results. See [`RESULTS.md`](RESULTS.md) for measured output.
