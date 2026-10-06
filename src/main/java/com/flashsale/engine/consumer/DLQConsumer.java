@@ -26,22 +26,21 @@ public class DLQConsumer {
     )
     public void handleFailedOrder(OrderRequest request) {
         try {
-            inventoryService.rollbackStock(
+            boolean restored = inventoryService.rollbackStockOnce(
+                    request.getOrderId(),
                     String.valueOf(request.getProductId()),
                     request.getQuantity());
 
-            log.error("Order processing permanently failed after retries. Stock rolled back. " +
+            log.error("Order processing permanently failed after retries. Stock rollback applied={}. " +
                             "orderId={}, productId={}, quantity={}, idempotencyKey={}",
-                    request.getOrderId(), request.getProductId(),
+                    restored, request.getOrderId(), request.getProductId(),
                     request.getQuantity(), request.getIdempotencyKey());
 
         } catch (Exception e) {
-            // This is the end of the line — nothing upstream will catch this.
-            // Swallow it so the message doesn't loop or get dropped, but log loudly:
-            // this is the "the safety net itself failed" case.
             log.error("CRITICAL: failed to roll back stock for a dead-lettered order. " +
-                            "Manual intervention needed. orderId={}, productId={}, quantity={}",
+                            "orderId={}, productId={}, quantity={}",
                     request.getOrderId(), request.getProductId(), request.getQuantity(), e);
+            throw e;
         }
     }
 }
