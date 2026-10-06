@@ -44,6 +44,18 @@ public class OrderController {
 
     @PostMapping()
     public ResponseEntity<OrderResponse> placeOrder(@RequestBody OrderRequest request) {
+        if (request.getIdempotencyKey() == null || request.getIdempotencyKey().isBlank()) {
+            return ResponseEntity.badRequest()
+                    .body(new OrderResponse(null, "INVALID_REQUEST", "idempotencyKey is required"));
+        }
+        if (request.getProductId() == null) {
+            return ResponseEntity.badRequest()
+                    .body(new OrderResponse(null, "INVALID_REQUEST", "productId is required"));
+        }
+        if (request.getQuantity() == null || request.getQuantity() <= 0) {
+            return ResponseEntity.badRequest()
+                    .body(new OrderResponse(null, "INVALID_REQUEST", "quantity must be greater than zero"));
+        }
         Long productId = request.getProductId();
         int quantity = request.getQuantity();
         String idempotencyKey = request.getIdempotencyKey();
