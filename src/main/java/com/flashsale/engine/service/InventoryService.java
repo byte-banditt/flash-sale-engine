@@ -1,7 +1,6 @@
 package com.flashsale.engine.service;
 
 // import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -31,15 +30,19 @@ public class InventoryService {
 
     }
     
-    public int reserveStock(String productId , int quantity){
+    public int reserveStock(String productId, int quantity, String idempotencyKey, String orderId){
         Long result = redisTemplate.execute(
             stockDecrementScript,
-            Collections.singletonList("product:" + productId + ":stock"),
-            String.valueOf(quantity)
+            List.of("product:" + productId + ":stock", "idempotency:" + idempotencyKey),
+            String.valueOf(quantity), orderId
         );
 
         if(result == null) return -1;
         return result.intValue();
+    }
+
+    public String reservedOrderId(String idempotencyKey) {
+        return redisTemplate.opsForValue().get("idempotency:" + idempotencyKey);
     }
 
     public void rollbackStock(String productId, int quantity){
@@ -47,9 +50,17 @@ public class InventoryService {
     }
 
     public boolean rollbackStockOnce(String orderId, String productId, int quantity) {
+        return rollbackStockOnce(orderId, productId, quantity, null);
+    }
+
+    public boolean rollbackStockOnce(String orderId, String productId, int quantity,
+                                     String idempotencyKey) {
+        List<String> keys = idempotencyKey == null
+                ? List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back")
+                : List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back",
+                          "idempotency:" + idempotencyKey);
         Long result = redisTemplate.execute(rollbackOnceScript,
-                List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back"),
-                String.valueOf(quantity));
+                keys, String.valueOf(quantity), orderId);
         if (result == null) {
             throw new IllegalStateException("Redis returned no rollback result");
         }

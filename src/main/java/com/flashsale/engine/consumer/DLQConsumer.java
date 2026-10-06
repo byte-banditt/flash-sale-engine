@@ -29,7 +29,7 @@ public class DLQConsumer {
             boolean restored = inventoryService.rollbackStockOnce(
                     request.getOrderId(),
                     String.valueOf(request.getProductId()),
-                    request.getQuantity());
+                    request.getQuantity(), request.getIdempotencyKey());
 
             log.error("Order processing permanently failed after retries. Stock rollback applied={}. " +
                             "orderId={}, productId={}, quantity={}, idempotencyKey={}",

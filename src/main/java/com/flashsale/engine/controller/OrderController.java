@@ -69,10 +69,11 @@ public class OrderController {
         }
 
         // 2. Reserve stock atomically in Redis.
-        int code = inventoryService.reserveStock(String.valueOf(productId), quantity);
+        String orderId = UUID.randomUUID().toString();
+        int code = inventoryService.reserveStock(String.valueOf(productId), quantity,
+                idempotencyKey, orderId);
 
         if (code == 1) {
-            String orderId = UUID.randomUUID().toString();
             request.setOrderId(orderId);
 
             try {
@@ -82,7 +83,8 @@ public class OrderController {
                         request);
             } catch (AmqpException e) {
                 // Stock was reserved but the order never made it to the queue - give it back.
-                inventoryService.rollbackStock(String.valueOf(productId), quantity);
+                inventoryService.rollbackStockOnce(orderId, String.valueOf(productId), quantity,
+                        idempotencyKey);
                 return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
                         .body(new OrderResponse(null, "FAILED", "Could not queue order for processing, please retry\n"));
             }
@@ -90,6 +92,9 @@ public class OrderController {
             return ResponseEntity.status(HttpStatus.ACCEPTED)
                     .body(new OrderResponse(orderId, "PENDING", "Stock reserved successfully\n"));
 
+        } else if (code == 2) {
+            String reservedOrderId = inventoryService.reservedOrderId(idempotencyKey);
+            return ResponseEntity.ok(new OrderResponse(reservedOrderId, "PENDING", "Order already reserved"));
         } else if (code == 0) {
             return ResponseEntity.status(HttpStatus.CONFLICT)
                     .body(new OrderResponse(null, "OUT_OF_STOCK", "Stock not available\n"));
