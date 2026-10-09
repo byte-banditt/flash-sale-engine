@@ -1,0 +1,116 @@
+$ docker compose --profile distributed logs --no-color app
+started=2026-10-09T08:44:19.004123+00:00
+time="2026-10-09T08:44:19Z" level=warning msg="/home/ayussh/projects/flash-sale-engine/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+app-2  | Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+app-2  | 
+app-2  |   .   ____          _            __ _ _
+app-2  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+app-2  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+app-2  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+app-2  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+app-2  |  =========|_|==============|___/=/_/_/_/
+app-2  | 
+app-2  |  :: Spring Boot ::                (v4.1.1)
+app-2  | 
+app-2  | 2026-10-09T08:37:39.396Z  INFO 1 --- [flash-sale-engine] [           main] c.f.engine.FlashSaleEngineApplication    : Starting FlashSaleEngineApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+app-2  | 2026-10-09T08:37:39.407Z  INFO 1 --- [flash-sale-engine] [           main] c.f.engine.FlashSaleEngineApplication    : No active profile set, falling back to 1 default profile: "default"
+app-2  | 2026-10-09T08:37:40.682Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+app-2  | 2026-10-09T08:37:40.684Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+app-2  | 2026-10-09T08:37:40.916Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 223 ms. Found 2 JPA repository interfaces.
+app-2  | 2026-10-09T08:37:41.004Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+app-2  | 2026-10-09T08:37:41.005Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+app-2  | 2026-10-09T08:37:41.026Z  INFO 1 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+app-2  | 2026-10-09T08:37:41.027Z  INFO 1 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+app-2  | 2026-10-09T08:37:41.027Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+app-2  | 2026-10-09T08:37:42.172Z  INFO 1 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+app-2  | 2026-10-09T08:37:42.191Z  INFO 1 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app-2  | 2026-10-09T08:37:42.192Z  INFO 1 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+app-2  | 2026-10-09T08:37:42.242Z  INFO 1 --- [flash-sale-engine] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2696 ms
+app-2  | 2026-10-09T08:37:42.597Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+app-2  | 2026-10-09T08:37:42.711Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+app-2  | 2026-10-09T08:37:43.348Z  INFO 1 --- [flash-sale-engine] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+app-2  | 2026-10-09T08:37:43.406Z  INFO 1 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+app-2  | 2026-10-09T08:37:43.731Z  INFO 1 --- [flash-sale-engine] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2759749
+app-2  | 2026-10-09T08:37:43.733Z  INFO 1 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+app-2  | 2026-10-09T08:37:43.794Z  WARN 1 --- [flash-sale-engine] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+app-2  | 2026-10-09T08:37:43.838Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+app-2  | 	Database JDBC URL [jdbc:postgresql://postgres:5432/flashsale_db]
+app-2  | 	Database driver: PostgreSQL JDBC Driver
+app-2  | 	Database dialect: PostgreSQLDialect
+app-2  | 	Database version: 16.15
+app-2  | 	Default catalog/schema: flashsale_db/public
+app-2  | 	Autocommit mode: undefined/unknown
+app-2  | 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+app-2  | 	JDBC fetch size: none
+app-2  | 	Pool: DataSourceConnectionProvider
+app-2  | 	Minimum pool size: undefined/unknown
+app-2  | 	Maximum pool size: undefined/unknown
+app-2  | 2026-10-09T08:37:45.062Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+app-2  | 2026-10-09T08:37:45.152Z  INFO 1 --- [flash-sale-engine] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+app-2  | 2026-10-09T08:37:46.282Z  INFO 1 --- [flash-sale-engine] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+app-2  | 2026-10-09T08:37:46.753Z  WARN 1 --- [flash-sale-engine] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+app-2  | 2026-10-09T08:37:47.620Z  INFO 1 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+app-2  | 2026-10-09T08:37:47.627Z  INFO 1 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+app-2  | 2026-10-09T08:37:47.708Z  INFO 1 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#36b2b6e6:0/SimpleConnection@2291fb1 [delegate=amqp://guest@172.18.0.2:5672/, localPort=43168]
+app-2  | 2026-10-09T08:37:47.779Z  INFO 1 --- [flash-sale-engine] [           main] c.f.engine.FlashSaleEngineApplication    : Started FlashSaleEngineApplication in 9.079 seconds (process running for 10.119)
+app-2  | 2026-10-09T08:37:49.864Z  INFO 1 --- [flash-sale-engine] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+app-2  | 2026-10-09T08:37:49.865Z  INFO 1 --- [flash-sale-engine] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+app-2  | 2026-10-09T08:37:49.867Z  INFO 1 --- [flash-sale-engine] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+app-1  | Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+app-1  | 
+app-1  |   .   ____          _            __ _ _
+app-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+app-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+app-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+app-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+app-1  |  =========|_|==============|___/=/_/_/_/
+app-1  | 
+app-1  |  :: Spring Boot ::                (v4.1.1)
+app-1  | 
+app-1  | 2026-10-09T08:37:39.599Z  INFO 1 --- [flash-sale-engine] [           main] c.f.engine.FlashSaleEngineApplication    : Starting FlashSaleEngineApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+app-1  | 2026-10-09T08:37:39.606Z  INFO 1 --- [flash-sale-engine] [           main] c.f.engine.FlashSaleEngineApplication    : No active profile set, falling back to 1 default profile: "default"
+app-1  | 2026-10-09T08:37:40.743Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+app-1  | 2026-10-09T08:37:40.745Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+app-1  | 2026-10-09T08:37:40.878Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 2 JPA repository interfaces.
+app-1  | 2026-10-09T08:37:40.949Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+app-1  | 2026-10-09T08:37:40.950Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+app-1  | 2026-10-09T08:37:40.969Z  INFO 1 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+app-1  | 2026-10-09T08:37:40.970Z  INFO 1 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+app-1  | 2026-10-09T08:37:40.970Z  INFO 1 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+app-1  | 2026-10-09T08:37:42.014Z  INFO 1 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+app-1  | 2026-10-09T08:37:42.053Z  INFO 1 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+app-1  | 2026-10-09T08:37:42.054Z  INFO 1 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+app-1  | 2026-10-09T08:37:42.122Z  INFO 1 --- [flash-sale-engine] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2432 ms
+app-1  | 2026-10-09T08:37:42.538Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+app-1  | 2026-10-09T08:37:42.638Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+app-1  | 2026-10-09T08:37:43.340Z  INFO 1 --- [flash-sale-engine] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+app-1  | 2026-10-09T08:37:43.400Z  INFO 1 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+app-1  | 2026-10-09T08:37:43.751Z  INFO 1 --- [flash-sale-engine] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f82209e
+app-1  | 2026-10-09T08:37:43.753Z  INFO 1 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+app-1  | 2026-10-09T08:37:43.813Z  WARN 1 --- [flash-sale-engine] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+app-1  | 2026-10-09T08:37:43.851Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+app-1  | 	Database JDBC URL [jdbc:postgresql://postgres:5432/flashsale_db]
+app-1  | 	Database driver: PostgreSQL JDBC Driver
+app-1  | 	Database dialect: PostgreSQLDialect
+app-1  | 	Database version: 16.15
+app-1  | 	Default catalog/schema: flashsale_db/public
+app-1  | 	Autocommit mode: undefined/unknown
+app-1  | 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+app-1  | 	JDBC fetch size: none
+app-1  | 	Pool: DataSourceConnectionProvider
+app-1  | 	Minimum pool size: undefined/unknown
+app-1  | 	Maximum pool size: undefined/unknown
+app-1  | 2026-10-09T08:37:45.019Z  INFO 1 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+app-1  | 2026-10-09T08:37:45.146Z  INFO 1 --- [flash-sale-engine] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+app-1  | 2026-10-09T08:37:46.288Z  INFO 1 --- [flash-sale-engine] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+app-1  | 2026-10-09T08:37:46.704Z  WARN 1 --- [flash-sale-engine] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+app-1  | 2026-10-09T08:37:47.390Z  INFO 1 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+app-1  | 2026-10-09T08:37:47.397Z  INFO 1 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+app-1  | 2026-10-09T08:37:47.497Z  INFO 1 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7ec01440:0/SimpleConnection@5c18ad5d [delegate=amqp://guest@172.18.0.2:5672/, localPort=40526]
+app-1  | 2026-10-09T08:37:47.655Z  INFO 1 --- [flash-sale-engine] [           main] c.f.engine.FlashSaleEngineApplication    : Started FlashSaleEngineApplication in 8.93 seconds (process running for 9.8)
+app-1  | 2026-10-09T08:37:53.220Z  INFO 1 --- [flash-sale-engine] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+app-1  | 2026-10-09T08:37:53.220Z  INFO 1 --- [flash-sale-engine] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+app-1  | 2026-10-09T08:37:53.221Z  INFO 1 --- [flash-sale-engine] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+
+exit_code=0
+ended=2026-10-09T08:44:19.130343+00:00

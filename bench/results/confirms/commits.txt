@@ -1,0 +1,6 @@
+92c91bc feat: confirm routed publishes before accepting orders
+ad3c6dd bench: record faults before publisher confirms
+4f9a9b6 bench: record replica scaling and fault harness
+962bbf2 feat: replicate APIs and consumers behind nginx
+2e826ee bench: baseline
+fcc43e0 docs: record raw verification and load results

@@ -10,6 +10,7 @@ queue drain. Baseline was recorded and committed before source edits.
 `http_concurrency.py` releases concurrent HTTP tasks against nginx and saves every
 response and upstream. It checks accepted, confirmed and distinct-key counts,
 remaining stock, multiple upstreams and drained queues. Stop load before running it.
+An optional output-directory argument preserves separate pre/post-confirm results.
 
 `experiment.py OUTPUT_DIR [none|kill|rabbit|redis]` runs instrumented k6 load.
 Normal runs use the original ramp. Fault runs use constant VUs for sustained load.
@@ -48,6 +49,14 @@ samples are not guaranteed peaks. Docker CPU percentages can exceed one core.
 `summarize.py RESULTS_DIR` checks HTTP-202 ledger against k6 counter and prints
 exact stored metrics and maximum observed resource samples without adding rounding.
 Full precision exports are authoritative; k6 summaries use display precision.
+
+`audit.py` verifies every completed accepted-key ledger and saves confirmed keys
+without a recorded HTTP 202. `compare.py` prints exact chronological before/after
+normal-run deltas and lost/stuck fault comparisons. Neither substitutes missing runs.
+
+Passing lost/stuck counts is not sufficient to pass all invariants. Inspect
+`stock_accounting_excess` and confirmed-without-202 keys; the confirm broker-restart
+campaign exposed persisted orders whose reservations had been released.
 
 Redis restart is observational, not a pass/fail HA test. Inspect runtime persistence
 settings and logs rather than assuming absent Compose persistence configuration

@@ -1,0 +1,6 @@
+Listing consumers in vhost / ...
+queue_name	channel_pid	consumer_tag	ack_required	prefetch_count	active	arguments
+order.dlq	<rabbit@af42eb2bb203.1791536156.817.0>	amq.ctag-Mx6q1cxMn6OuZHmIvzUYMw	true	250	true	[]
+order.dlq	<rabbit@af42eb2bb203.1791536156.784.0>	amq.ctag-U_0SpbMTDQxJXcHfdShV5A	true	250	true	[]
+order.queue	<rabbit@af42eb2bb203.1791536156.794.0>	amq.ctag-ansoQux60gZSmqQ6SNo1Xg	true	250	true	[]
+order.queue	<rabbit@af42eb2bb203.1791536156.767.0>	amq.ctag-bRhUyRKotofho22YYseNkQ	true	250	true	[]

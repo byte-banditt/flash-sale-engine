@@ -1,0 +1,22 @@
+[
+  {
+    "test": "invalidInputReturns400",
+    "original_body_unchanged": true
+  },
+  {
+    "test": "concurrentRequestsCannotOversell",
+    "original_body_unchanged": true
+  },
+  {
+    "test": "concurrentSameKeyReservesOnce",
+    "original_body_unchanged": true
+  },
+  {
+    "test": "exhaustedRetriesReachDlqAndRollbackOnlyOnce",
+    "original_body_unchanged": true
+  },
+  {
+    "test": "publishFailureRestoresStock",
+    "original_body_unchanged": true
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "group": "replicas",
+    "run": "r1-run-1",
+    "http_202": 51593,
+    "confirmed": 51593,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r1-run-2",
+    "http_202": 51650,
+    "confirmed": 51650,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r1-run-3",
+    "http_202": 51618,
+    "confirmed": 51618,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r2-run-1",
+    "http_202": 51495,
+    "confirmed": 51495,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r2-run-2",
+    "http_202": 51510,
+    "confirmed": 51510,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r2-run-3",
+    "http_202": 51488,
+    "confirmed": 51488,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r3-run-1",
+    "http_202": 51337,
+    "confirmed": 51337,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r3-run-2",
+    "http_202": 51481,
+    "confirmed": 51481,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "replicas",
+    "run": "r3-run-3",
+    "http_202": 51431,
+    "confirmed": 51431,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "kill-run-1",
+    "http_202": 57250,
+    "confirmed": 57250,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "kill-run-2",
+    "http_202": 57243,
+    "confirmed": 57243,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "kill-run-3",
+    "http_202": 57321,
+    "confirmed": 57321,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "rabbit-run-1",
+    "http_202": 51696,
+    "confirmed": 51696,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "rabbit-run-2",
+    "http_202": 51527,
+    "confirmed": 51527,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "rabbit-run-3",
+    "http_202": 50139,
+    "confirmed": 50139,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "faults-before",
+    "run": "redis-observation",
+    "http_202": 54239,
+    "confirmed": 54239,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "kill-run-1",
+    "http_202": 55781,
+    "confirmed": 55785,
+    "confirmed_without_http_202": 4,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "kill-run-2",
+    "http_202": 55613,
+    "confirmed": 55614,
+    "confirmed_without_http_202": 1,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "kill-run-3",
+    "http_202": 55584,
+    "confirmed": 55584,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "normal-run-1",
+    "http_202": 49201,
+    "confirmed": 49201,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "normal-run-2",
+    "http_202": 49973,
+    "confirmed": 49973,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "normal-run-3",
+    "http_202": 49987,
+    "confirmed": 49987,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "rabbit-run-1",
+    "http_202": 50244,
+    "confirmed": 50244,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  },
+  {
+    "group": "confirms",
+    "run": "rabbit-run-2",
+    "http_202": 50789,
+    "confirmed": 50792,
+    "confirmed_without_http_202": 3,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 3
+  },
+  {
+    "group": "confirms",
+    "run": "rabbit-run-3",
+    "http_202": 50871,
+    "confirmed": 50871,
+    "confirmed_without_http_202": 0,
+    "lost": 0,
+    "stuck": 0,
+    "stock_accounting_excess": 0
+  }
+]

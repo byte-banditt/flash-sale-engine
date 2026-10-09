@@ -1,5 +1,5 @@
-import asyncio, subprocess, json, pathlib, time, collections
-root=pathlib.Path('bench/results/replicas/http');root.mkdir(parents=True,exist_ok=True)
+import asyncio, subprocess, json, pathlib, time, collections, sys
+root=pathlib.Path(sys.argv[1] if len(sys.argv)>1 else 'bench/results/replicas/http');root.mkdir(parents=True,exist_ok=True)
 def docker(container,*args): return subprocess.check_output(['docker','exec',container,*args],text=True).strip()
 async def requests(count,same):
     gate=asyncio.Event()

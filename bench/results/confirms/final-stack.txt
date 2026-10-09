@@ -1,0 +1,7 @@
+NAME                        IMAGE                             COMMAND                  SERVICE    CREATED             STATUS                       PORTS
+flash-sale-engine-app-1     flash-sale-engine:local           "java -jar app.jar"      app        25 minutes ago      Up 12 minutes                8080/tcp
+flash-sale-engine-app-2     flash-sale-engine:local           "java -jar app.jar"      app        25 minutes ago      Up 24 minutes                8080/tcp
+flash-sale-engine-nginx-1   nginx:1.28-alpine                 "/docker-entrypoint.…"   nginx      About an hour ago   Up About an hour             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+flash_postgres              postgres:16-alpine                "docker-entrypoint.s…"   postgres   About an hour ago   Up About an hour (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+flash_rabbitmq              rabbitmq:3.13-management-alpine   "docker-entrypoint.s…"   rabbitmq   About an hour ago   Up 6 minutes (healthy)       0.0.0.0:5672->5672/tcp, [::]:5672->5672/tcp, 0.0.0.0:15672->15672/tcp, [::]:15672->15672/tcp
+flash_redis                 redis:7-alpine                    "docker-entrypoint.s…"   redis      About an hour ago   Up 36 minutes (healthy)      0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp

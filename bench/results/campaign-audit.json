@@ -1,0 +1,8 @@
+{
+  "completed_instrumented_runs": 25,
+  "completed_original_baseline_runs": 3,
+  "maximum_observed_host_swap_used_bytes": 39215104,
+  "observed_host_memory_total_bytes": [
+    5157515264
+  ]
+}

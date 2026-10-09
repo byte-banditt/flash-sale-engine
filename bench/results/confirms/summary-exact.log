@@ -1,0 +1,63 @@
+{"run": "kill-run-1", "req_per_s": 464.6017426761397, "p50_ms": 6.493244, "p95_ms": 10.170674100000001, "p99_ms": 13.35117307999999, "http_error_rate": 0.00023299578815306031, "http_202": 55781, "confirmed": 55785, "redis_stock": 44215, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 4, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0}
+{"run": "kill-run-1", "container": "flash-sale-engine-app-2", "max_observed_cpu": "72.66%", "max_observed_memory": "350.2MiB / 640MiB"}
+{"run": "kill-run-1", "container": "flash-sale-engine-app-1", "max_observed_cpu": "286.85%", "max_observed_memory": "345.4MiB / 640MiB"}
+{"run": "kill-run-1", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "20.09%", "max_observed_memory": "11.82MiB / 64MiB"}
+{"run": "kill-run-1", "container": "flash_rabbitmq", "max_observed_cpu": "236.61%", "max_observed_memory": "207.9MiB / 384MiB"}
+{"run": "kill-run-1", "container": "flash_redis", "max_observed_cpu": "16.86%", "max_observed_memory": "20.3MiB / 384MiB"}
+{"run": "kill-run-1", "container": "flash_postgres", "max_observed_cpu": "48.40%", "max_observed_memory": "100.4MiB / 384MiB"}
+{"run": "kill-run-2", "req_per_s": 462.9682763731145, "p50_ms": 6.6825575, "p95_ms": 10.231186299999989, "p99_ms": 13.185564189999994, "http_error_rate": 0.00025167181994678936, "http_202": 55613, "confirmed": 55614, "redis_stock": 44386, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 1, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0}
+{"run": "kill-run-2", "container": "flash-sale-engine-app-2", "max_observed_cpu": "83.22%", "max_observed_memory": "351.1MiB / 640MiB"}
+{"run": "kill-run-2", "container": "flash-sale-engine-app-1", "max_observed_cpu": "282.88%", "max_observed_memory": "338.5MiB / 640MiB"}
+{"run": "kill-run-2", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "18.36%", "max_observed_memory": "11.67MiB / 64MiB"}
+{"run": "kill-run-2", "container": "flash_rabbitmq", "max_observed_cpu": "248.33%", "max_observed_memory": "159.5MiB / 384MiB"}
+{"run": "kill-run-2", "container": "flash_redis", "max_observed_cpu": "8.59%", "max_observed_memory": "22.44MiB / 384MiB"}
+{"run": "kill-run-2", "container": "flash_postgres", "max_observed_cpu": "44.89%", "max_observed_memory": "100MiB / 384MiB"}
+{"run": "kill-run-3", "req_per_s": 462.7543640578583, "p50_ms": 6.795168, "p95_ms": 10.3951338, "p99_ms": 12.964104040000016, "http_error_rate": 0.0001439030093716835, "http_202": 55584, "confirmed": 55584, "redis_stock": 44416, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0}
+{"run": "kill-run-3", "container": "flash-sale-engine-app-2", "max_observed_cpu": "85.30%", "max_observed_memory": "352MiB / 640MiB"}
+{"run": "kill-run-3", "container": "flash-sale-engine-app-1", "max_observed_cpu": "286.37%", "max_observed_memory": "343.8MiB / 640MiB"}
+{"run": "kill-run-3", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "22.70%", "max_observed_memory": "11.96MiB / 64MiB"}
+{"run": "kill-run-3", "container": "flash_rabbitmq", "max_observed_cpu": "258.23%", "max_observed_memory": "211MiB / 384MiB"}
+{"run": "kill-run-3", "container": "flash_redis", "max_observed_cpu": "6.75%", "max_observed_memory": "23.59MiB / 384MiB"}
+{"run": "kill-run-3", "container": "flash_postgres", "max_observed_cpu": "50.01%", "max_observed_memory": "99.63MiB / 384MiB"}
+{"run": "normal-run-1", "req_per_s": 409.63689727629014, "p50_ms": 6.844158999999999, "p95_ms": 11.058139749999999, "p99_ms": 14.704708789999975, "http_error_rate": 0, "http_202": 49201, "confirmed": 49201, "redis_stock": 50799, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0}
+{"run": "normal-run-1", "container": "flash-sale-engine-app-2", "max_observed_cpu": "122.44%", "max_observed_memory": "349.6MiB / 640MiB"}
+{"run": "normal-run-1", "container": "flash-sale-engine-app-1", "max_observed_cpu": "136.30%", "max_observed_memory": "338.4MiB / 640MiB"}
+{"run": "normal-run-1", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "28.79%", "max_observed_memory": "12.39MiB / 64MiB"}
+{"run": "normal-run-1", "container": "flash_rabbitmq", "max_observed_cpu": "278.25%", "max_observed_memory": "201.5MiB / 384MiB"}
+{"run": "normal-run-1", "container": "flash_redis", "max_observed_cpu": "11.33%", "max_observed_memory": "18.62MiB / 384MiB"}
+{"run": "normal-run-1", "container": "flash_postgres", "max_observed_cpu": "65.30%", "max_observed_memory": "97.96MiB / 384MiB"}
+{"run": "normal-run-2", "req_per_s": 415.5532886364096, "p50_ms": 6.5155695, "p95_ms": 9.9147412, "p99_ms": 11.988108439999985, "http_error_rate": 0, "http_202": 49973, "confirmed": 49973, "redis_stock": 50027, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0}
+{"run": "normal-run-2", "container": "flash-sale-engine-app-2", "max_observed_cpu": "73.63%", "max_observed_memory": "348MiB / 640MiB"}
+{"run": "normal-run-2", "container": "flash-sale-engine-app-1", "max_observed_cpu": "74.90%", "max_observed_memory": "340.7MiB / 640MiB"}
+{"run": "normal-run-2", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "24.78%", "max_observed_memory": "11.48MiB / 64MiB"}
+{"run": "normal-run-2", "container": "flash_rabbitmq", "max_observed_cpu": "193.16%", "max_observed_memory": "186.6MiB / 384MiB"}
+{"run": "normal-run-2", "container": "flash_redis", "max_observed_cpu": "6.59%", "max_observed_memory": "15.65MiB / 384MiB"}
+{"run": "normal-run-2", "container": "flash_postgres", "max_observed_cpu": "142.43%", "max_observed_memory": "99.42MiB / 384MiB"}
+{"run": "normal-run-3", "req_per_s": 416.50574681805085, "p50_ms": 6.364679, "p95_ms": 10.10993545, "p99_ms": 13.000242089999999, "http_error_rate": 0, "http_202": 49987, "confirmed": 49987, "redis_stock": 50013, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0}
+{"run": "normal-run-3", "container": "flash-sale-engine-app-2", "max_observed_cpu": "74.91%", "max_observed_memory": "349.1MiB / 640MiB"}
+{"run": "normal-run-3", "container": "flash-sale-engine-app-1", "max_observed_cpu": "74.22%", "max_observed_memory": "341.4MiB / 640MiB"}
+{"run": "normal-run-3", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "26.85%", "max_observed_memory": "11.24MiB / 64MiB"}
+{"run": "normal-run-3", "container": "flash_rabbitmq", "max_observed_cpu": "220.78%", "max_observed_memory": "202.2MiB / 384MiB"}
+{"run": "normal-run-3", "container": "flash_redis", "max_observed_cpu": "13.95%", "max_observed_memory": "19.84MiB / 384MiB"}
+{"run": "normal-run-3", "container": "flash_postgres", "max_observed_cpu": "58.03%", "max_observed_memory": "98.52MiB / 384MiB"}
+{"run": "rabbit-run-1", "req_per_s": 459.88600496925886, "p50_ms": 6.547588, "p95_ms": 10.197875199999993, "p99_ms": 12.9441175, "http_error_rate": 0.0905388527883867, "http_202": 50244, "confirmed": 50244, "redis_stock": 49756, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 99}
+{"run": "rabbit-run-1", "container": "flash-sale-engine-app-2", "max_observed_cpu": "46.65%", "max_observed_memory": "357.6MiB / 640MiB"}
+{"run": "rabbit-run-1", "container": "flash-sale-engine-app-1", "max_observed_cpu": "59.55%", "max_observed_memory": "343.6MiB / 640MiB"}
+{"run": "rabbit-run-1", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "15.60%", "max_observed_memory": "11.56MiB / 64MiB"}
+{"run": "rabbit-run-1", "container": "flash_rabbitmq", "max_observed_cpu": "231.26%", "max_observed_memory": "242.8MiB / 384MiB"}
+{"run": "rabbit-run-1", "container": "flash_redis", "max_observed_cpu": "10.03%", "max_observed_memory": "24.67MiB / 384MiB"}
+{"run": "rabbit-run-1", "container": "flash_postgres", "max_observed_cpu": "54.99%", "max_observed_memory": "101.8MiB / 384MiB"}
+{"run": "rabbit-run-2", "req_per_s": 460.0674501260111, "p50_ms": 6.7292645, "p95_ms": 10.294487, "p99_ms": 12.856773749999991, "http_error_rate": 0.08082380194006081, "http_202": 50789, "confirmed": 50792, "redis_stock": 49211, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 3, "stock_accounting_excess": 3, "drained": true, "k6_exit": 99}
+{"run": "rabbit-run-2", "container": "flash-sale-engine-app-2", "max_observed_cpu": "40.72%", "max_observed_memory": "356MiB / 640MiB"}
+{"run": "rabbit-run-2", "container": "flash-sale-engine-app-1", "max_observed_cpu": "50.25%", "max_observed_memory": "344.2MiB / 640MiB"}
+{"run": "rabbit-run-2", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "17.00%", "max_observed_memory": "10.91MiB / 64MiB"}
+{"run": "rabbit-run-2", "container": "flash_rabbitmq", "max_observed_cpu": "233.10%", "max_observed_memory": "202.7MiB / 384MiB"}
+{"run": "rabbit-run-2", "container": "flash_redis", "max_observed_cpu": "7.33%", "max_observed_memory": "24.23MiB / 384MiB"}
+{"run": "rabbit-run-2", "container": "flash_postgres", "max_observed_cpu": "36.02%", "max_observed_memory": "105.4MiB / 384MiB"}
+{"run": "rabbit-run-3", "req_per_s": 458.3583459530039, "p50_ms": 6.9397635, "p95_ms": 11.127887999999999, "p99_ms": 16.392501719999974, "http_error_rate": 0.07592821332558308, "http_202": 50871, "confirmed": 50871, "redis_stock": 49129, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 99}
+{"run": "rabbit-run-3", "container": "flash-sale-engine-app-2", "max_observed_cpu": "41.93%", "max_observed_memory": "355.4MiB / 640MiB"}
+{"run": "rabbit-run-3", "container": "flash-sale-engine-app-1", "max_observed_cpu": "42.40%", "max_observed_memory": "346.5MiB / 640MiB"}
+{"run": "rabbit-run-3", "container": "flash-sale-engine-nginx-1", "max_observed_cpu": "14.49%", "max_observed_memory": "10.95MiB / 64MiB"}
+{"run": "rabbit-run-3", "container": "flash_rabbitmq", "max_observed_cpu": "95.25%", "max_observed_memory": "164.2MiB / 384MiB"}
+{"run": "rabbit-run-3", "container": "flash_redis", "max_observed_cpu": "10.47%", "max_observed_memory": "23.21MiB / 384MiB"}
+{"run": "rabbit-run-3", "container": "flash_postgres", "max_observed_cpu": "33.74%", "max_observed_memory": "102MiB / 384MiB"}
