@@ -1,0 +1,6 @@
+$ docker events --since 1791534349 --until 1791534477 --filter event=oom --filter event=die --format {{json .}}
+started=2026-10-09T08:27:57.042583+00:00
+{"Type":"container","Action":"die","Actor":{"ID":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","Attributes":{"com.docker.compose.config-hash":"c1e1f85cab1ec5b1981679de809852371f3afa12375de591de863504c3489e9c","com.docker.compose.container-number":"1","com.docker.compose.depends_on":"","com.docker.compose.image":"sha256:1db42ccef14898aa29bae778452d567534b59c107129cbc1163fb552de184d3c","com.docker.compose.oneoff":"False","com.docker.compose.project":"flash-sale-engine","com.docker.compose.project.config_files":"/home/ayussh/projects/flash-sale-engine/docker-compose.yml","com.docker.compose.project.working_dir":"/home/ayussh/projects/flash-sale-engine","com.docker.compose.replace":"flash_redis","com.docker.compose.service":"redis","com.docker.compose.version":"5.5.1","desktop.docker.io/ports.scheme":"v2","desktop.docker.io/ports/6379/tcp":":6379","desktop.docker.io/wsl-distro":"Debian","execDuration":"2350","exitCode":"0","image":"redis:7-alpine","name":"flash_redis"}},"scope":"local","time":1791534395,"timeNano":1791534395907103461}
+
+exit_code=0
+ended=2026-10-09T08:27:57.067303+00:00

@@ -1,0 +1,6 @@
+$ docker events --since 1791533700 --until 1791533828 --filter event=oom --filter event=die --format {{json .}}
+started=2026-10-09T08:17:08.161890+00:00
+{"Type":"container","Action":"die","Actor":{"ID":"7584501b57d50df6ff2d0e7628287602db45d357d3e06c51051c8cca57cd7df2","Attributes":{"com.docker.compose.config-hash":"17b9e56a69777e8bb08fa61dce415113e5dbf4c991f7eb2e232b2ba720d5d782","com.docker.compose.container-number":"1","com.docker.compose.depends_on":"postgres:service_healthy:false,redis:service_healthy:false,rabbitmq:service_healthy:false","com.docker.compose.image":"sha256:b6a2f78233106ab6b624f0ee4688a7db4dac498802b6fabbdc64c5b27602fde9","com.docker.compose.oneoff":"False","com.docker.compose.project":"flash-sale-engine","com.docker.compose.project.config_files":"/home/ayussh/projects/flash-sale-engine/docker-compose.yml","com.docker.compose.project.working_dir":"/home/ayussh/projects/flash-sale-engine","com.docker.compose.service":"app","com.docker.compose.version":"5.5.1","desktop.docker.io/ports.scheme":"v2","desktop.docker.io/wsl-distro":"Debian","execDuration":"109","exitCode":"137","image":"flash-sale-engine:local","name":"flash-sale-engine-app-1"}},"scope":"local","time":1791533746,"timeNano":1791533746097420889}
+
+exit_code=0
+ended=2026-10-09T08:17:08.181250+00:00

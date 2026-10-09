@@ -1,0 +1,20 @@
+$ docker exec flash_rabbitmq sh -c cat /sys/fs/cgroup/cpu.stat; cat /sys/fs/cgroup/memory.events
+started=2026-10-09T08:17:09.252554+00:00
+usage_usec 942071784
+user_usec 568736240
+system_usec 373335544
+nice_usec 0
+nr_periods 0
+nr_throttled 0
+throttled_usec 0
+nr_bursts 0
+burst_usec 0
+low 0
+high 0
+max 0
+oom 0
+oom_kill 0
+oom_group_kill 0
+
+exit_code=0
+ended=2026-10-09T08:17:09.322505+00:00

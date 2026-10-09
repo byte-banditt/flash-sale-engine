@@ -1,0 +1,6 @@
+$ docker restart flash_rabbitmq
+started=2026-10-09T08:24:24.148649+00:00
+flash_rabbitmq
+
+exit_code=0
+ended=2026-10-09T08:24:26.908162+00:00

@@ -1,0 +1,13 @@
+{
+  "http_202": 57250,
+  "confirmed": 57250,
+  "redis_stock": 42750,
+  "oversold_count": 0,
+  "duplicate_orders": 0,
+  "lost_orders": 0,
+  "stuck_reservations": 0,
+  "unacknowledged_confirmed": 0,
+  "stock_accounting_excess": 0,
+  "drained": true,
+  "k6_exit": 0
+}
