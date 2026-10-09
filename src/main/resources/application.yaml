@@ -28,6 +28,8 @@ spring:
 
   # RabbitMQ Configuration
   rabbitmq:
+    publisher-confirm-type: correlated
+    publisher-returns: true
     host: localhost
     port: 5672
     username: guest

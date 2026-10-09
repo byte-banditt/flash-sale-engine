@@ -26,6 +26,8 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -242,6 +244,54 @@ class OrderFlowIntegrationTests {
         HttpResponse<String> response = post("publish-" + UUID.randomUUID(), 1);
         assertEquals(503, response.statusCode());
         assertEquals(1, stock());
+        assertEquals(0, orders.count());
+    }
+
+    @Test
+    @Order(6)
+    void brokerNackRestoresStockAndReleasesKey() throws Exception {
+        stock(1);
+        String key = "nack-" + UUID.randomUUID();
+        doAnswer(invocation -> {
+            CorrelationData correlation = invocation.getArgument(3);
+            correlation.getFuture().complete(new CorrelationData.Confirm(false, "forced broker nack"));
+            return null;
+        }).when(publisher).convertAndSend(eq(RabbitMQConfig.ORDER_EXCHANGE),
+                eq(RabbitMQConfig.ORDER_ROUTING_KEY), any(OrderRequest.class), any(CorrelationData.class));
+        assertEquals(503, post(key, 1).statusCode());
+        assertEquals(1, stock());
+        assertNull(redis.opsForValue().get("idempotency:" + key));
+        assertEquals(0, orders.count());
+    }
+
+    @Test
+    @Order(7)
+    void actualUnroutableReturnRestoresStock() throws Exception {
+        stock(1);
+        String key = "return-" + UUID.randomUUID();
+        Binding binding = new Binding(RabbitMQConfig.ORDER_QUEUE, Binding.DestinationType.QUEUE,
+                RabbitMQConfig.ORDER_EXCHANGE, RabbitMQConfig.ORDER_ROUTING_KEY, null);
+        rabbitAdmin.removeBinding(binding);
+        try {
+            assertEquals(503, post(key, 1).statusCode());
+            assertEquals(1, stock());
+            assertNull(redis.opsForValue().get("idempotency:" + key));
+            assertEquals(0, orders.count());
+        } finally {
+            rabbitAdmin.declareBinding(binding);
+        }
+    }
+
+    @Test
+    @Order(8)
+    void confirmTimeoutRestoresStock() throws Exception {
+        stock(1);
+        String key = "timeout-" + UUID.randomUUID();
+        doNothing().when(publisher).convertAndSend(eq(RabbitMQConfig.ORDER_EXCHANGE),
+                eq(RabbitMQConfig.ORDER_ROUTING_KEY), any(OrderRequest.class), any(CorrelationData.class));
+        assertEquals(503, post(key, 1).statusCode());
+        assertEquals(1, stock());
+        assertNull(redis.opsForValue().get("idempotency:" + key));
         assertEquals(0, orders.count());
     }
 }

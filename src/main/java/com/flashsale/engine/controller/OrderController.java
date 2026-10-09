@@ -82,7 +82,8 @@ public class OrderController {
                         RabbitMQConfig.ORDER_ROUTING_KEY,
                         request);
             } catch (AmqpException e) {
-                // Stock was reserved but the order never made it to the queue - give it back.
+                // No routed broker acknowledgement: atomically release the reservation.
+                // A timeout is ambiguous: the broker may still have received the message.
                 inventoryService.rollbackStockOnce(orderId, String.valueOf(productId), quantity,
                         idempotencyKey);
                 return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)

@@ -11,7 +11,9 @@ import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFacto
 // import org.springframework.amqp.rabbit.config.StatelessRetryOperationsInterceptorFactoryBean;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.amqp.rabbit.retry.RepublishMessageRecoverer;
+import org.springframework.amqp.rabbit.retry.RepublishMessageRecovererWithConfirms;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory.ConfirmType;
+import org.springframework.beans.factory.annotation.Value;
 // import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
 import org.springframework.context.annotation.Bean;
@@ -34,6 +36,9 @@ import java.time.Duration;
 
 @Configuration 
 public class RabbitMQConfig {
+    @Value("${flashsale.publish-confirm-timeout-ms:2000}")
+    private long confirmTimeoutMillis;
+
     public static final String ORDER_EXCHANGE = "order.exchange";
     public static final String ORDER_QUEUE = "order.queue";
     public static final String ORDER_ROUTING_KEY = "order.created";
@@ -116,9 +121,11 @@ public class RabbitMQConfig {
         StatelessRetryOperationsInterceptorFactoryBean factoryBean =
                 new StatelessRetryOperationsInterceptorFactoryBean();
         factoryBean.setRetryPolicy(retryPolicy);
-        factoryBean.setMessageRecoverer(new RepublishMessageRecoverer(
+        RepublishMessageRecovererWithConfirms recoverer = new RepublishMessageRecovererWithConfirms(
                 rabbitTemplateForRecovery(connectionFactory, converter),
-                DLX_EXCHANGE, DLQ_ROUTING_KEY));
+                DLX_EXCHANGE, DLQ_ROUTING_KEY, ConfirmType.CORRELATED);
+        recoverer.setConfirmTimeout(confirmTimeoutMillis);
+        factoryBean.setMessageRecoverer(recoverer);
 
         return factoryBean.getObject();
     }
@@ -127,7 +134,7 @@ public class RabbitMQConfig {
     public RabbitTemplate rabbitTemplateForRecovery( ConnectionFactory connectionFactory,MessageConverter messageConverter){
         // inject ConnectionFactory (constructor or @Autowired) and pass it here —
         // left out so you wire it the way the rest of the class expects.
-        RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+        RabbitTemplate rabbitTemplate = new ConfirmingRabbitTemplate(connectionFactory, confirmTimeoutMillis);
         rabbitTemplate.setMessageConverter( messageConverter);
         // throw new UnsupportedOperationException("wire ConnectionFactory here");
         return rabbitTemplate;

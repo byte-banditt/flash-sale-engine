@@ -3000,3 +3000,15 @@ The Redis row is observation only, not a Redis-loss/HA assertion. Normal restart
 ```
 
 Known limitation: Redis inventory and idempotency state are not coordinated with Postgres or broker transactions. No explicit named persistence volume/AOF/recovery policy is configured; normal restart with the same anonymous volume and graceful RDB save is not evidence of safety under hard loss, missing volume, or stale snapshots. Redis loss is not a pass/fail test in this campaign. Full logs: [redis-full.log](bench/results/faults-before/redis-full.log).
+
+## Publisher-confirm implementation validation
+
+`JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw test` was executed after the change. Original assertions are retained; added cases simulate a broker nack, remove an actual broker binding to force a mandatory return, and suppress a confirmation to force timeout. Each checks HTTP 503, restored stock, released key and no persisted order. DLQ recovery uses Spring AMQP confirmed republish.
+
+```text
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.90 s -- in com.flashsale.engine.OrderFlowIntegrationTests
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+```
+
+Full executed output: [tests.log](bench/results/confirms/tests.log). No outbox decision is inferred from unit tests; it depends on the following fault reruns.

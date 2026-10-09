@@ -10,7 +10,7 @@ Learning/demo project; not production-ready commerce system.
 
 1. Operator initializes Redis stock key for a product ID.
 2. `POST /api/v1/orders` runs Redis Lua script to atomically check/decrement stock.
-3. Successful reservation publishes request to RabbitMQ, returns `202 Accepted` with generated order ID.
+3. Successful reservation publishes request to RabbitMQ and waits for a routed publisher confirm, then returns `202 Accepted` with generated order ID.
 4. RabbitMQ consumer stores `CONFIRMED` order in PostgreSQL.
 5. Consumer failures retry twice, delays two then four seconds. Exhausted retries republish to dead-letter queue; its consumer restores Redis stock once per order ID.
 
@@ -95,10 +95,10 @@ curl -i -X POST http://localhost:8080/api/v1/orders \
 
 | Status | Meaning |
 | --- | --- |
-| `202 Accepted` | Redis reservation succeeded; AMQP publish did not throw. Order `PENDING` for async processing. |
+| `202 Accepted` | Redis reservation succeeded; broker confirmed a routed publish. Order `PENDING` for async processing. |
 | `409 Conflict` / `OUT_OF_STOCK` | Redis key exists, insufficient stock. |
 | `409 Conflict` / `NOT_FOUND` | Redis stock key uninitialized. |
-| `503 Service Unavailable` | AMQP publish threw; code attempts stock rollback. |
+| `503 Service Unavailable` | Publish failure, nack, return or confirm timeout; atomic Redis rollback releases stock and idempotency key. |
 | `200 OK` | Persisted order already uses supplied idempotency key. |
 | `400 Bad Request` | Missing or blank idempotency key, missing product ID, or nonpositive quantity. |
 
@@ -111,12 +111,25 @@ Concurrent requests with the same key receive the existing reservation ID with `
 - `idempotencyKey` unique in PostgreSQL. Consumer checks it before save; duplicate delivery after persistence creates no second row. Redis keeps the reservation key until a failed order is rolled back.
 - Dead-letter rollback uses one Redis Lua script to mark an order ID and increment stock atomically. Duplicate delivery cannot increment stock twice.
 - Order queue durable; configured with dead-letter exchange/queue.
+- Publisher confirms are correlated and publishes mandatory. A returned message
+  cannot qualify as accepted even if the exchange acknowledges it. Configure the
+  wait with `flashsale.publish-confirm-timeout-ms`; DLQ republish also waits for
+  confirms before recovering the failed delivery.
 
 ## Current limitations
 
 - Stock init unauthenticated, may overwrite Redis stock.
 - `products` entity/table unused for inventory initialization/validation; orders use Redis only.
-- No RabbitMQ publisher confirms/outbox. Non-throwing publish not end-to-end durability guarantee.
+- App replication shares single Redis, RabbitMQ and PostgreSQL instances; these
+  are not replicated infrastructure. Publisher confirms are broker acceptance,
+  not proof that the consumer has committed a database row.
+- Redis has image-default RDB snapshots and an anonymous data volume, with no
+  explicit AOF or coordinated recovery policy. The observed normal restart saved
+  and reloaded RDB; hard state loss and stale snapshots remain limitations.
+- Reservation, publish and persistence are separate operations. A crash before
+  publish or an ambiguous confirm timeout is not a distributed transaction.
+  Immediate timeout rollback cannot rule out a publish arriving later. See the
+  measured fault results; they do not prove every crash boundary is safe.
 - No independent recovery path if Redis rollback keeps failing. `scripts/seed_data.sql` remains empty.
 
 ## Tests
@@ -125,4 +138,8 @@ Concurrent requests with the same key receive the existing reservation ID with `
 ./mvnw test
 ```
 
-Tests use Testcontainers for PostgreSQL, Redis, and RabbitMQ; Docker must be running. They cover concurrent oversell, same-key reservations, DLQ redelivery, and publish failure. Run `k6 run scripts/load_test.js` against a running stack for load results. See [`RESULTS.md`](RESULTS.md) for measured output.
+Tests use capped Testcontainers for PostgreSQL, Redis, and RabbitMQ; Docker must be running. They cover concurrent oversell, same-key reservations, DLQ redelivery, publish failure, nack, a real unroutable return, and confirm timeout. Run `k6 run scripts/load_test.js` against a running stack for load results. See [`RESULTS.md`](RESULTS.md) for measured output.
+
+For distributed experiments, see [bench/README.md](bench/README.md). Scripts save
+raw accepted-key ledgers, database/Redis reconciliation, Docker resource snapshots,
+and failed load thresholds. Experiments run sequentially on the same laptop.
