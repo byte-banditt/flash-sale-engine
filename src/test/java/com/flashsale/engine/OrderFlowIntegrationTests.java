@@ -56,12 +56,18 @@ class OrderFlowIntegrationTests {
     private static final HttpClient HTTP = HttpClient.newHttpClient();
 
     @Container
-    static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:16-alpine");
+    static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:16-alpine")
+            .withCreateContainerCmdModifier(cmd -> cmd.getHostConfig()
+                    .withMemory(384L * 1024 * 1024).withMemorySwap(384L * 1024 * 1024));
     @Container
     static final GenericContainer<?> REDIS = new GenericContainer<>(DockerImageName.parse("redis:7-alpine"))
-            .withExposedPorts(6379);
+            .withExposedPorts(6379)
+            .withCreateContainerCmdModifier(cmd -> cmd.getHostConfig()
+                    .withMemory(384L * 1024 * 1024).withMemorySwap(384L * 1024 * 1024));
     @Container
-    static final RabbitMQContainer RABBIT = new RabbitMQContainer("rabbitmq:3.13-management-alpine");
+    static final RabbitMQContainer RABBIT = new RabbitMQContainer("rabbitmq:3.13-management-alpine")
+            .withCreateContainerCmdModifier(cmd -> cmd.getHostConfig()
+                    .withMemory(384L * 1024 * 1024).withMemorySwap(384L * 1024 * 1024));
 
     @DynamicPropertySource
     static void services(DynamicPropertyRegistry registry) {

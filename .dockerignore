@@ -1,0 +1,4 @@
+*
+!target/
+target/*
+!target/flash-sale-engine-0.0.1-SNAPSHOT.jar

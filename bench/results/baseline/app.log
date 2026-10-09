@@ -53,3 +53,12 @@ Picked up JAVA_TOOL_OPTIONS: -Xmx256m
 2026-10-09T07:38:26.508Z  INFO 3505 --- [flash-sale-engine] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-10-09T07:38:26.508Z  INFO 3505 --- [flash-sale-engine] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-10-09T07:38:26.510Z  INFO 3505 --- [flash-sale-engine] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-09T07:46:05.306Z  INFO 3505 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-10-09T07:46:05.308Z  INFO 3505 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-10-09T07:46:05.567Z  INFO 3505 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-10-09T07:46:05.833Z  INFO 3505 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-10-09T07:46:05.843Z  INFO 3505 --- [flash-sale-engine] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-09T07:46:05.861Z  INFO 3505 --- [flash-sale-engine] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-09T07:46:06.023Z  INFO 3505 --- [flash-sale-engine] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-09T07:46:06.053Z  INFO 3505 --- [flash-sale-engine] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-09T07:46:06.062Z  INFO 3505 --- [flash-sale-engine] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

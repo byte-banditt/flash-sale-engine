@@ -1,0 +1,2 @@
+time="2026-10-09T07:49:07Z" level=warning msg="/home/ayussh/projects/flash-sale-engine/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2026/10/09 07:49:07 [notice] 31#31: signal process started

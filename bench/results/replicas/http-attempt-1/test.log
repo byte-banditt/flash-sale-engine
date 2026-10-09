@@ -1,0 +1,7 @@
+{'requests': 2000, 'initial_stock': 100, 'statuses': {409: 1859, 202: 100, 502: 41}, 'postgres': '100|100|100', 'redis_stock': 0}
+Traceback (most recent call last):
+  File "/home/ayussh/projects/flash-sale-engine/bench/http_concurrency.py", line 37, in <module>
+    assert set(counts)<=({200,202} if same else {202,409}),summary
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'requests': 2000, 'initial_stock': 100, 'statuses': {409: 1859, 202: 100, 502: 41}, 'postgres': '100|100|100', 'redis_stock': 0}
+exit_code=1

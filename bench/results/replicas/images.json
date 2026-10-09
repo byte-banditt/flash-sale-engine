@@ -1,0 +1,139 @@
+[
+    {
+        "Id": "sha256:99c854ac987d0909dceed547bc974a8174d3b92380e657ec55fb5ea1cddc49ae",
+        "RepoTags": [
+            "flash-sale-engine:local"
+        ],
+        "RepoDigests": [
+            "flash-sale-engine@sha256:99c854ac987d0909dceed547bc974a8174d3b92380e657ec55fb5ea1cddc49ae"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-09T07:47:17.511336182Z",
+        "Config": {
+            "User": "10001:10001",
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-21.0.12.1+1",
+                "JAVA_TOOL_OPTIONS=-Xmx256m"
+            ],
+            "Entrypoint": [
+                "java",
+                "-jar",
+                "app.jar"
+            ],
+            "WorkingDir": "/app",
+            "Labels": {
+                "com.docker.compose.project": "flash-sale-engine",
+                "com.docker.compose.service": "app",
+                "com.docker.compose.version": "5.5.1"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 408096181,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:74d97c428c51a828f9051a7a40a53ff1fc99e54fc30323ce36760701b0b7f711",
+                "sha256:baf1a350e0e1d00ceba2137c71230f7da7169c5c0abcae7c9f6c2d722cb6d94e",
+                "sha256:d87dbc49b44ca2d4171fe12f7dfcb9dbc62b4a43a9a0e34a26a7ae39498e7cf7",
+                "sha256:9248f3d0047d55db8f014b4fe149d51b85515efcbf6342449dd9c34a66cee9fc",
+                "sha256:d2abfe9c833160e132446b4a633f9f61a3ecbecbca128daa66bb0253e6f2f70f",
+                "sha256:76f312a11a269cad5dc40fb9717e7d9c43f9ad6a678d7cb4fd8fa7f757502b62",
+                "sha256:3bcf72f50762a2318fab6b3c842f8dda1a9aff0cd2442174e74386b43b3bee3f"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-09T07:47:19.650279026Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:99c854ac987d0909dceed547bc974a8174d3b92380e657ec55fb5ea1cddc49ae",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "kjzyj2j41qu0ntgx9gqqzkpaj",
+                    "CreatedAt": "2026-10-09T07:47:20.484809847Z"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236",
+        "RepoTags": [
+            "nginx:1.28-alpine"
+        ],
+        "RepoDigests": [
+            "nginx@sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-03-24T23:11:15.718500787Z",
+        "Config": {
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.28.3",
+                "PKG_RELEASE=1",
+                "DYNPKG_RELEASE=1",
+                "NJS_VERSION=0.9.6",
+                "NJS_RELEASE=1",
+                "ACME_VERSION=0.3.1"
+            ],
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 92460189,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:989e799e634906e94dc9a5ee2ee26fc92ad260522990f26e707861a5f52bf64e",
+                "sha256:a2738b08d7114c9d5581dd5482d3b5cc297fcf73b8d330c3ba38d24c43939119",
+                "sha256:47a53288c3ef0ee51df84ef47d217f18c1762412532fded9af1fd88ecee14294",
+                "sha256:9e707aa6db4786355904a1b794c80f378b690f8f0384af56117708a23a91f1da",
+                "sha256:a3446cc6c821fa11b704a45811ab554675f0327307af71b3f4ff5a70c7a4eec8",
+                "sha256:42608b42cb5e68548abf1c71aa851acfd65816d0ceaff6ee85849c7c478463f0",
+                "sha256:53c769b49ca0a2f0f6cf5e4a807af8933cec6cde9302d56d91a78bc38ea407a8",
+                "sha256:f76f397f2ce6b266573b70eb60ef1335e9984a1941eedd2a3505af4870c3afa0"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-09T07:46:26.284419911Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236",
+            "size": 10317
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/nginx"
+                }
+            ]
+        }
+    }
+]

@@ -631,3 +631,38 @@ exit_code=0
 ```
 
 All baseline accepted counts equal CONFIRMED counts; stock conservation holds. Duplicate-key counts are in each raw Postgres output. OOMKilled is false in captured Docker inspect data; captured dependency cgroup snapshots show no OOM kills or CPU throttling. Host app JVM RSS and WSL memory are recorded; host/JVM throttling was not instrumented. Full raw output, including test shutdown warnings: [baseline directory](bench/results/baseline/). Existing RESULTS.md sections above are historical and are not evidence for this task.
+
+## Multi-replica deployment and HTTP concurrency
+
+Executed `JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw test` after adding deployment, then again after capping Testcontainers. Original assertions unchanged. Both executions passed; full logs in [replicas](bench/results/replicas/).
+
+```text
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.84 s -- in com.flashsale.engine.OrderFlowIntegrationTests
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+```
+
+Executed `docker compose --profile distributed up -d --build --scale app=2` and `python3 bench/http_concurrency.py`. This script releases concurrent tasks against nginx, records each HTTP status/upstream, waits for persistence and queue drain, asserts accepted/CONFIRMED/distinct-key counts and remaining stock.
+
+Initial failed burst, with proxy connect timeout before tuning:
+
+```text
+{'requests': 2000, 'initial_stock': 100, 'statuses': {409: 1859, 202: 100, 502: 41}, 'postgres': '100|100|100', 'redis_stock': 0}
+Traceback (most recent call last):
+  File "/home/ayussh/projects/flash-sale-engine/bench/http_concurrency.py", line 37, in <module>
+    assert set(counts)<=({200,202} if same else {202,409}),summary
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'requests': 2000, 'initial_stock': 100, 'statuses': {409: 1859, 202: 100, 502: 41}, 'postgres': '100|100|100', 'redis_stock': 0}
+exit_code=1
+```
+
+nginx logged `upstream timed out (110: Operation timed out) while connecting to upstream`; full [nginx output](bench/results/replicas/nginx-http.log). Increased connect timeout, retaining all HTTP assertions. Successful attempt without explicit queue/upstream assertions remains in [http-attempt-2](bench/results/replicas/http-attempt-2/). Final run with those assertions:
+
+```text
+{'requests': 2000, 'initial_stock': 100, 'statuses': {202: 100, 409: 1900}, 'upstreams': {'172.18.0.5:8080': 1000, '172.18.0.6:8080': 1000}, 'postgres': '100|100|100', 'redis_stock': 0}
+{'requests': 40, 'initial_stock': 10, 'statuses': {200: 39, 202: 1}, 'upstreams': {'172.18.0.6:8080': 20, '172.18.0.5:8080': 20}, 'postgres': '1|1|1', 'redis_stock': 9}
+HTTP assertions passed
+exit_code=0
+```
+
+Per-response evidence and queue snapshots: [HTTP raw results](bench/results/replicas/http/). Docker image IDs and in-container Java version: [images](bench/results/replicas/images.json), [Java](bench/results/replicas/java.txt). Host baseline Java and image Java are different distributions; use the replicated runs for matched scaling/confirm comparisons rather than treating host baseline as a controlled container comparison. Container resource limits and app JVM heap are constant across replicated comparisons. Testcontainers memory caps were added after baseline; baseline tests used their existing uncapped infrastructure containers.

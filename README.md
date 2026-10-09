@@ -42,6 +42,37 @@ Hibernate uses `ddl-auto: update`, creating/updating mapped tables at startup.
 docker compose down
 ```
 
+## Distributed local profile
+
+The default Compose invocation still starts only infrastructure for the host JVM.
+Stop that JVM before starting the distributed profile, which uses the same port.
+Build the jar before building the image:
+
+```bash
+JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw package
+docker compose --profile distributed up -d --build --scale app=2
+```
+
+Change `--scale app=N` to choose replica count. Every app replica runs both HTTP
+handlers and order/DLQ consumers. nginx resolves the scaled service through Docker
+DNS and distributes requests round-robin; `X-Replica` identifies the upstream.
+POSTs already sent are not retried by the proxy.
+
+```text
+k6 / HTTP clients (same laptop)
+             |
+       nginx :8080
+       /     |     \\
+    app     app    app ...     HTTP API + consumers in each
+       \\     |     /
+        Redis / RabbitMQ / PostgreSQL
+             shared single instances
+```
+
+App heaps and container memory are capped in Compose. This is app replication,
+not infrastructure HA: the shared services remain failure domains.
+See `bench/` and [RESULTS.md](RESULTS.md) for executed experiments and limitations.
+
 ## Try flow
 
 Initialize stock. Current API treats `productId` as Redis-key component; does not look up PostgreSQL product record.

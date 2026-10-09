@@ -1,0 +1,10 @@
+{
+  "requests": 2000,
+  "initial_stock": 100,
+  "statuses": {
+    "202": 100,
+    "409": 1900
+  },
+  "postgres": "100|100|100",
+  "redis_stock": 0
+}

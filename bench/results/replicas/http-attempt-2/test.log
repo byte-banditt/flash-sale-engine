@@ -1,0 +1,4 @@
+{'requests': 2000, 'initial_stock': 100, 'statuses': {202: 100, 409: 1900}, 'postgres': '100|100|100', 'redis_stock': 0}
+{'requests': 40, 'initial_stock': 10, 'statuses': {200: 39, 202: 1}, 'postgres': '1|1|1', 'redis_stock': 9}
+HTTP assertions passed
+exit_code=0
