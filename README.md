@@ -6,6 +6,12 @@ orders in PostgreSQL.
 
 Learning/demo project; not production-ready commerce system.
 
+Measured fault result: publisher confirms preserved all recorded accepted orders,
+but a broker restart left CONFIRMED orders whose Redis stock had been refunded.
+Stock conservation failed in that run. App replication and confirms therefore do
+not establish end-to-end inventory safety. [RESULTS.md](RESULTS.md) records the
+failure, client outcome ambiguities, and the measured latency cost.
+
 ## What it does
 
 1. Operator initializes Redis stock key for a product ID.
@@ -130,6 +136,9 @@ Concurrent requests with the same key receive the existing reservation ID with `
   publish or an ambiguous confirm timeout is not a distributed transaction.
   Immediate timeout rollback cannot rule out a publish arriving later. See the
   measured fault results; they do not prove every crash boundary is safe.
+- No outbox was added: accepted-order loss was absent in the confirm fault reruns,
+  so the specified condition for adding one did not occur. The observed stock
+  accounting failure remains a known limitation.
 - No independent recovery path if Redis rollback keeps failing. `scripts/seed_data.sql` remains empty.
 
 ## Tests
