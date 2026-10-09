@@ -1,0 +1,10 @@
+time="2026-10-09T07:37:51Z" level=warning msg="/home/ayussh/projects/flash-sale-engine/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container flash_rabbitmq Starting 
+ Container flash_postgres Starting 
+ Container flash_redis Starting 
+ Container flash_rabbitmq Started 
+ Container flash_postgres Started 
+ Container flash_redis Started 
+flash_postgres
+flash_redis
+flash_rabbitmq

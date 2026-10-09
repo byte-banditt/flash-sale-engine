@@ -313,3 +313,321 @@ order.queue	0	0
 ```
 
 All 51385 orders accepted in final run were CONFIRMED after queue drain; 100000 - 51385 = 48615 Redis stock.
+
+## Measured baseline for distributed/fault-tolerance work
+
+All measurements below were executed in this session. Load generator and system share one laptop. Baseline revision: `fcc43e010a672b8a3c52a9bc7a6db381f11768b5`. Existing comment-only RabbitMQConfig diff was present before work, recorded in `bench/results/baseline/preexisting.diff`, and is excluded from commits. No source was edited before this baseline.
+
+Commands: `JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw test`; `docker compose up -d`; `docker update --memory 384m --memory-swap 384m flash_postgres flash_redis flash_rabbitmq`; `JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw package -DskipTests`; `JAVA_TOOL_OPTIONS=-Xmx256m java -jar target/flash-sale-engine-0.0.1-SNAPSHOT.jar`; `python3 bench/baseline.py`. The existing `scripts/load_test.js` was unchanged. Every run uses clean orders and Redis state, then waits for ready/unacknowledged queues to reach zero.
+
+Raw environment:
+
+```text
+2026-10-09T07:37:37+00:00
+fcc43e010a672b8a3c52a9bc7a6db381f11768b5
+ M src/main/java/com/flashsale/engine/config/RabbitMQConfig.java
+?? bench/
+Linux DESKTOP-P6C785V 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.4
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  1369636864  2064973824    53964800  1946628096  3787878400
+Swap:     4294967296           0  4294967296
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  16
+On-line CPU(s) list:                     0-15
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD Ryzen 7 7840HS w/ Radeon 780M Graphics
+CPU family:                              25
+Model:                                   116
+Thread(s) per core:                      2
+Core(s) per socket:                      8
+Socket(s):                               1
+Stepping:                                1
+BogoMIPS:                                7585.87
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx512_bf16 clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm
+Virtualization:                          AMD-V
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               256 KiB (8 instances)
+L1i cache:                               256 KiB (8 instances)
+L2 cache:                                8 MiB (8 instances)
+L3 cache:                                16 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-15
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Vulnerable: Safe RET, no microcode
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Vulnerable: No microcode
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+openjdk version "21.0.12.1" 2026-08-18
+OpenJDK Runtime Environment (build 21.0.12.1+1-1-deb13u1-Debian)
+OpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-deb13u1-Debian, mixed mode, sharing)
+Client:
+ Version:           29.8.0
+ API version:       1.56
+ Go version:        go1.26.8
+ Git commit:        88096ef
+ Built:             Thu Sep  3 21:49:51 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Desktop 4.91.0 (239619)
+ Engine:
+  Version:          29.8.0
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.8
+  Git commit:       3ce5872
+  Built:            Thu Sep  3 21:51:20 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.3.4
+  GitCommit:        db8809540e1a7a9da5d518876894933ff55692ab
+ runc:
+  Version:          1.4.3
+  GitCommit:        v1.4.3-0-gbb14dabe
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+Docker Compose version v5.5.1
+k6 v2.2.0 (commit/00a9a1b7f5, go1.26.5, linux/amd64)
+```
+
+Host app has capped heap but no container memory limit. Raw JVM flags/RSS: [jvm.txt](bench/results/baseline/jvm.txt). Dependencies have memory limits; [limits.txt](bench/results/baseline/limits.txt). Live stats started during the first run; sampling coverage is partial there: [live-stats.log](bench/results/baseline/live-stats.log). Initial Docker-unavailable attempt and recovery: [raw failure](bench/results/baseline/docker-initial-failure.txt). No benchmark was run with Docker unavailable.
+
+Executed test summary:
+
+```text
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.27 s -- in com.flashsale.engine.OrderFlowIntegrationTests
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+```
+
+| Run | HTTP 202 | req/s | p50 ms | p95 ms | p99 ms | error rate | CONFIRMED | Redis stock |
+|---|---|---|---|---|---|---|---|---|
+| run-1 | 52079 | 433.86762161230314 | 2.273946 | 5.323319649999997 | 7.7905503099999995 | 0 | 52079 | 47921 |
+| run-2 | 52168 | 434.51179425973214 | 2.133507 | 4.724691 | 7.137312359999998 | 0 | 52168 | 47832 |
+| run-3 | 52180 | 434.630519918471 | 2.167679 | 4.307293 | 6.181404799999997 | 0 | 52180 | 47820 |
+
+### run-1 raw output
+
+```text
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(99)<1000' p(99)=7.79ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    unexpected_responses
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    accepted_orders................: 52079 433.859291/s
+    unexpected_responses...........: 0.00% 0 out of 52079
+
+    HTTP
+    http_req_duration..............: avg=2.64ms   min=751.43µs med=2.27ms   max=506.89ms p(90)=4.38ms   p(95)=5.32ms   p(99)=7.79ms  
+      { expected_response:true }...: avg=2.64ms   min=751.43µs med=2.27ms   max=506.89ms p(90)=4.38ms   p(95)=5.32ms   p(99)=7.79ms  
+    http_req_failed................: 0.00% 0 out of 52080
+    http_reqs......................: 52080 433.867622/s
+
+    EXECUTION
+    iteration_duration.............: avg=103.19ms min=100.89ms med=102.85ms max=610.03ms p(90)=105.05ms p(95)=106.02ms p(99)=108.56ms
+    iterations.....................: 52079 433.859291/s
+    vus............................: 1     min=0          max=99 
+    vus_max........................: 100   min=100        max=100
+
+    NETWORK
+    data_received..................: 12 MB 103 kB/s
+    data_sent......................: 12 MB 96 kB/s
+
+
+
+
+running (2m00.0s), 000/100 VUs, 52079 complete and 0 interrupted iterations
+orders ✓ [ 100% ] 000/100 VUs  2m0s
+
+exit_code=0
+```
+
+```text
+$ docker exec flash_rabbitmq rabbitmqctl list_queues name messages_ready messages_unacknowledged
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	messages_ready	messages_unacknowledged
+order.dlq	0	0
+order.queue	0	0
+
+exit_code=0
+$ docker exec flash_postgres psql -U postgres -d flashsale_db -tAc select count(*), count(distinct idempotency_key), coalesce(sum(quantity),0) from orders where status='CONFIRMED'
+52079|52079|52079
+
+exit_code=0
+$ docker exec flash_redis redis-cli GET product:101:stock
+47921
+
+exit_code=0
+```
+
+### run-2 raw output
+
+```text
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(99)<1000' p(99)=7.13ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    unexpected_responses
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    accepted_orders................: 52168 434.503465/s
+    unexpected_responses...........: 0.00% 0 out of 52168
+
+    HTTP
+    http_req_duration..............: avg=2.44ms   min=764.55µs med=2.13ms   max=57.36ms  p(90)=3.77ms   p(95)=4.72ms   p(99)=7.13ms  
+      { expected_response:true }...: avg=2.44ms   min=764.55µs med=2.13ms   max=57.36ms  p(90)=3.77ms   p(95)=4.72ms   p(99)=7.13ms  
+    http_req_failed................: 0.00% 0 out of 52169
+    http_reqs......................: 52169 434.511794/s
+
+    EXECUTION
+    iteration_duration.............: avg=103.01ms min=100.94ms med=102.75ms max=157.78ms p(90)=104.39ms p(95)=105.29ms p(99)=107.69ms
+    iterations.....................: 52168 434.503465/s
+    vus............................: 1     min=0          max=99 
+    vus_max........................: 100   min=100        max=100
+
+    NETWORK
+    data_received..................: 12 MB 103 kB/s
+    data_sent......................: 12 MB 96 kB/s
+
+
+
+
+running (2m00.1s), 000/100 VUs, 52168 complete and 0 interrupted iterations
+orders ✓ [ 100% ] 000/100 VUs  2m0s
+
+exit_code=0
+```
+
+```text
+$ docker exec flash_rabbitmq rabbitmqctl list_queues name messages_ready messages_unacknowledged
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	messages_ready	messages_unacknowledged
+order.dlq	0	0
+order.queue	0	0
+
+exit_code=0
+$ docker exec flash_postgres psql -U postgres -d flashsale_db -tAc select count(*), count(distinct idempotency_key), coalesce(sum(quantity),0) from orders where status='CONFIRMED'
+52168|52168|52168
+
+exit_code=0
+$ docker exec flash_redis redis-cli GET product:101:stock
+47832
+
+exit_code=0
+```
+
+### run-3 raw output
+
+```text
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(99)<1000' p(99)=6.18ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    unexpected_responses
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    CUSTOM
+    accepted_orders................: 52180 434.622191/s
+    unexpected_responses...........: 0.00% 0 out of 52180
+
+    HTTP
+    http_req_duration..............: avg=2.39ms   min=727.79µs med=2.16ms  max=13.36ms  p(90)=3.57ms  p(95)=4.3ms   p(99)=6.18ms  
+      { expected_response:true }...: avg=2.39ms   min=727.79µs med=2.16ms  max=13.36ms  p(90)=3.57ms  p(95)=4.3ms   p(99)=6.18ms  
+    http_req_failed................: 0.00% 0 out of 52181
+    http_reqs......................: 52181 434.63052/s
+
+    EXECUTION
+    iteration_duration.............: avg=102.98ms min=100.97ms med=102.8ms max=128.81ms p(90)=104.2ms p(95)=104.9ms p(99)=106.84ms
+    iterations.....................: 52180 434.622191/s
+    vus............................: 1     min=0          max=99 
+    vus_max........................: 100   min=100        max=100
+
+    NETWORK
+    data_received..................: 12 MB 103 kB/s
+    data_sent......................: 12 MB 96 kB/s
+
+
+
+
+running (2m00.1s), 000/100 VUs, 52180 complete and 0 interrupted iterations
+orders ✓ [ 100% ] 000/100 VUs  2m0s
+
+exit_code=0
+```
+
+```text
+$ docker exec flash_rabbitmq rabbitmqctl list_queues name messages_ready messages_unacknowledged
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	messages_ready	messages_unacknowledged
+order.dlq	0	0
+order.queue	0	0
+
+exit_code=0
+$ docker exec flash_postgres psql -U postgres -d flashsale_db -tAc select count(*), count(distinct idempotency_key), coalesce(sum(quantity),0) from orders where status='CONFIRMED'
+52180|52180|52180
+
+exit_code=0
+$ docker exec flash_redis redis-cli GET product:101:stock
+47820
+
+exit_code=0
+```
+
+All baseline accepted counts equal CONFIRMED counts; stock conservation holds. Duplicate-key counts are in each raw Postgres output. OOMKilled is false in captured Docker inspect data; captured dependency cgroup snapshots show no OOM kills or CPU throttling. Host app JVM RSS and WSL memory are recorded; host/JVM throttling was not instrumented. Full raw output, including test shutdown warnings: [baseline directory](bench/results/baseline/). Existing RESULTS.md sections above are historical and are not evidence for this task.

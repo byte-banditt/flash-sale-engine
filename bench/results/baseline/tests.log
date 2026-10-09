@@ -1,0 +1,268 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.flashsale:flash-sale-engine >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ flash-sale-engine ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ flash-sale-engine ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ flash-sale-engine ---
+[INFO] skip non existing resourceDirectory /home/ayussh/projects/flash-sale-engine/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ flash-sale-engine ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ flash-sale-engine ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Running com.flashsale.engine.OrderFlowIntegrationTests
+07:37:42.173 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+07:37:42.176 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+07:37:42.186 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+07:37:42.366 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+07:37:42.625 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+07:37:42.627 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+07:37:42.652 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 4918 MB
+  Labels: 
+    com.docker.desktop.address=unix:///var/run/docker-cli.sock
+07:37:42.733 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+07:37:42.847 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop.exe) does not have credentials for https://index.docker.io/v1/
+07:37:42.997 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: a6cccb55cccbab4e95c54d04d52d0af0906ff4e068e4aecb95daf10db0b05342
+07:37:43.645 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT0.911993753S
+07:37:43.653 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+07:37:43.653 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+07:37:43.654 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+07:37:43.655 [main] INFO tc.rabbitmq:3.13-management-alpine -- Creating container for image: rabbitmq:3.13-management-alpine
+07:37:43.744 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine is starting: 94b29104543e556ce2fcc1ba5539b51a5af4c19c9c7430f0eb3f2a5e38584349
+07:37:51.962 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine started in PT8.307334717S
+07:37:51.963 [main] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+07:37:52.082 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: 7472a9a035f5adaf6d3f9c1446a88e38cef4e13997ad8405e33ef6e3403b730f
+07:37:52.437 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT0.474001848S
+07:37:52.438 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+07:37:52.527 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: e6a1644f650049748974cf4ee99e72452a02cdac30d16c0bca42b82104329e3f
+07:37:54.429 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT1.990677099S
+07:37:54.437 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:61350/test?loggerLevel=OFF)
+07:37:54.675 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.flashsale.engine.OrderFlowIntegrationTests]: OrderFlowIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:37:54.913 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.flashsale.engine.FlashSaleEngineApplication for test class com.flashsale.engine.OrderFlowIntegrationTests
+07:37:55.014 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.flashsale.engine.OrderFlowIntegrationTests]: OrderFlowIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:37:55.017 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.flashsale.engine.FlashSaleEngineApplication for test class com.flashsale.engine.OrderFlowIntegrationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-09T07:37:55.509Z  INFO 2918 --- [flash-sale-engine] [           main] c.f.engine.OrderFlowIntegrationTests     : Starting OrderFlowIntegrationTests using Java 21.0.12.1 with PID 2918 (started by ayussh in /home/ayussh/projects/flash-sale-engine)
+2026-10-09T07:37:55.511Z  INFO 2918 --- [flash-sale-engine] [           main] c.f.engine.OrderFlowIntegrationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-10-09T07:37:56.252Z  INFO 2918 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-09T07:37:56.254Z  INFO 2918 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-09T07:37:56.419Z  INFO 2918 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 155 ms. Found 2 JPA repository interfaces.
+2026-10-09T07:37:56.482Z  INFO 2918 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-09T07:37:56.484Z  INFO 2918 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-09T07:37:56.502Z  INFO 2918 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-09T07:37:56.503Z  INFO 2918 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-09T07:37:56.503Z  INFO 2918 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-10-09T07:37:57.109Z  INFO 2918 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-09T07:37:57.120Z  INFO 2918 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-09T07:37:57.120Z  INFO 2918 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-09T07:37:57.157Z  INFO 2918 --- [flash-sale-engine] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1627 ms
+2026-10-09T07:37:57.362Z  INFO 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-09T07:37:57.435Z  INFO 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-09T07:37:57.778Z  INFO 2918 --- [flash-sale-engine] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-09T07:37:57.802Z  INFO 2918 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-09T07:37:57.958Z  INFO 2918 --- [flash-sale-engine] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4eee730c
+2026-10-09T07:37:57.959Z  INFO 2918 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-09T07:37:57.994Z  WARN 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-09T07:37:58.018Z  INFO 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:61350/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-09T07:37:58.676Z  INFO 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-09T07:37:58.742Z  WARN 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-10-09T07:37:58.742Z  WARN 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : constraint "ukd1kkvl4hi9hp3peub1umk2xeo" of relation "orders" does not exist, skipping
+2026-10-09T07:37:58.746Z  WARN 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-10-09T07:37:58.746Z  WARN 2918 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : constraint "ukhmsk25beh6atojvle1xuymjj0" of relation "orders" does not exist, skipping
+2026-10-09T07:37:58.748Z  INFO 2918 --- [flash-sale-engine] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/ayussh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.11/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-10-09T07:38:00.212Z  INFO 2918 --- [flash-sale-engine] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-09T07:38:00.518Z  WARN 2918 --- [flash-sale-engine] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-09T07:38:01.108Z  INFO 2918 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 43905 (http) with context path '/'
+2026-10-09T07:38:01.114Z  INFO 2918 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:57200]
+2026-10-09T07:38:01.169Z  INFO 2918 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#d181ca3:0/SimpleConnection@21826d78 [delegate=amqp://guest@127.0.0.1:57200/, localPort=47382]
+2026-10-09T07:38:01.270Z  INFO 2918 --- [flash-sale-engine] [           main] c.f.engine.OrderFlowIntegrationTests     : Started OrderFlowIntegrationTests in 6.173 seconds (process running for 20.117)
+2026-10-09T07:38:01.890Z  INFO 2918 --- [flash-sale-engine] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-09T07:38:01.890Z  INFO 2918 --- [flash-sale-engine] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-09T07:38:01.893Z  INFO 2918 --- [flash-sale-engine] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-09T07:38:10.178Z  WARN 2918 --- [flash-sale-engine] [ntContainer#1-1] o.s.a.r.retry.RepublishMessageRecoverer  : Republishing failed message to exchange 'order.dlx' with routing key order.failed
+2026-10-09T07:38:10.185Z ERROR 2918 --- [flash-sale-engine] [ntContainer#0-1] c.flashsale.engine.consumer.DLQConsumer  : Order processing permanently failed after retries. Stock rollback applied=true. orderId=acbfa4cc-6354-41bb-b229-2e6ba4c1e4fd, productId=101, quantity=1, idempotencyKey=fail-a77a0102-bf88-456c-bc96-2c8dde644aa7
+2026-10-09T07:38:10.289Z ERROR 2918 --- [flash-sale-engine] [ntContainer#0-1] c.flashsale.engine.consumer.DLQConsumer  : Order processing permanently failed after retries. Stock rollback applied=false. orderId=acbfa4cc-6354-41bb-b229-2e6ba4c1e4fd, productId=101, quantity=1, idempotencyKey=fail-a77a0102-bf88-456c-bc96-2c8dde644aa7
+2026-10-09T07:38:10.291Z ERROR 2918 --- [flash-sale-engine] [ntContainer#0-1] c.flashsale.engine.consumer.DLQConsumer  : Order processing permanently failed after retries. Stock rollback applied=false. orderId=acbfa4cc-6354-41bb-b229-2e6ba4c1e4fd, productId=101, quantity=1, idempotencyKey=fail-a77a0102-bf88-456c-bc96-2c8dde644aa7
+2026-10-09T07:38:11.098Z  INFO 2918 --- [flash-sale-engine] [xecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:61345
+2026-10-09T07:38:11.106Z  WARN 2918 --- [flash-sale-engine] [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:61345]: Connection reset
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[na:na]
+	at io.netty.buffer.AdaptivePoolingAllocator$AdaptiveByteBuf.setBytes(AdaptivePoolingAllocator.java:2549) ~[netty-buffer-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1139) ~[netty-buffer-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:161) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:445) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196) ~[netty-transport-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204) ~[netty-common-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.2.17.Final.jar:4.2.17.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.2.17.Final.jar:4.2.17.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.27 s -- in com.flashsale.engine.OrderFlowIntegrationTests
+2026-10-09T07:38:12.179Z  WARN 2918 --- [flash-sale-engine] [ntContainer#1-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1014) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:1004) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:804) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$500(AMQConnection.java:49) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:703) ~[amqp-client-5.30.0.jar:5.30.0]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.io.EOFException
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:297) ~[na:na]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:92) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:694) ~[amqp-client-5.30.0.jar:5.30.0]
+	... 1 common frames omitted
+
+2026-10-09T07:38:12.191Z  INFO 2918 --- [flash-sale-engine] [ntContainer#1-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@718d339f: tags=[[amq.ctag-5cjjE-yRtd_jzEa2e7bttw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:57200/,2), conn: Proxy@1a8b7423 Shared Rabbit Connection: SimpleConnection@21826d78 [delegate=amqp://guest@127.0.0.1:57200/, localPort=47382], acknowledgeMode=AUTO local queue size=0
+2026-10-09T07:38:12.195Z  INFO 2918 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:57200]
+2026-10-09T07:38:12.199Z ERROR 2918 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:60) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:629) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:746) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:256) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2239) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2211) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2191) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:472) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:456) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1978) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1941) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1602) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1400) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1355) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1297) ~[amqp-client-5.30.0.jar:5.30.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:676) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:644) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:590) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	... 12 common frames omitted
+
+2026-10-09T07:38:12.200Z  INFO 2918 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:57200]
+2026-10-09T07:38:12.292Z  WARN 2918 --- [flash-sale-engine] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1014) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:1004) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:804) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$500(AMQConnection.java:49) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:703) ~[amqp-client-5.30.0.jar:5.30.0]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.io.EOFException
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:297) ~[na:na]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:92) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:694) ~[amqp-client-5.30.0.jar:5.30.0]
+	... 1 common frames omitted
+
+2026-10-09T07:38:12.293Z  INFO 2918 --- [flash-sale-engine] [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2ff19416: tags=[[amq.ctag-HUfwy4fyFxgHc9_RmiXAWw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:57200/,1), conn: Proxy@1a8b7423 Shared Rabbit Connection: SimpleConnection@21826d78 [delegate=amqp://guest@127.0.0.1:57200/, localPort=47382], acknowledgeMode=AUTO local queue size=0
+2026-10-09T07:38:12.295Z  INFO 2918 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:57200]
+2026-10-09T07:38:12.296Z ERROR 2918 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:60) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:629) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:746) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:256) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2239) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2211) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2191) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:472) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:456) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1978) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1941) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1602) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1400) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1355) ~[amqp-client-5.30.0.jar:5.30.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1297) ~[amqp-client-5.30.0.jar:5.30.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:676) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:644) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:590) ~[spring-rabbit-4.1.1.jar:4.1.1]
+	... 12 common frames omitted
+
+2026-10-09T07:38:12.297Z  INFO 2918 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:57200]
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.379 s
+[INFO] Finished at: 2026-10-09T07:38:12Z
+[INFO] ------------------------------------------------------------------------

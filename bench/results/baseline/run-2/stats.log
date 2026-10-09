@@ -1,0 +1,6 @@
+$ docker stats --no-stream --format {{json .}}
+{"BlockIO":"39.2MB / 978MB","CPUPerc":"0.01%","Container":"bbdc9eb016dd6349ec966168d864fe3ace9201c7d4d107771711e138b01aee27","ID":"bbdc9eb016dd","MemPerc":"22.36%","MemUsage":"85.87MiB / 384MiB","Name":"flash_postgres","NetIO":"80MB / 61.5MB","PIDs":"16"}
+{"BlockIO":"12.3MB / 5.63MB","CPUPerc":"0.37%","Container":"4be5c3365b4967226166d719c007dc50d1d8818139ef5dca5e631979fae84b61","ID":"4be5c3365b49","MemPerc":"3.59%","MemUsage":"13.8MiB / 384MiB","Name":"flash_redis","NetIO":"26.4MB / 4.98MB","PIDs":"7"}
+{"BlockIO":"2.54MB / 19.2MB","CPUPerc":"1.25%","Container":"e3293f49635381e0eacb700761d0b1b3796f07d50de924e238b2f7b6866d6386","ID":"e3293f496353","MemPerc":"51.62%","MemUsage":"198.2MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"44.9MB / 43.1MB","PIDs":"56"}
+
+exit_code=0

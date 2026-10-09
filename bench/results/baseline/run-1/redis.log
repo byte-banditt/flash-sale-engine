@@ -1,0 +1,4 @@
+$ docker exec flash_redis redis-cli GET product:101:stock
+47921
+
+exit_code=0

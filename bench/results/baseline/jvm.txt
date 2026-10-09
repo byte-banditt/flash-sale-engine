@@ -1,0 +1,4 @@
+    PID   RSS COMMAND
+   3505 576520 java -jar target/flash-sale-engine-0.0.1-SNAPSHOT.jar
+3505:
+-XX:CICompilerCount=12 -XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=13 -XX:G1EagerReclaimRemSetThreshold=12 -XX:G1HeapRegionSize=1048576 -XX:G1RemSetArrayOfCardsEntries=12 -XX:G1RemSetHowlMaxNumBuckets=8 -XX:G1RemSetHowlNumBuckets=4 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=81788928 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=268435456 -XX:MaxNewSize=160432128 -XX:MinHeapDeltaBytes=1048576 -XX:MinHeapSize=8388608 -XX:NonNMethodCodeHeapSize=7602480 -XX:NonProfiledCodeHeapSize=122027880 -XX:ProfiledCodeHeapSize=122027880 -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:SoftMaxHeapSize=268435456 -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC 

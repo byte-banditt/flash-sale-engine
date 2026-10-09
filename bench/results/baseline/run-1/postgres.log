@@ -1,0 +1,4 @@
+$ docker exec flash_postgres psql -U postgres -d flashsale_db -tAc select count(*), count(distinct idempotency_key), coalesce(sum(quantity),0) from orders where status='CONFIRMED'
+52079|52079|52079
+
+exit_code=0

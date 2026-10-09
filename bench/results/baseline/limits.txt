@@ -1,0 +1,3 @@
+/flash_postgres OOMKilled=false Memory=402653184 NanoCpus=0
+/flash_redis OOMKilled=false Memory=402653184 NanoCpus=0
+/flash_rabbitmq OOMKilled=false Memory=402653184 NanoCpus=0
