@@ -4,8 +4,10 @@ root=pathlib.Path(sys.argv[1]); root.mkdir(parents=True,exist_ok=True)
 fault=sys.argv[2] if len(sys.argv)>2 else 'none'
 
 def cmd(args,name,check=True):
+    began=datetime.datetime.now(datetime.timezone.utc).isoformat()
     p=subprocess.run(args,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
-    (root/name).write_text('$ '+' '.join(args)+'\n'+p.stdout+f'\nexit_code={p.returncode}\n')
+    ended=datetime.datetime.now(datetime.timezone.utc).isoformat()
+    (root/name).write_text('$ '+' '.join(args)+'\nstarted='+began+'\n'+p.stdout+f'\nexit_code={p.returncode}\nended='+ended+'\n')
     if check and p.returncode: raise RuntimeError(f'{args}: {p.stdout}')
     return p.stdout
 
@@ -13,6 +15,8 @@ def raw(args): return subprocess.check_output(args,text=True).strip()
 apps=raw(['docker','compose','--profile','distributed','ps','-q','app']).splitlines()
 containers=apps+['flash_postgres','flash_redis','flash_rabbitmq']
 cmd(['git','rev-parse','HEAD'],'git.txt')
+cmd(['git','diff','--','src','docker-compose.yml','deploy','Dockerfile'],'working-source.diff')
+cmd(['sha256sum','bench/load.js','bench/experiment.py'],'harness-sha256.txt')
 cmd(['docker','compose','--profile','distributed','config'],'compose.txt')
 for _ in range(120):
     try:
@@ -35,9 +39,10 @@ def sample():
             subprocess.run(['free','-b'],stdout=f,stderr=f)
             stop.wait(5)
 thread=threading.Thread(target=sample);thread.start()
-start=time.monotonic()
+start=time.monotonic();event_since=str(int(time.time()))
 with (root/'k6.log').open('w') as f:
     args=['k6','run','--quiet','--summary-export',str(root/'summary.json'),'-e','BASE_URL=http://localhost:8080','-e',f'RUN_ID={root.name}','bench/load.js']
+    if fault!='none': args[2:2]=['-e','FAULT_LOAD=true']
     f.write('$ '+' '.join(args)+'\n');f.flush()
     proc=subprocess.Popen(args,stdout=f,stderr=f)
     if fault!='none':
@@ -79,5 +84,6 @@ summary={'http_202':len(accepted),'confirmed':len(confirmed),'redis_stock':stock
 (root/'reconciliation.json').write_text(json.dumps(summary,indent=2)+'\n')
 resources('after')
 cmd(['docker','inspect',*containers],'inspect.log')
+cmd(['docker','events','--since',event_since,'--until',str(int(time.time())),'--filter','event=oom','--filter','event=die','--format','{{json .}}'],'docker-events.log',False)
 cmd(['docker','compose','--profile','distributed','logs','--no-color','app'],'app.log',False)
 print(json.dumps(summary),flush=True)

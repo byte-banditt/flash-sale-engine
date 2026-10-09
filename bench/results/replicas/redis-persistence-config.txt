@@ -1,0 +1,9 @@
+appendonly
+no
+save
+3600 1 300 100 60 10000
+dbfilename
+dump.rdb
+dir
+/data
+[{"Type":"volume","Name":"2c50c3d6439f56cc652d6f34838dc12c9794bd8cb4c23880572e5f98dd0261ae","Source":"/var/lib/docker/volumes/2c50c3d6439f56cc652d6f34838dc12c9794bd8cb4c23880572e5f98dd0261ae/_data","Destination":"/data","Driver":"local","Mode":"z","RW":true,"Propagation":""}]

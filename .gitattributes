@@ -1,2 +1,8 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+# Keep raw measurement files readable, but avoid enormous line-by-line Git diffs.
+bench/results/**/k6.log -diff
+bench/results/**/app.log -diff
+bench/results/**/orders.csv -diff
+bench/results/**/reservations.txt -diff
+bench/results/**/inspect.log -diff

@@ -6,8 +6,10 @@ const accepted = new Counter('accepted_orders');
 const unexpected = new Rate('unexpected_responses');
 http.setResponseCallback(http.expectedStatuses(200,202,409));
 export const options = {
-  scenarios: { orders: { executor: 'ramping-vus', startVUs: 0,
-    stages: [{duration:'30s',target:20},{duration:'1m',target:100},{duration:'30s',target:0}] } },
+  scenarios: { orders: __ENV.FAULT_LOAD === 'true'
+    ? {executor:'constant-vus', vus:50, duration:'2m'}
+    : { executor: 'ramping-vus', startVUs: 0,
+      stages: [{duration:'30s',target:20},{duration:'1m',target:100},{duration:'30s',target:0}] } },
   thresholds: { unexpected_responses:['rate<0.01'], http_req_failed:['rate<0.01'], http_req_duration:['p(99)<1000'] },
   summaryTrendStats:['avg','min','med','max','p(90)','p(95)','p(99)'],
 };
