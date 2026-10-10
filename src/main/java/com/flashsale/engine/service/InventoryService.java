@@ -2,6 +2,8 @@ package com.flashsale.engine.service;
 
 // import java.util.Collection;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InventoryService {
+    private static final Logger log = LoggerFactory.getLogger(InventoryService.class);
     private final StringRedisTemplate redisTemplate;
     private final DefaultRedisScript<Long> stockDecrementScript;
     private final DefaultRedisScript<Long> rollbackOnceScript;
@@ -59,11 +62,15 @@ public class InventoryService {
                 ? List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back")
                 : List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back",
                           "idempotency:" + idempotencyKey);
+        log.debug("ORDER_TRACE event=REFUND_START key={} orderId={} epochMs={}",
+                idempotencyKey, orderId, System.currentTimeMillis());
         Long result = redisTemplate.execute(rollbackOnceScript,
                 keys, String.valueOf(quantity), orderId);
         if (result == null) {
             throw new IllegalStateException("Redis returned no rollback result");
         }
+        log.debug("ORDER_TRACE event=REFUND_END key={} orderId={} epochMs={} applied={}",
+                idempotencyKey, orderId, System.currentTimeMillis(), result == 1);
         return result == 1;
     }
 }

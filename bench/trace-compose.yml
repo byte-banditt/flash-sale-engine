@@ -1,0 +1,5 @@
+# Diagnostic-only override. JVM/container limits remain inherited unchanged.
+services:
+  app:
+    environment:
+      LOGGING_LEVEL_COM_FLASHSALE_ENGINE: DEBUG

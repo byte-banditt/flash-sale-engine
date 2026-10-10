@@ -1,0 +1,131 @@
+$ docker compose --profile distributed config
+started=2026-10-10T13:09:25.619221+00:00
+time="2026-10-10T13:09:25Z" level=warning msg="/home/ayussh/projects/flash-sale-engine/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+name: flash-sale-engine
+services:
+  app:
+    profiles:
+      - distributed
+    build:
+      context: /home/ayussh/projects/flash-sale-engine
+      dockerfile: Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+        required: true
+      rabbitmq:
+        condition: service_healthy
+        required: true
+      redis:
+        condition: service_healthy
+        required: true
+    environment:
+      JAVA_TOOL_OPTIONS: -Xmx256m
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/flashsale_db
+      SPRING_RABBITMQ_HOST: rabbitmq
+    image: flash-sale-engine:local
+    mem_limit: "671088640"
+    memswap_limit: "671088640"
+    networks:
+      default: null
+  nginx:
+    profiles:
+      - distributed
+    depends_on:
+      app:
+        condition: service_started
+        required: true
+    image: nginx:1.28-alpine
+    mem_limit: "67108864"
+    memswap_limit: "67108864"
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /home/ayussh/projects/flash-sale-engine/deploy/nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true
+        bind: {}
+  postgres:
+    container_name: flash_postgres
+    environment:
+      POSTGRES_DB: flashsale_db
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U postgres -d flashsale_db
+      timeout: 3s
+      interval: 5s
+      retries: 30
+    image: postgres:16-alpine
+    mem_limit: "402653184"
+    memswap_limit: "402653184"
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+  rabbitmq:
+    container_name: flash_rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: guest
+    healthcheck:
+      test:
+        - CMD
+        - rabbitmq-diagnostics
+        - -q
+        - ping
+      timeout: 5s
+      interval: 5s
+      retries: 30
+    image: rabbitmq:3.13-management-alpine
+    mem_limit: "402653184"
+    memswap_limit: "402653184"
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5672
+        published: "5672"
+        protocol: tcp
+      - mode: ingress
+        target: 15672
+        published: "15672"
+        protocol: tcp
+  redis:
+    container_name: flash_redis
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      timeout: 3s
+      interval: 5s
+      retries: 30
+    image: redis:7-alpine
+    mem_limit: "402653184"
+    memswap_limit: "402653184"
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 6379
+        published: "6379"
+        protocol: tcp
+networks:
+  default:
+    name: flash-sale-engine_default
+
+exit_code=0
+ended=2026-10-10T13:09:25.698320+00:00
