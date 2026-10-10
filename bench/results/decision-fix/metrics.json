@@ -1,6 +1,90 @@
 {
   "runs": [
     {
+      "group": "before-normal",
+      "run": "normal-1",
+      "http_202": 48921,
+      "confirmed": 48921,
+      "confirmed_quantity": 48921,
+      "redis_stock": 51079,
+      "i1_delta_units": 0,
+      "i1_violation_units": 0,
+      "i2_violations": 0,
+      "lost": 0,
+      "duplicates": 0,
+      "stuck": 0,
+      "stuck_decisions": 0,
+      "http_error_rate": 0,
+      "req_per_s": 407.32480746004944,
+      "p50_ms": 7.0934989999999996,
+      "p95_ms": 15.553272649999997,
+      "p99_ms": 35.835293880000016,
+      "k6_exit": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "http_202": 48894,
+      "confirmed": 48894,
+      "confirmed_quantity": 48894,
+      "redis_stock": 51106,
+      "i1_delta_units": 0,
+      "i1_violation_units": 0,
+      "i2_violations": 0,
+      "lost": 0,
+      "duplicates": 0,
+      "stuck": 0,
+      "stuck_decisions": 0,
+      "http_error_rate": 0,
+      "req_per_s": 406.90755813511294,
+      "p50_ms": 8.175344,
+      "p95_ms": 15.02713969999999,
+      "p99_ms": 28.017806039999858,
+      "k6_exit": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "http_202": 49090,
+      "confirmed": 49090,
+      "confirmed_quantity": 49090,
+      "redis_stock": 50910,
+      "i1_delta_units": 0,
+      "i1_violation_units": 0,
+      "i2_violations": 0,
+      "lost": 0,
+      "duplicates": 0,
+      "stuck": 0,
+      "stuck_decisions": 0,
+      "http_error_rate": 0,
+      "req_per_s": 408.59552101562707,
+      "p50_ms": 7.728246,
+      "p95_ms": 14.7226795,
+      "p99_ms": 28.13137869999999,
+      "k6_exit": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "http_202": 45195,
+      "confirmed": 45197,
+      "confirmed_quantity": 45197,
+      "redis_stock": 54805,
+      "i1_delta_units": 2,
+      "i1_violation_units": 2,
+      "i2_violations": 2,
+      "lost": 0,
+      "duplicates": 0,
+      "stuck": 0,
+      "stuck_decisions": 0,
+      "http_error_rate": 0.11050756725905808,
+      "req_per_s": 423.08606077135204,
+      "p50_ms": 8.369834,
+      "p95_ms": 36.402017,
+      "p99_ms": 96.63515280000006,
+      "k6_exit": 99
+    },
+    {
       "group": "repro",
       "run": "rabbit-1",
       "http_202": 48222,
@@ -213,6 +297,30 @@
   ],
   "groups": [
     {
+      "group": "before-normal",
+      "runs": 3,
+      "violating_runs": 0,
+      "i1_excess_units": 0,
+      "i2_violations": 0,
+      "lost": 0,
+      "duplicates": 0,
+      "stuck": 0,
+      "stuck_decisions": 0,
+      "rule_of_three_upper_bound": 1.0
+    },
+    {
+      "group": "diagnostic",
+      "runs": 1,
+      "violating_runs": 1,
+      "i1_excess_units": 2,
+      "i2_violations": 2,
+      "lost": 0,
+      "duplicates": 0,
+      "stuck": 0,
+      "stuck_decisions": 0,
+      "rule_of_three_upper_bound": null
+    },
+    {
       "group": "repro",
       "runs": 10,
       "violating_runs": 4,
@@ -226,6 +334,174 @@
     }
   ],
   "resources": [
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "container": "flash-sale-engine-app-1",
+      "max_observed_cpu": "80.08%",
+      "max_observed_memory": "365.7MiB / 640MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "container": "flash-sale-engine-app-2",
+      "max_observed_cpu": "82.70%",
+      "max_observed_memory": "348.2MiB / 640MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "container": "flash-sale-engine-nginx-1",
+      "max_observed_cpu": "31.66%",
+      "max_observed_memory": "10.54MiB / 64MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "container": "flash_rabbitmq",
+      "max_observed_cpu": "248.63%",
+      "max_observed_memory": "207.7MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "container": "flash_redis",
+      "max_observed_cpu": "16.67%",
+      "max_observed_memory": "25.82MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "container": "flash_postgres",
+      "max_observed_cpu": "72.30%",
+      "max_observed_memory": "100.7MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "container": "flash-sale-engine-app-1",
+      "max_observed_cpu": "73.31%",
+      "max_observed_memory": "364.1MiB / 640MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "container": "flash-sale-engine-app-2",
+      "max_observed_cpu": "67.68%",
+      "max_observed_memory": "347.9MiB / 640MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "container": "flash-sale-engine-nginx-1",
+      "max_observed_cpu": "29.57%",
+      "max_observed_memory": "9.914MiB / 64MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "container": "flash_rabbitmq",
+      "max_observed_cpu": "265.81%",
+      "max_observed_memory": "234.6MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "container": "flash_redis",
+      "max_observed_cpu": "27.88%",
+      "max_observed_memory": "25.92MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "container": "flash_postgres",
+      "max_observed_cpu": "108.63%",
+      "max_observed_memory": "101MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "container": "flash-sale-engine-app-1",
+      "max_observed_cpu": "63.22%",
+      "max_observed_memory": "363MiB / 640MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "container": "flash-sale-engine-app-2",
+      "max_observed_cpu": "65.07%",
+      "max_observed_memory": "347MiB / 640MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "container": "flash-sale-engine-nginx-1",
+      "max_observed_cpu": "25.16%",
+      "max_observed_memory": "10.09MiB / 64MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "container": "flash_rabbitmq",
+      "max_observed_cpu": "147.59%",
+      "max_observed_memory": "239.1MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "container": "flash_redis",
+      "max_observed_cpu": "18.04%",
+      "max_observed_memory": "23.98MiB / 384MiB"
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "container": "flash_postgres",
+      "max_observed_cpu": "60.86%",
+      "max_observed_memory": "110.1MiB / 384MiB"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "container": "flash-sale-engine-app-1",
+      "max_observed_cpu": "277.74%",
+      "max_observed_memory": "341.3MiB / 640MiB"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "container": "flash-sale-engine-app-2",
+      "max_observed_cpu": "385.99%",
+      "max_observed_memory": "363.7MiB / 640MiB"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "container": "flash-sale-engine-nginx-1",
+      "max_observed_cpu": "27.53%",
+      "max_observed_memory": "11.1MiB / 64MiB"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "container": "flash_rabbitmq",
+      "max_observed_cpu": "267.35%",
+      "max_observed_memory": "224.1MiB / 384MiB"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "container": "flash_redis",
+      "max_observed_cpu": "13.27%",
+      "max_observed_memory": "24.66MiB / 384MiB"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "container": "flash_postgres",
+      "max_observed_cpu": "53.53%",
+      "max_observed_memory": "102.6MiB / 384MiB"
+    },
     {
       "group": "repro",
       "run": "rabbit-1",

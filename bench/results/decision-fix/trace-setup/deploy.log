@@ -1,0 +1,64 @@
+time="2026-10-10T13:14:56Z" level=warning msg="/home/ayussh/projects/flash-sale-engine/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Image flash-sale-engine:local Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 540B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 245B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-alpine
+#3 DONE 1.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 105B done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/eclipse-temurin:21-jre-alpine@sha256:51ab5e3302e7141ce665ca3ea85e8b5cd648eafbc3c0c90dd79d6537684e4555
+#5 resolve docker.io/library/eclipse-temurin:21-jre-alpine@sha256:51ab5e3302e7141ce665ca3ea85e8b5cd648eafbc3c0c90dd79d6537684e4555 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 64.24MB 1.3s done
+#6 DONE 1.3s
+
+#7 [2/3] WORKDIR /app
+#7 CACHED
+
+#8 [3/3] COPY target/flash-sale-engine-0.0.1-SNAPSHOT.jar app.jar
+#8 DONE 0.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 2.3s done
+#9 exporting manifest sha256:e5435aded7e73549a49e7dfd66028d74e9748e245ba845bab60f1f472a0892ca 0.0s done
+#9 exporting config sha256:4940af0319f6f68b2fc5927860ab4a8c941b8489c935e6cbfc4663e08c158b12 0.0s done
+#9 exporting attestation manifest sha256:97f6f6e27819330639992564c8a6f0b03066abf91e1a0d7f6eaafc9f92149ae5 0.0s done
+#9 exporting manifest list sha256:c60ccedc22fed10e14b213a0c71d735c90721bbb8a7cc802523dc18f628639b7 0.0s done
+#9 naming to docker.io/library/flash-sale-engine:local done
+#9 unpacking to docker.io/library/flash-sale-engine:local
+#9 unpacking to docker.io/library/flash-sale-engine:local 1.4s done
+#9 DONE 3.9s
+
+#10 resolving provenance for metadata file
+#10 DONE 0.0s
+ Image flash-sale-engine:local Built 
+ Container flash-sale-engine-nginx-1 Running 
+ Container flash_postgres Running 
+ Container flash_redis Running 
+ Container flash_rabbitmq Running 
+ Container flash-sale-engine-app-1 Recreate 
+ Container flash-sale-engine-app-2 Recreate 
+ Container flash-sale-engine-app-2 Recreated 
+ Container flash-sale-engine-app-1 Recreated 
+ Container flash_redis Waiting 
+ Container flash_rabbitmq Waiting 
+ Container flash_postgres Waiting 
+ Container flash_postgres Healthy 
+ Container flash_redis Healthy 
+ Container flash_rabbitmq Healthy 
+ Container flash-sale-engine-app-1 Starting 
+ Container flash-sale-engine-app-1 Started 
+ Container flash-sale-engine-app-2 Starting 
+ Container flash-sale-engine-app-2 Started 
