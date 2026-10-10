@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.Callable;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -49,6 +51,7 @@ import com.flashsale.engine.consumer.DLQConsumer;
 import com.flashsale.engine.dto.OrderRequest;
 import com.flashsale.engine.repository.OrderRepository;
 import com.flashsale.engine.service.OrderProcessingService;
+import com.flashsale.engine.service.InventoryService;
 
 @Testcontainers
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -90,6 +93,8 @@ class OrderFlowIntegrationTests {
     StringRedisTemplate redis;
     @Autowired
     OrderRepository orders;
+    @Autowired
+    InventoryService inventory;
     @Autowired
     RabbitAdmin rabbitAdmin;
     @MockitoSpyBean(name = "rabbitTemplateForRecovery")
@@ -294,4 +299,148 @@ class OrderFlowIntegrationTests {
         assertNull(redis.opsForValue().get("idempotency:" + key));
         assertEquals(0, orders.count());
     }
+    private RabbitTemplate independentPublisher() {
+        RabbitTemplate direct = new RabbitTemplate(publisher.getConnectionFactory());
+        direct.setMessageConverter(publisher.getMessageConverter());
+        return direct;
+    }
+
+    private void assertDecision(OrderRequest request, String decision) {
+        assertEquals(decision, redis.opsForValue().get("order:" + request.getOrderId() + ":decision"));
+    }
+
+    @Test
+    @Order(9)
+    void lostConfirmAfterDeliveryKeepsConsumerOwnedReservation() throws Exception {
+        stock(1);
+        String key = "lost-confirm-consumer-" + UUID.randomUUID();
+        AtomicReference<OrderRequest> sent = new AtomicReference<>();
+        RabbitTemplate direct = independentPublisher();
+        doAnswer(invocation -> {
+            OrderRequest request = invocation.getArgument(2);
+            sent.set(request);
+            // A real broker delivery, but the original correlation never completes.
+            direct.convertAndSend(RabbitMQConfig.ORDER_EXCHANGE, RabbitMQConfig.ORDER_ROUTING_KEY, request);
+            await(() -> orders.findByIdempotencyKey(key).isPresent());
+            return null;
+        }).when(publisher).convertAndSend(eq(RabbitMQConfig.ORDER_EXCHANGE),
+                eq(RabbitMQConfig.ORDER_ROUTING_KEY), any(OrderRequest.class), any(CorrelationData.class));
+        assertEquals(503, post(key, 1).statusCode());
+        assertEquals(1, orders.count());
+        assertEquals(0, stock());
+        assertEquals(sent.get().getOrderId(), redis.opsForValue().get("idempotency:" + key));
+        assertDecision(sent.get(), "CONSUMER");
+        assertNull(redis.opsForValue().get("order:" + sent.get().getOrderId() + ":rolled-back"));
+    }
+
+    @Test
+    @Order(10)
+    void lostConfirmRefundWinsAndLaterDeliveryCannotPersist() throws Exception {
+        stock(1);
+        String key = "lost-confirm-refund-" + UUID.randomUUID();
+        CountDownLatch entered = new CountDownLatch(1);
+        CountDownLatch release = new CountDownLatch(1);
+        AtomicInteger completed = new AtomicInteger();
+        AtomicReference<OrderRequest> sent = new AtomicReference<>();
+        RabbitTemplate direct = independentPublisher();
+        doAnswer(invocation -> {
+            entered.countDown();
+            assertTrue(release.await(20, TimeUnit.SECONDS), "Consumer was not released");
+            Object result = invocation.callRealMethod();
+            completed.incrementAndGet();
+            return result;
+        }).when(processing).processOrder(any(OrderRequest.class));
+        doAnswer(invocation -> {
+            OrderRequest request = invocation.getArgument(2);
+            sent.set(request);
+            direct.convertAndSend(RabbitMQConfig.ORDER_EXCHANGE, RabbitMQConfig.ORDER_ROUTING_KEY, request);
+            assertTrue(entered.await(10, TimeUnit.SECONDS), "Message never reached the real consumer");
+            return null;
+        }).when(publisher).convertAndSend(eq(RabbitMQConfig.ORDER_EXCHANGE),
+                eq(RabbitMQConfig.ORDER_ROUTING_KEY), any(OrderRequest.class), any(CorrelationData.class));
+        try {
+            assertEquals(503, post(key, 1).statusCode());
+            assertEquals(1, stock());
+            assertNull(redis.opsForValue().get("idempotency:" + key));
+            assertDecision(sent.get(), "REFUND");
+        } finally {
+            release.countDown();
+        }
+        await(() -> completed.get() == 1);
+        assertEquals(0, orders.count());
+        assertEquals(1, stock());
+        assertDecision(sent.get(), "REFUND");
+    }
+
+    @Test
+    @Order(11)
+    void nackWithoutDeliveryRestoresStockAndOldDeliveryCannotUndoRetry() throws Exception {
+        stock(1);
+        String key = "nack-retry-" + UUID.randomUUID();
+        AtomicReference<OrderRequest> failed = new AtomicReference<>();
+        doAnswer(invocation -> {
+            failed.set(invocation.getArgument(2));
+            CorrelationData correlation = invocation.getArgument(3);
+            correlation.getFuture().complete(new CorrelationData.Confirm(false, "forced broker nack"));
+            return null;
+        }).when(publisher).convertAndSend(eq(RabbitMQConfig.ORDER_EXCHANGE),
+                eq(RabbitMQConfig.ORDER_ROUTING_KEY), any(OrderRequest.class), any(CorrelationData.class));
+        assertEquals(503, post(key, 1).statusCode());
+        assertEquals(1, stock());
+        assertEquals(0, orders.count());
+        assertNull(redis.opsForValue().get("idempotency:" + key));
+        assertDecision(failed.get(), "REFUND");
+        reset(publisher);
+        assertEquals(202, post(key, 1).statusCode());
+        await(() -> orders.count() == 1);
+        String replacement = orders.findByIdempotencyKey(key).orElseThrow().getOrderId();
+        assertNotEquals(failed.get().getOrderId(), replacement);
+        publisher.convertAndSend(RabbitMQConfig.ORDER_EXCHANGE, RabbitMQConfig.ORDER_ROUTING_KEY, failed.get());
+        verify(processing, timeout(10_000)).processOrder(argThat(r -> r.getOrderId().equals(failed.get().getOrderId())));
+        assertEquals(1, orders.count());
+        assertEquals(0, stock());
+        assertEquals(replacement, redis.opsForValue().get("idempotency:" + key));
+        assertDecision(failed.get(), "REFUND");
+    }
+
+    @Test
+    @Order(12)
+    void claimSurvivesCrashAndRedeliveryPersistsExactlyOnce() throws Exception {
+        stock(1);
+        String key = "claim-redelivery-" + UUID.randomUUID();
+        OrderRequest request = new OrderRequest(UUID.randomUUID().toString(), (long) PRODUCT_ID, 1, key);
+        assertEquals(1, inventory.reserveStock(Integer.toString(PRODUCT_ID), 1, key, request.getOrderId()));
+        // Simulate a consumer dying after Redis claim and before DB persistence.
+        assertTrue(inventory.claimForPersistence(request.getOrderId(), key));
+        assertEquals(0, orders.count());
+        publisher.convertAndSend(RabbitMQConfig.ORDER_EXCHANGE, RabbitMQConfig.ORDER_ROUTING_KEY, request);
+        await(() -> orders.count() == 1);
+        publisher.convertAndSend(RabbitMQConfig.ORDER_EXCHANGE, RabbitMQConfig.ORDER_ROUTING_KEY, request);
+        verify(processing, timeout(10_000).times(2)).processOrder(any(OrderRequest.class));
+        assertEquals(1, orders.count());
+        assertEquals(request.getOrderId(), orders.findByIdempotencyKey(key).orElseThrow().getOrderId());
+        assertEquals(0, stock());
+        assertEquals(request.getOrderId(), redis.opsForValue().get("idempotency:" + key));
+        assertDecision(request, "CONSUMER");
+        assertFalse(inventory.rollbackStockOnce(request.getOrderId(), Integer.toString(PRODUCT_ID), 1, key));
+        assertEquals(0, stock());
+    }
+
+    @Test
+    @Order(13)
+    void deadLetterOfClaimedOrderResumesPersistenceInsteadOfOrphaningReservation() throws Exception {
+        stock(1);
+        String key = "claim-dlq-" + UUID.randomUUID();
+        OrderRequest request = new OrderRequest(UUID.randomUUID().toString(), (long) PRODUCT_ID, 1, key);
+        assertEquals(1, inventory.reserveStock(Integer.toString(PRODUCT_ID), 1, key, request.getOrderId()));
+        assertTrue(inventory.claimForPersistence(request.getOrderId(), key));
+        publisher.convertAndSend(RabbitMQConfig.DLX_EXCHANGE, RabbitMQConfig.DLQ_ROUTING_KEY, request);
+        await(() -> orders.count() == 1);
+        assertEquals(1, orders.count());
+        assertEquals(0, stock());
+        assertEquals(request.getOrderId(), redis.opsForValue().get("idempotency:" + key));
+        assertDecision(request, "CONSUMER");
+        assertNull(redis.opsForValue().get("order:" + request.getOrderId() + ":rolled-back"));
+    }
+
 }
