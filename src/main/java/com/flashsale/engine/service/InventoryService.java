@@ -17,12 +17,15 @@ public class InventoryService {
     private final StringRedisTemplate redisTemplate;
     private final DefaultRedisScript<Long> stockDecrementScript;
     private final DefaultRedisScript<Long> rollbackOnceScript;
+    private final DefaultRedisScript<Long> claimPersistenceScript;
     
     public InventoryService(StringRedisTemplate redisTemplate, DefaultRedisScript<Long> stockDecrementScript,
-                            DefaultRedisScript<Long> rollbackOnceScript){
+                            DefaultRedisScript<Long> rollbackOnceScript,
+                            DefaultRedisScript<Long> claimPersistenceScript){
         this.redisTemplate = redisTemplate;
         this.stockDecrementScript = stockDecrementScript;
         this.rollbackOnceScript = rollbackOnceScript;
+        this.claimPersistenceScript = claimPersistenceScript;
 
     }
     
@@ -48,6 +51,20 @@ public class InventoryService {
         return redisTemplate.opsForValue().get("idempotency:" + idempotencyKey);
     }
 
+    public boolean claimForPersistence(String orderId, String idempotencyKey) {
+        Long result = redisTemplate.execute(claimPersistenceScript,
+                List.of("order:" + orderId + ":decision", "order:" + orderId + ":rolled-back",
+                        "idempotency:" + idempotencyKey), orderId);
+        if (result == null) {
+            throw new IllegalStateException("Redis returned no persistence decision");
+        }
+        return result == 1;
+    }
+
+    public boolean consumerOwnsOrder(String orderId) {
+        return "CONSUMER".equals(redisTemplate.opsForValue().get("order:" + orderId + ":decision"));
+    }
+
     public void rollbackStock(String productId, int quantity){
         redisTemplate.opsForValue().increment("product:" + productId +  ":stock" , quantity);
     }
@@ -59,8 +76,10 @@ public class InventoryService {
     public boolean rollbackStockOnce(String orderId, String productId, int quantity,
                                      String idempotencyKey) {
         List<String> keys = idempotencyKey == null
-                ? List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back")
+                ? List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back",
+                          "order:" + orderId + ":decision")
                 : List.of("product:" + productId + ":stock", "order:" + orderId + ":rolled-back",
+                          "order:" + orderId + ":decision",
                           "idempotency:" + idempotencyKey);
         log.debug("ORDER_TRACE event=REFUND_START key={} orderId={} epochMs={}",
                 idempotencyKey, orderId, System.currentTimeMillis());

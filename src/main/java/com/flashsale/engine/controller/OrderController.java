@@ -82,12 +82,12 @@ public class OrderController {
                         RabbitMQConfig.ORDER_ROUTING_KEY,
                         request);
             } catch (AmqpException e) {
-                // No routed broker acknowledgement: atomically release the reservation.
-                // A timeout is ambiguous: the broker may still have received the message.
+                // An ambiguous confirmation must not refund a consumer-owned order.
+                // If refund wins, any later delivery is discarded before persistence.
                 inventoryService.rollbackStockOnce(orderId, String.valueOf(productId), quantity,
                         idempotencyKey);
                 return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
-                        .body(new OrderResponse(null, "FAILED", "Could not queue order for processing, please retry\n"));
+                        .body(new OrderResponse(null, "FAILED", "Publish acknowledgement unavailable; retry with the same idempotency key\n"));
             }
 
             return ResponseEntity.status(HttpStatus.ACCEPTED)

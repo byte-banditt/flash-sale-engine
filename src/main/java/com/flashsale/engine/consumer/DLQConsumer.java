@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import com.flashsale.engine.config.RabbitMQConfig;
 import com.flashsale.engine.dto.OrderRequest;
 import com.flashsale.engine.service.InventoryService;
+import com.flashsale.engine.service.OrderProcessingService;
 
 @Component
 public class DLQConsumer {
@@ -15,9 +16,11 @@ public class DLQConsumer {
     private static final Logger log = LoggerFactory.getLogger(DLQConsumer.class);
 
     private final InventoryService inventoryService;
+    private final OrderProcessingService processingService;
 
-    public DLQConsumer(InventoryService inventoryService) {
+    public DLQConsumer(InventoryService inventoryService, OrderProcessingService processingService) {
         this.inventoryService = inventoryService;
+        this.processingService = processingService;
     }
 
     @RabbitListener(
@@ -30,6 +33,12 @@ public class DLQConsumer {
                     request.getOrderId(),
                     String.valueOf(request.getProductId()),
                     request.getQuantity(), request.getIdempotencyKey());
+
+            if (!restored && inventoryService.consumerOwnsOrder(request.getOrderId())) {
+                // A claim survives a crash/DB retry. Resume it rather than ack an orphan.
+                processingService.processOrder(request);
+                return;
+            }
 
             log.error("Order processing permanently failed after retries. Stock rollback applied={}. " +
                             "orderId={}, productId={}, quantity={}, idempotencyKey={}",

@@ -16,13 +16,20 @@ public class OrderProcessingService {
     private static final Logger log = LoggerFactory.getLogger(OrderProcessingService.class);
 
     private final OrderRepository orderRepository;
+    private final InventoryService inventoryService;
 
-    public OrderProcessingService(OrderRepository orderRepository) {
+    public OrderProcessingService(OrderRepository orderRepository, InventoryService inventoryService) {
         this.orderRepository = orderRepository;
+        this.inventoryService = inventoryService;
     }
 
     @Transactional
     public void processOrder(OrderRequest request) {
+        if (!inventoryService.claimForPersistence(request.getOrderId(), request.getIdempotencyKey())) {
+            log.debug("Refund won; discard delivery. key={} orderId={}",
+                    request.getIdempotencyKey(), request.getOrderId());
+            return;
+        }
         boolean alreadyProcessed = orderRepository
                 .findByIdempotencyKey(request.getIdempotencyKey())
                 .isPresent();
