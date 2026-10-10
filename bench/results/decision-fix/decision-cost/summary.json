@@ -1,0 +1,105 @@
+{
+  "script_sha": "19a73533d2b70e09a915549195fccb54800327ee",
+  "prefix": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a",
+  "runs": [
+    {
+      "batch": 1,
+      "case": "new_claim",
+      "samples": 1000,
+      "elapsed_ns": 191134086,
+      "calls_per_s": 5231.9291703940235,
+      "p50_ms": 0.16202,
+      "p95_ms": 0.27437154999999996,
+      "p99_ms": 0.9864851499999999,
+      "errors": 0
+    },
+    {
+      "batch": 1,
+      "case": "resume_claim",
+      "samples": 1000,
+      "elapsed_ns": 147373500,
+      "calls_per_s": 6785.480428978072,
+      "p50_ms": 0.1335615,
+      "p95_ms": 0.20783605,
+      "p99_ms": 0.37831864999999953,
+      "errors": 0
+    },
+    {
+      "batch": 1,
+      "case": "refund_blocks",
+      "samples": 1000,
+      "elapsed_ns": 134678615,
+      "calls_per_s": 7425.083781860988,
+      "p50_ms": 0.1258215,
+      "p95_ms": 0.17943924999999997,
+      "p99_ms": 0.24052002999999988,
+      "errors": 0
+    },
+    {
+      "batch": 2,
+      "case": "new_claim",
+      "samples": 1000,
+      "elapsed_ns": 170346671,
+      "calls_per_s": 5870.381816853937,
+      "p50_ms": 0.159828,
+      "p95_ms": 0.23761159999999995,
+      "p99_ms": 0.30048021,
+      "errors": 0
+    },
+    {
+      "batch": 2,
+      "case": "resume_claim",
+      "samples": 1000,
+      "elapsed_ns": 148339022,
+      "calls_per_s": 6741.314500509516,
+      "p50_ms": 0.141322,
+      "p95_ms": 0.18860829999999995,
+      "p99_ms": 0.22275385999999991,
+      "errors": 0
+    },
+    {
+      "batch": 2,
+      "case": "refund_blocks",
+      "samples": 1000,
+      "elapsed_ns": 142760019,
+      "calls_per_s": 7004.762306735193,
+      "p50_ms": 0.1301975,
+      "p95_ms": 0.20745459999999996,
+      "p99_ms": 0.30684479,
+      "errors": 0
+    },
+    {
+      "batch": 3,
+      "case": "new_claim",
+      "samples": 1000,
+      "elapsed_ns": 142921019,
+      "calls_per_s": 6996.871467869957,
+      "p50_ms": 0.134639,
+      "p95_ms": 0.19169079999999988,
+      "p99_ms": 0.25032684,
+      "errors": 0
+    },
+    {
+      "batch": 3,
+      "case": "resume_claim",
+      "samples": 1000,
+      "elapsed_ns": 127250157,
+      "calls_per_s": 7858.536473161286,
+      "p50_ms": 0.1208445,
+      "p95_ms": 0.16239239999999994,
+      "p99_ms": 0.22090332,
+      "errors": 0
+    },
+    {
+      "batch": 3,
+      "case": "refund_blocks",
+      "samples": 1000,
+      "elapsed_ns": 137722140,
+      "calls_per_s": 7260.996670542587,
+      "p50_ms": 0.130463,
+      "p95_ms": 0.18171284999999995,
+      "p99_ms": 0.27431027999999985,
+      "errors": 0
+    }
+  ]
+}

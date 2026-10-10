@@ -1,0 +1,170 @@
+2026-10-10T13:41:46.545877+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"69.22%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.71%","MemUsage":"369.3MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"338MB / 456MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"64.75%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.41%","MemUsage":"341.8MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"340MB / 458MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"23.81%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"13.53%","MemUsage":"8.656MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.51GB / 2.53GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 62.1MB","CPUPerc":"36.83%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"36.72%","MemUsage":"141MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"17.7MB / 18.5MB","PIDs":"56"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"11.53%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"10.22%","MemUsage":"39.23MiB / 384MiB","Name":"flash_redis","NetIO":"577MB / 137MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.6GB","CPUPerc":"43.51%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.07%","MemUsage":"103.9MiB / 384MiB","Name":"flash_postgres","NetIO":"1.78GB / 1.36GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2252988416   289947648    97943552  2901590016  2904526848
+Swap:     4294967296   319029248  3975938048
+2026-10-10T13:41:53.719518+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"42.04%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.67%","MemUsage":"369.1MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"341MB / 461MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"70.03%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.54%","MemUsage":"342.6MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"343MB / 462MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"12.68%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.05%","MemUsage":"9.633MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.52GB / 2.54GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 69.3MB","CPUPerc":"27.58%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"37.07%","MemUsage":"142.4MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"19.8MB / 20.7MB","PIDs":"56"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"6.61%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.64%","MemUsage":"29.32MiB / 384MiB","Name":"flash_redis","NetIO":"579MB / 138MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.6GB","CPUPerc":"31.62%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"26.96%","MemUsage":"103.5MiB / 384MiB","Name":"flash_postgres","NetIO":"1.78GB / 1.36GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2216579072   311681024    97943552  2916270080  2940936192
+Swap:     4294967296   319029248  3975938048
+2026-10-10T13:42:00.880149+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"47.12%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.65%","MemUsage":"368.9MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"345MB / 465MB","PIDs":"105"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"44.08%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.50%","MemUsage":"342.4MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"346MB / 466MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"13.61%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.05%","MemUsage":"9.633MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.52GB / 2.54GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 75.6MB","CPUPerc":"155.81%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"36.96%","MemUsage":"141.9MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"21.8MB / 22.8MB","PIDs":"56"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"7.19%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"6.47%","MemUsage":"24.86MiB / 384MiB","Name":"flash_redis","NetIO":"581MB / 138MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.7GB","CPUPerc":"35.90%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.30%","MemUsage":"104.8MiB / 384MiB","Name":"flash_postgres","NetIO":"1.78GB / 1.36GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2248892416   269656064    97943552  2925965312  2908622848
+Swap:     4294967296   319029248  3975938048
+2026-10-10T13:42:08.015957+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"46.31%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.63%","MemUsage":"368.8MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"348MB / 469MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"46.04%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.60%","MemUsage":"343MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"349MB / 471MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"13.98%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.92%","MemUsage":"9.551MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.52GB / 2.54GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 81.3MB","CPUPerc":"127.75%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"37.48%","MemUsage":"143.9MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"23.6MB / 24.7MB","PIDs":"56"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"7.52%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"6.03%","MemUsage":"23.14MiB / 384MiB","Name":"flash_redis","NetIO":"583MB / 139MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.7GB","CPUPerc":"32.12%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"26.96%","MemUsage":"103.5MiB / 384MiB","Name":"flash_postgres","NetIO":"1.79GB / 1.36GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2263826432   244006912    97943552  2936705024  2893688832
+Swap:     4294967296   318967808  3975999488
+2026-10-10T13:42:15.271479+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"52.76%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.62%","MemUsage":"368.8MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"351MB / 474MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"52.11%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.55%","MemUsage":"342.7MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"353MB / 475MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"16.19%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.01%","MemUsage":"9.605MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.53GB / 2.55GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 90.2MB","CPUPerc":"35.78%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"36.40%","MemUsage":"139.8MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"25.9MB / 27.1MB","PIDs":"56"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"12.23%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"6.08%","MemUsage":"23.34MiB / 384MiB","Name":"flash_redis","NetIO":"585MB / 139MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.7GB","CPUPerc":"33.92%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.13%","MemUsage":"104.2MiB / 384MiB","Name":"flash_postgres","NetIO":"1.79GB / 1.37GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2285465600   217182208    97943552  2941931520  2872049664
+Swap:     4294967296   318959616  3976007680
+2026-10-10T13:42:22.432889+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"50.50%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.65%","MemUsage":"368.9MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"355MB / 478MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"50.52%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.48%","MemUsage":"342.3MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"356MB / 480MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"17.08%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.00%","MemUsage":"9.602MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.53GB / 2.55GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 98.2MB","CPUPerc":"36.99%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"36.52%","MemUsage":"140.2MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"28MB / 29.4MB","PIDs":"56"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"9.58%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"6.31%","MemUsage":"24.23MiB / 384MiB","Name":"flash_redis","NetIO":"587MB / 140MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.8GB","CPUPerc":"33.02%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.05%","MemUsage":"103.9MiB / 384MiB","Name":"flash_postgres","NetIO":"1.79GB / 1.37GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2281189376   209747968    97943552  2953650176  2876325888
+Swap:     4294967296   318926848  3976040448
+2026-10-10T13:42:29.838567+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"110.67%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.38%","MemUsage":"367.2MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"358MB / 482MB","PIDs":"92"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"46.33%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.53%","MemUsage":"342.6MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"359MB / 483MB","PIDs":"96"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"14.63%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.88%","MemUsage":"9.523MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.53GB / 2.55GB","PIDs":"2"}
+{"BlockIO":"6.37MB / 105MB","CPUPerc":"149.99%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"49.06%","MemUsage":"188.4MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"30MB / 31.4MB","PIDs":"105"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"13.75%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.59%","MemUsage":"29.14MiB / 384MiB","Name":"flash_redis","NetIO":"589MB / 140MB","PIDs":"13"}
+{"BlockIO":"104MB / 20.8GB","CPUPerc":"27.84%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.19%","MemUsage":"104.4MiB / 384MiB","Name":"flash_postgres","NetIO":"1.79GB / 1.37GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2321973248   158830592   103579648  2969362432  2835542016
+Swap:     4294967296   318926848  3976040448
+2026-10-10T13:42:36.995494+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"27.76%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.45%","MemUsage":"367.7MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"359MB / 485MB","PIDs":"92"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"29.12%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.32%","MemUsage":"341.2MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"361MB / 486MB","PIDs":"84"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"13.29%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.28%","MemUsage":"9.777MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.54GB / 2.56GB","PIDs":"2"}
+{"BlockIO":"684kB / 0B","CPUPerc":"98.67%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"23.85%","MemUsage":"91.58MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"150kB / 109kB","PIDs":"55"}
+{"BlockIO":"107MB / 180MB","CPUPerc":"6.07%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"6.93%","MemUsage":"26.61MiB / 384MiB","Name":"flash_redis","NetIO":"591MB / 140MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.8GB","CPUPerc":"14.79%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.17%","MemUsage":"104.3MiB / 384MiB","Name":"flash_postgres","NetIO":"1.79GB / 1.37GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2240450560   237031424    73162752  2942312448  2917064704
+Swap:     4294967296   318922752  3976044544
+2026-10-10T13:42:44.187893+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"32.47%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.41%","MemUsage":"367.4MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"361MB / 487MB","PIDs":"94"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"47.78%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.29%","MemUsage":"341.1MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"362MB / 489MB","PIDs":"86"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"12.07%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.52%","MemUsage":"9.293MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.54GB / 2.56GB","PIDs":"2"}
+{"BlockIO":"692kB / 442kB","CPUPerc":"184.38%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"55.36%","MemUsage":"212.6MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"557kB / 314kB","PIDs":"106"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"2.85%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"6.90%","MemUsage":"26.48MiB / 384MiB","Name":"flash_redis","NetIO":"593MB / 141MB","PIDs":"7"}
+{"BlockIO":"104MB / 20.8GB","CPUPerc":"9.38%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.16%","MemUsage":"104.3MiB / 384MiB","Name":"flash_postgres","NetIO":"1.79GB / 1.37GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2323259392   156753920   104484864  2971049984  2834255872
+Swap:     4294967296   318922752  3976044544
+2026-10-10T13:42:51.298407+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"48.92%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.65%","MemUsage":"368.9MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"364MB / 492MB","PIDs":"110"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"50.44%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.78%","MemUsage":"344.2MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"366MB / 493MB","PIDs":"101"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"15.33%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"12.55%","MemUsage":"8.035MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.54GB / 2.56GB","PIDs":"2"}
+{"BlockIO":"692kB / 8.64MB","CPUPerc":"33.39%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"41.60%","MemUsage":"159.8MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"2.64MB / 2.67MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"8.21%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.04%","MemUsage":"27.05MiB / 384MiB","Name":"flash_redis","NetIO":"595MB / 141MB","PIDs":"7"}
+{"BlockIO":"105MB / 20.8GB","CPUPerc":"34.43%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.34%","MemUsage":"105MiB / 384MiB","Name":"flash_postgres","NetIO":"1.8GB / 1.37GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2309521408   158019584    97943552  2976993280  2847993856
+Swap:     4294967296   318918656  3976048640
+2026-10-10T13:42:58.434094+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"46.51%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.69%","MemUsage":"369.2MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"368MB / 496MB","PIDs":"110"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"46.13%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.73%","MemUsage":"343.9MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"369MB / 498MB","PIDs":"102"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"14.62%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.76%","MemUsage":"9.449MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.55GB / 2.57GB","PIDs":"2"}
+{"BlockIO":"692kB / 16MB","CPUPerc":"32.18%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"40.33%","MemUsage":"154.9MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"4.67MB / 4.81MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"8.85%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.52%","MemUsage":"28.87MiB / 384MiB","Name":"flash_redis","NetIO":"597MB / 142MB","PIDs":"7"}
+{"BlockIO":"105MB / 20.9GB","CPUPerc":"34.08%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.39%","MemUsage":"105.2MiB / 384MiB","Name":"flash_postgres","NetIO":"1.8GB / 1.38GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2307842048   148561920    97943552  2988113920  2849673216
+Swap:     4294967296   318918656  3976048640
+2026-10-10T13:43:05.556857+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"45.59%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.85%","MemUsage":"370.2MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"371MB / 501MB","PIDs":"110"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"45.85%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.66%","MemUsage":"343.4MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"372MB / 502MB","PIDs":"102"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"14.94%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.21%","MemUsage":"9.094MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.55GB / 2.57GB","PIDs":"2"}
+{"BlockIO":"692kB / 22.8MB","CPUPerc":"29.24%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"39.85%","MemUsage":"153MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"6.71MB / 6.96MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"9.92%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.63%","MemUsage":"29.3MiB / 384MiB","Name":"flash_redis","NetIO":"599MB / 142MB","PIDs":"7"}
+{"BlockIO":"105MB / 20.9GB","CPUPerc":"29.40%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.32%","MemUsage":"104.9MiB / 384MiB","Name":"flash_postgres","NetIO":"1.8GB / 1.38GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2307227648   134979584    97943552  3002335232  2850287616
+Swap:     4294967296   318918656  3976048640
+2026-10-10T13:43:12.718099+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"51.02%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.77%","MemUsage":"369.7MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"374MB / 505MB","PIDs":"110"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"48.94%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.67%","MemUsage":"343.5MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"376MB / 506MB","PIDs":"102"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"14.34%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.58%","MemUsage":"9.328MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.55GB / 2.57GB","PIDs":"2"}
+{"BlockIO":"692kB / 28.4MB","CPUPerc":"35.24%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"38.40%","MemUsage":"147.5MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"8.45MB / 8.78MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"7.87%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.63%","MemUsage":"29.28MiB / 384MiB","Name":"flash_redis","NetIO":"601MB / 143MB","PIDs":"7"}
+{"BlockIO":"105MB / 20.9GB","CPUPerc":"33.89%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.45%","MemUsage":"105.4MiB / 384MiB","Name":"flash_postgres","NetIO":"1.8GB / 1.38GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2308800512    73289728   100483072  3064963072  2848714752
+Swap:     4294967296   318910464  3976056832
+2026-10-10T13:43:19.875337+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"52.33%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.68%","MemUsage":"369.2MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"377MB / 509MB","PIDs":"110"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"53.76%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.58%","MemUsage":"342.9MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"378MB / 510MB","PIDs":"102"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"14.63%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"13.79%","MemUsage":"8.824MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.56GB / 2.58GB","PIDs":"2"}
+{"BlockIO":"692kB / 35.6MB","CPUPerc":"172.46%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"37.88%","MemUsage":"145.5MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"10.7MB / 11.2MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"8.60%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"7.88%","MemUsage":"30.25MiB / 384MiB","Name":"flash_redis","NetIO":"603MB / 143MB","PIDs":"7"}
+{"BlockIO":"105MB / 20.9GB","CPUPerc":"35.65%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.52%","MemUsage":"105.7MiB / 384MiB","Name":"flash_postgres","NetIO":"1.81GB / 1.38GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2249621504   122519552    97943552  3072397312  2907893760
+Swap:     4294967296   318910464  3976056832
+2026-10-10T13:43:27.052611+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"60.07%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.66%","MemUsage":"369MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"380MB / 513MB","PIDs":"109"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"43.96%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.75%","MemUsage":"344MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"382MB / 515MB","PIDs":"102"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"12.33%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"14.98%","MemUsage":"9.586MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.56GB / 2.58GB","PIDs":"2"}
+{"BlockIO":"692kB / 42.7MB","CPUPerc":"29.54%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"38.00%","MemUsage":"145.9MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"12.8MB / 13.3MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"7.15%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"8.07%","MemUsage":"30.98MiB / 384MiB","Name":"flash_redis","NetIO":"605MB / 143MB","PIDs":"7"}
+{"BlockIO":"105MB / 21GB","CPUPerc":"29.52%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.53%","MemUsage":"105.7MiB / 384MiB","Name":"flash_postgres","NetIO":"1.81GB / 1.38GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2241781760   119562240    97943552  3083177984  2915733504
+Swap:     4294967296   318910464  3976056832
+2026-10-10T13:43:34.236173+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"52.67%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.63%","MemUsage":"368.9MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"384MB / 518MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"52.82%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.53%","MemUsage":"342.6MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"385MB / 519MB","PIDs":"97"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"15.22%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.22%","MemUsage":"9.738MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.56GB / 2.58GB","PIDs":"2"}
+{"BlockIO":"692kB / 49.5MB","CPUPerc":"37.73%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"37.36%","MemUsage":"143.5MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"14.5MB / 15.2MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"8.51%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"8.25%","MemUsage":"31.7MiB / 384MiB","Name":"flash_redis","NetIO":"607MB / 144MB","PIDs":"7"}
+{"BlockIO":"105MB / 21GB","CPUPerc":"37.51%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.55%","MemUsage":"105.8MiB / 384MiB","Name":"flash_postgres","NetIO":"1.81GB / 1.38GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2246049792   110473216    97943552  3088003072  2911465472
+Swap:     4294967296   318881792  3976085504
+2026-10-10T13:43:41.407381+00:00
+{"BlockIO":"37.6MB / 0B","CPUPerc":"52.28%","Container":"75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd","ID":"75393ed4e7e8","MemPerc":"57.61%","MemUsage":"368.7MiB / 640MiB","Name":"flash-sale-engine-app-2","NetIO":"387MB / 522MB","PIDs":"106"}
+{"BlockIO":"35.4MB / 0B","CPUPerc":"51.22%","Container":"18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181","ID":"18ca92a71e9a","MemPerc":"53.59%","MemUsage":"343MiB / 640MiB","Name":"flash-sale-engine-app-1","NetIO":"389MB / 523MB","PIDs":"97"}
+{"BlockIO":"5.01MB / 12.3kB","CPUPerc":"15.51%","Container":"395a72f0eb57429dea7f4812c9c7500841f2608091b2718d09499459a6b7a142","ID":"395a72f0eb57","MemPerc":"15.02%","MemUsage":"9.613MiB / 64MiB","Name":"flash-sale-engine-nginx-1","NetIO":"2.57GB / 2.59GB","PIDs":"2"}
+{"BlockIO":"692kB / 57.1MB","CPUPerc":"32.99%","Container":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","ID":"af42eb2bb203","MemPerc":"36.40%","MemUsage":"139.8MiB / 384MiB","Name":"flash_rabbitmq","NetIO":"16.8MB / 17.6MB","PIDs":"56"}
+{"BlockIO":"107MB / 183MB","CPUPerc":"7.83%","Container":"4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4","ID":"4dbbf4ae879e","MemPerc":"8.35%","MemUsage":"32.07MiB / 384MiB","Name":"flash_redis","NetIO":"608MB / 144MB","PIDs":"7"}
+{"BlockIO":"105MB / 21GB","CPUPerc":"40.50%","Container":"ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811","ID":"ff2f6134a6b2","MemPerc":"27.46%","MemUsage":"105.4MiB / 384MiB","Name":"flash_postgres","NetIO":"1.81GB / 1.39GB","PIDs":"26"}
+               total        used        free      shared  buff/cache   available
+Mem:      5157515264  2233315328   100134912    97943552  3111370752  2924199936
+Swap:     4294967296   318849024  3976118272

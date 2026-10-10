@@ -1,0 +1,4328 @@
+{
+  "limits": [
+    {
+      "group": "after-rabbit",
+      "container": "/flash-sale-engine-app-1",
+      "memory_bytes": 671088640,
+      "memory_plus_swap_bytes": 671088640,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "after-rabbit",
+      "container": "/flash-sale-engine-app-2",
+      "memory_bytes": 671088640,
+      "memory_plus_swap_bytes": 671088640,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "after-rabbit",
+      "container": "/flash_postgres",
+      "memory_bytes": 402653184,
+      "memory_plus_swap_bytes": 402653184,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "after-rabbit",
+      "container": "/flash_redis",
+      "memory_bytes": 402653184,
+      "memory_plus_swap_bytes": 402653184,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "after-rabbit",
+      "container": "/flash_rabbitmq",
+      "memory_bytes": 402653184,
+      "memory_plus_swap_bytes": 402653184,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "repro",
+      "container": "/flash-sale-engine-app-1",
+      "memory_bytes": 671088640,
+      "memory_plus_swap_bytes": 671088640,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "repro",
+      "container": "/flash-sale-engine-app-2",
+      "memory_bytes": 671088640,
+      "memory_plus_swap_bytes": 671088640,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "repro",
+      "container": "/flash_postgres",
+      "memory_bytes": 402653184,
+      "memory_plus_swap_bytes": 402653184,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "repro",
+      "container": "/flash_redis",
+      "memory_bytes": 402653184,
+      "memory_plus_swap_bytes": 402653184,
+      "cpu_quota": 0,
+      "oom_killed": false
+    },
+    {
+      "group": "repro",
+      "container": "/flash_rabbitmq",
+      "memory_bytes": 402653184,
+      "memory_plus_swap_bytes": 402653184,
+      "cpu_quota": 0,
+      "oom_killed": false
+    }
+  ],
+  "cgroup_snapshots": [
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "after-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-0.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-1.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-2.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-3.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "snapshot": "before-cgroup-4.txt",
+      "nr_throttled": 0,
+      "throttled_usec": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0
+    }
+  ],
+  "host_samples": [
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "min_observed_available_host_bytes": 2975379456,
+      "max_observed_swap_used_bytes": 425631744
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "min_observed_available_host_bytes": 2979741696,
+      "max_observed_swap_used_bytes": 424538112
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "min_observed_available_host_bytes": 2878091264,
+      "max_observed_swap_used_bytes": 426127360
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-1",
+      "min_observed_available_host_bytes": 2923769856,
+      "max_observed_swap_used_bytes": 425275392
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-2",
+      "min_observed_available_host_bytes": 2875170816,
+      "max_observed_swap_used_bytes": 425160704
+    },
+    {
+      "group": "after-normal",
+      "run": "normal-3",
+      "min_observed_available_host_bytes": 2837549056,
+      "max_observed_swap_used_bytes": 424964096
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "min_observed_available_host_bytes": 2773618688,
+      "max_observed_swap_used_bytes": 268210176
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "min_observed_available_host_bytes": 2816069632,
+      "max_observed_swap_used_bytes": 268201984
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "min_observed_available_host_bytes": 2834644992,
+      "max_observed_swap_used_bytes": 268509184
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "min_observed_available_host_bytes": 2474643456,
+      "max_observed_swap_used_bytes": 282742784
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "min_observed_available_host_bytes": 2006155264,
+      "max_observed_swap_used_bytes": 312057856
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "min_observed_available_host_bytes": 2466676736,
+      "max_observed_swap_used_bytes": 319643648
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "min_observed_available_host_bytes": 2795925504,
+      "max_observed_swap_used_bytes": 319377408
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "min_observed_available_host_bytes": 2834255872,
+      "max_observed_swap_used_bytes": 319029248
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "min_observed_available_host_bytes": 2904481792,
+      "max_observed_swap_used_bytes": 318812160
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "min_observed_available_host_bytes": 2879377408,
+      "max_observed_swap_used_bytes": 322183168
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "min_observed_available_host_bytes": 2325958656,
+      "max_observed_swap_used_bytes": 345198592
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "min_observed_available_host_bytes": 2836586496,
+      "max_observed_swap_used_bytes": 347090944
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "min_observed_available_host_bytes": 2868850688,
+      "max_observed_swap_used_bytes": 352464896
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "min_observed_available_host_bytes": 2741211136,
+      "max_observed_swap_used_bytes": 355074048
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "min_observed_available_host_bytes": 2690490368,
+      "max_observed_swap_used_bytes": 369344512
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "min_observed_available_host_bytes": 2545520640,
+      "max_observed_swap_used_bytes": 383496192
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "min_observed_available_host_bytes": 2633306112,
+      "max_observed_swap_used_bytes": 412205056
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "min_observed_available_host_bytes": 2578874368,
+      "max_observed_swap_used_bytes": 417411072
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "min_observed_available_host_bytes": 2632577024,
+      "max_observed_swap_used_bytes": 426983424
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "min_observed_available_host_bytes": 2943131648,
+      "max_observed_swap_used_bytes": 427503616
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-1",
+      "min_observed_available_host_bytes": 2686578688,
+      "max_observed_swap_used_bytes": 73232384
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-2",
+      "min_observed_available_host_bytes": 2677518336,
+      "max_observed_swap_used_bytes": 74346496
+    },
+    {
+      "group": "before-normal",
+      "run": "normal-3",
+      "min_observed_available_host_bytes": 2673033216,
+      "max_observed_swap_used_bytes": 78872576
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "min_observed_available_host_bytes": 2830856192,
+      "max_observed_swap_used_bytes": 177217536
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "min_observed_available_host_bytes": 2720079872,
+      "max_observed_swap_used_bytes": 59920384
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "min_observed_available_host_bytes": 2713182208,
+      "max_observed_swap_used_bytes": 61685760
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "min_observed_available_host_bytes": 2697879552,
+      "max_observed_swap_used_bytes": 63082496
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "min_observed_available_host_bytes": 2697175040,
+      "max_observed_swap_used_bytes": 64966656
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "min_observed_available_host_bytes": 2679750656,
+      "max_observed_swap_used_bytes": 66846720
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "min_observed_available_host_bytes": 2692415488,
+      "max_observed_swap_used_bytes": 67977216
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "min_observed_available_host_bytes": 2705956864,
+      "max_observed_swap_used_bytes": 68960256
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "min_observed_available_host_bytes": 2702880768,
+      "max_observed_swap_used_bytes": 70037504
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "min_observed_available_host_bytes": 2712764416,
+      "max_observed_swap_used_bytes": 71245824
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "min_observed_available_host_bytes": 2714787840,
+      "max_observed_swap_used_bytes": 71954432
+    }
+  ]
+}

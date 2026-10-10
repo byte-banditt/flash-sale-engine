@@ -1,0 +1,225 @@
+{
+  "oom_events": 0,
+  "nonzero_throttling_snapshots": 0,
+  "nonzero_oom_snapshots": 0,
+  "unavailable_cgroup_snapshots": 0,
+  "events": [
+    {
+      "group": "after-kill",
+      "run": "kill-1",
+      "action": "die",
+      "container": "flash-sale-engine-app-1"
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-2",
+      "action": "die",
+      "container": "flash-sale-engine-app-1"
+    },
+    {
+      "group": "after-kill",
+      "run": "kill-3",
+      "action": "die",
+      "container": "flash-sale-engine-app-1"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-1",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-2",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-3",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-4",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-5",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-6",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-7",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-8",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-9",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-10",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-11",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-12",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-13",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-14",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-15",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-16",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-17",
+      "action": "die",
+      "container": "peaceful_mcclintock"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-18",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-19",
+      "action": "die",
+      "container": "wireless-triage-smoke"
+    },
+    {
+      "group": "after-rabbit",
+      "run": "rabbit-20",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "diagnostic",
+      "run": "trace-rabbit-1",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-1",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-2",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-3",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-4",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-5",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-6",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-7",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-8",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-9",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    },
+    {
+      "group": "repro",
+      "run": "rabbit-10",
+      "action": "die",
+      "container": "flash_rabbitmq"
+    }
+  ],
+  "jvm_oom_matching_log_lines": 0
+}

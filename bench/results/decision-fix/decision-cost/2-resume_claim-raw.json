@@ -1,0 +1,5002 @@
+[
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:0",
+    "elapsed_ns": 192297,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:1",
+    "elapsed_ns": 153150,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:2",
+    "elapsed_ns": 134534,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:3",
+    "elapsed_ns": 143632,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:4",
+    "elapsed_ns": 135826,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:5",
+    "elapsed_ns": 130396,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:6",
+    "elapsed_ns": 138972,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:7",
+    "elapsed_ns": 122379,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:8",
+    "elapsed_ns": 124364,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:9",
+    "elapsed_ns": 118773,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:10",
+    "elapsed_ns": 129825,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:11",
+    "elapsed_ns": 190713,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:12",
+    "elapsed_ns": 150445,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:13",
+    "elapsed_ns": 246534,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:14",
+    "elapsed_ns": 139654,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:15",
+    "elapsed_ns": 121749,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:16",
+    "elapsed_ns": 147669,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:17",
+    "elapsed_ns": 152138,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:18",
+    "elapsed_ns": 134273,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:19",
+    "elapsed_ns": 152239,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:20",
+    "elapsed_ns": 137259,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:21",
+    "elapsed_ns": 122550,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:22",
+    "elapsed_ns": 120967,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:23",
+    "elapsed_ns": 135927,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:24",
+    "elapsed_ns": 135535,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:25",
+    "elapsed_ns": 134353,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:26",
+    "elapsed_ns": 119444,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:27",
+    "elapsed_ns": 134684,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:28",
+    "elapsed_ns": 131207,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:29",
+    "elapsed_ns": 137921,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:30",
+    "elapsed_ns": 139523,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:31",
+    "elapsed_ns": 144894,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:32",
+    "elapsed_ns": 130997,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:33",
+    "elapsed_ns": 117601,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:34",
+    "elapsed_ns": 154443,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:35",
+    "elapsed_ns": 159843,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:36",
+    "elapsed_ns": 164061,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:37",
+    "elapsed_ns": 142540,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:38",
+    "elapsed_ns": 126588,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:39",
+    "elapsed_ns": 138411,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:40",
+    "elapsed_ns": 132410,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:41",
+    "elapsed_ns": 149613,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:42",
+    "elapsed_ns": 139974,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:43",
+    "elapsed_ns": 132510,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:44",
+    "elapsed_ns": 147138,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:45",
+    "elapsed_ns": 128251,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:46",
+    "elapsed_ns": 132119,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:47",
+    "elapsed_ns": 135616,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:48",
+    "elapsed_ns": 132449,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:49",
+    "elapsed_ns": 152599,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:50",
+    "elapsed_ns": 129023,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:51",
+    "elapsed_ns": 147209,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:52",
+    "elapsed_ns": 150605,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:53",
+    "elapsed_ns": 138992,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:54",
+    "elapsed_ns": 127811,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:55",
+    "elapsed_ns": 162057,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:56",
+    "elapsed_ns": 161527,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:57",
+    "elapsed_ns": 116529,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:58",
+    "elapsed_ns": 138943,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:59",
+    "elapsed_ns": 105517,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:60",
+    "elapsed_ns": 138351,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:61",
+    "elapsed_ns": 158400,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:62",
+    "elapsed_ns": 125085,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:63",
+    "elapsed_ns": 179341,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:64",
+    "elapsed_ns": 139484,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:65",
+    "elapsed_ns": 138522,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:66",
+    "elapsed_ns": 150125,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:67",
+    "elapsed_ns": 137008,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:68",
+    "elapsed_ns": 156076,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:69",
+    "elapsed_ns": 140796,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:70",
+    "elapsed_ns": 127831,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:71",
+    "elapsed_ns": 132870,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:72",
+    "elapsed_ns": 153842,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:73",
+    "elapsed_ns": 115486,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:74",
+    "elapsed_ns": 134524,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:75",
+    "elapsed_ns": 126227,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:76",
+    "elapsed_ns": 134684,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:77",
+    "elapsed_ns": 136327,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:78",
+    "elapsed_ns": 126197,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:79",
+    "elapsed_ns": 175304,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:80",
+    "elapsed_ns": 118693,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:81",
+    "elapsed_ns": 116519,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:82",
+    "elapsed_ns": 154543,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:83",
+    "elapsed_ns": 121929,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:84",
+    "elapsed_ns": 125085,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:85",
+    "elapsed_ns": 148701,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:86",
+    "elapsed_ns": 122941,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:87",
+    "elapsed_ns": 108563,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:88",
+    "elapsed_ns": 144192,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:89",
+    "elapsed_ns": 130666,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:90",
+    "elapsed_ns": 108883,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:91",
+    "elapsed_ns": 139102,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:92",
+    "elapsed_ns": 137008,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:93",
+    "elapsed_ns": 115496,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:94",
+    "elapsed_ns": 170154,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:95",
+    "elapsed_ns": 135145,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:96",
+    "elapsed_ns": 130145,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:97",
+    "elapsed_ns": 164302,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:98",
+    "elapsed_ns": 121668,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:99",
+    "elapsed_ns": 155063,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:100",
+    "elapsed_ns": 145255,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:101",
+    "elapsed_ns": 150184,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:102",
+    "elapsed_ns": 120466,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:103",
+    "elapsed_ns": 141337,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:104",
+    "elapsed_ns": 133211,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:105",
+    "elapsed_ns": 131808,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:106",
+    "elapsed_ns": 153150,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:107",
+    "elapsed_ns": 109134,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:108",
+    "elapsed_ns": 138792,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:109",
+    "elapsed_ns": 127310,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:110",
+    "elapsed_ns": 151066,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:111",
+    "elapsed_ns": 158170,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:112",
+    "elapsed_ns": 116939,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:113",
+    "elapsed_ns": 133822,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:114",
+    "elapsed_ns": 129524,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:115",
+    "elapsed_ns": 138071,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:116",
+    "elapsed_ns": 159282,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:117",
+    "elapsed_ns": 120847,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:118",
+    "elapsed_ns": 149163,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:119",
+    "elapsed_ns": 140195,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:120",
+    "elapsed_ns": 142720,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:121",
+    "elapsed_ns": 129264,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:122",
+    "elapsed_ns": 132861,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:123",
+    "elapsed_ns": 123773,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:124",
+    "elapsed_ns": 139203,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:125",
+    "elapsed_ns": 123532,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:126",
+    "elapsed_ns": 151787,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:127",
+    "elapsed_ns": 133511,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:128",
+    "elapsed_ns": 157008,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:129",
+    "elapsed_ns": 152789,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:130",
+    "elapsed_ns": 164072,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:131",
+    "elapsed_ns": 144092,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:132",
+    "elapsed_ns": 124043,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:133",
+    "elapsed_ns": 146988,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:134",
+    "elapsed_ns": 141658,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:135",
+    "elapsed_ns": 154843,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:136",
+    "elapsed_ns": 170304,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:137",
+    "elapsed_ns": 138712,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:138",
+    "elapsed_ns": 123653,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:139",
+    "elapsed_ns": 187978,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:140",
+    "elapsed_ns": 148611,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:141",
+    "elapsed_ns": 126097,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:142",
+    "elapsed_ns": 120847,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:143",
+    "elapsed_ns": 103283,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:144",
+    "elapsed_ns": 133892,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:145",
+    "elapsed_ns": 117922,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:146",
+    "elapsed_ns": 146297,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:147",
+    "elapsed_ns": 134845,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:148",
+    "elapsed_ns": 108283,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:149",
+    "elapsed_ns": 111819,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:150",
+    "elapsed_ns": 175454,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:151",
+    "elapsed_ns": 142460,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:152",
+    "elapsed_ns": 143702,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:153",
+    "elapsed_ns": 126248,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:154",
+    "elapsed_ns": 161707,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:155",
+    "elapsed_ns": 150425,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:156",
+    "elapsed_ns": 140144,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:157",
+    "elapsed_ns": 148481,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:158",
+    "elapsed_ns": 147309,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:159",
+    "elapsed_ns": 156416,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:160",
+    "elapsed_ns": 142771,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:161",
+    "elapsed_ns": 167067,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:162",
+    "elapsed_ns": 161106,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:163",
+    "elapsed_ns": 268156,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:164",
+    "elapsed_ns": 211424,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:165",
+    "elapsed_ns": 185744,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:166",
+    "elapsed_ns": 215722,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:167",
+    "elapsed_ns": 145936,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:168",
+    "elapsed_ns": 151487,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:169",
+    "elapsed_ns": 150495,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:170",
+    "elapsed_ns": 138041,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:171",
+    "elapsed_ns": 163340,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:172",
+    "elapsed_ns": 158611,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:173",
+    "elapsed_ns": 174102,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:174",
+    "elapsed_ns": 149353,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:175",
+    "elapsed_ns": 157318,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:176",
+    "elapsed_ns": 140856,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:177",
+    "elapsed_ns": 153251,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:178",
+    "elapsed_ns": 136577,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:179",
+    "elapsed_ns": 137990,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:180",
+    "elapsed_ns": 131478,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:181",
+    "elapsed_ns": 146828,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:182",
+    "elapsed_ns": 166406,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:183",
+    "elapsed_ns": 138261,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:184",
+    "elapsed_ns": 159883,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:185",
+    "elapsed_ns": 141277,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:186",
+    "elapsed_ns": 150935,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:187",
+    "elapsed_ns": 138071,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:188",
+    "elapsed_ns": 122450,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:189",
+    "elapsed_ns": 157028,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:190",
+    "elapsed_ns": 155946,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:191",
+    "elapsed_ns": 115917,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:192",
+    "elapsed_ns": 152138,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:193",
+    "elapsed_ns": 123903,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:194",
+    "elapsed_ns": 138942,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:195",
+    "elapsed_ns": 124624,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:196",
+    "elapsed_ns": 136878,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:197",
+    "elapsed_ns": 132169,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:198",
+    "elapsed_ns": 139123,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:199",
+    "elapsed_ns": 146166,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:200",
+    "elapsed_ns": 506292,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:201",
+    "elapsed_ns": 181124,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:202",
+    "elapsed_ns": 128672,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:203",
+    "elapsed_ns": 173470,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:204",
+    "elapsed_ns": 141026,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:205",
+    "elapsed_ns": 169613,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:206",
+    "elapsed_ns": 126518,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:207",
+    "elapsed_ns": 146036,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:208",
+    "elapsed_ns": 167969,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:209",
+    "elapsed_ns": 148521,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:210",
+    "elapsed_ns": 295399,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:211",
+    "elapsed_ns": 231173,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:212",
+    "elapsed_ns": 178120,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:213",
+    "elapsed_ns": 201134,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:214",
+    "elapsed_ns": 149643,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:215",
+    "elapsed_ns": 205934,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:216",
+    "elapsed_ns": 158620,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:217",
+    "elapsed_ns": 131368,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:218",
+    "elapsed_ns": 151346,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:219",
+    "elapsed_ns": 154613,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:220",
+    "elapsed_ns": 149664,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:221",
+    "elapsed_ns": 132159,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:222",
+    "elapsed_ns": 176205,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:223",
+    "elapsed_ns": 141367,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:224",
+    "elapsed_ns": 133071,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:225",
+    "elapsed_ns": 141357,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:226",
+    "elapsed_ns": 145756,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:227",
+    "elapsed_ns": 126929,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:228",
+    "elapsed_ns": 139063,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:229",
+    "elapsed_ns": 173611,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:230",
+    "elapsed_ns": 134183,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:231",
+    "elapsed_ns": 150114,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:232",
+    "elapsed_ns": 137229,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:233",
+    "elapsed_ns": 132220,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:234",
+    "elapsed_ns": 127210,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:235",
+    "elapsed_ns": 109825,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:236",
+    "elapsed_ns": 145685,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:237",
+    "elapsed_ns": 153010,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:238",
+    "elapsed_ns": 189241,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:239",
+    "elapsed_ns": 188168,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:240",
+    "elapsed_ns": 132970,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:241",
+    "elapsed_ns": 186556,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:242",
+    "elapsed_ns": 159723,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:243",
+    "elapsed_ns": 142970,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:244",
+    "elapsed_ns": 145626,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:245",
+    "elapsed_ns": 161417,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:246",
+    "elapsed_ns": 137650,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:247",
+    "elapsed_ns": 148411,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:248",
+    "elapsed_ns": 182427,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:249",
+    "elapsed_ns": 131537,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:250",
+    "elapsed_ns": 129494,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:251",
+    "elapsed_ns": 152108,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:252",
+    "elapsed_ns": 142419,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:253",
+    "elapsed_ns": 135936,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:254",
+    "elapsed_ns": 150014,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:255",
+    "elapsed_ns": 151556,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:256",
+    "elapsed_ns": 139484,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:257",
+    "elapsed_ns": 113262,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:258",
+    "elapsed_ns": 140475,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:259",
+    "elapsed_ns": 126097,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:260",
+    "elapsed_ns": 121799,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:261",
+    "elapsed_ns": 133221,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:262",
+    "elapsed_ns": 140926,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:263",
+    "elapsed_ns": 201074,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:264",
+    "elapsed_ns": 125927,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:265",
+    "elapsed_ns": 190764,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:266",
+    "elapsed_ns": 120997,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:267",
+    "elapsed_ns": 126859,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:268",
+    "elapsed_ns": 140325,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:269",
+    "elapsed_ns": 137189,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:270",
+    "elapsed_ns": 135075,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:271",
+    "elapsed_ns": 166596,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:272",
+    "elapsed_ns": 155495,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:273",
+    "elapsed_ns": 138722,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:274",
+    "elapsed_ns": 158731,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:275",
+    "elapsed_ns": 135065,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:276",
+    "elapsed_ns": 137319,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:277",
+    "elapsed_ns": 179612,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:278",
+    "elapsed_ns": 147800,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:279",
+    "elapsed_ns": 141989,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:280",
+    "elapsed_ns": 141307,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:281",
+    "elapsed_ns": 115557,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:282",
+    "elapsed_ns": 121458,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:283",
+    "elapsed_ns": 136838,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:284",
+    "elapsed_ns": 149994,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:285",
+    "elapsed_ns": 137098,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:286",
+    "elapsed_ns": 129904,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:287",
+    "elapsed_ns": 144563,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:288",
+    "elapsed_ns": 132139,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:289",
+    "elapsed_ns": 137430,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:290",
+    "elapsed_ns": 132420,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:291",
+    "elapsed_ns": 137309,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:292",
+    "elapsed_ns": 137099,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:293",
+    "elapsed_ns": 192548,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:294",
+    "elapsed_ns": 124644,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:295",
+    "elapsed_ns": 158441,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:296",
+    "elapsed_ns": 168971,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:297",
+    "elapsed_ns": 118963,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:298",
+    "elapsed_ns": 128782,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:299",
+    "elapsed_ns": 161797,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:300",
+    "elapsed_ns": 147970,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:301",
+    "elapsed_ns": 139634,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:302",
+    "elapsed_ns": 127149,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:303",
+    "elapsed_ns": 134303,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:304",
+    "elapsed_ns": 107942,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:305",
+    "elapsed_ns": 123182,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:306",
+    "elapsed_ns": 140396,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:307",
+    "elapsed_ns": 145254,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:308",
+    "elapsed_ns": 156196,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:309",
+    "elapsed_ns": 161046,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:310",
+    "elapsed_ns": 140776,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:311",
+    "elapsed_ns": 132931,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:312",
+    "elapsed_ns": 121448,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:313",
+    "elapsed_ns": 159924,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:314",
+    "elapsed_ns": 120887,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:315",
+    "elapsed_ns": 129975,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:316",
+    "elapsed_ns": 156567,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:317",
+    "elapsed_ns": 133531,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:318",
+    "elapsed_ns": 149603,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:319",
+    "elapsed_ns": 129974,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:320",
+    "elapsed_ns": 115115,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:321",
+    "elapsed_ns": 185984,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:322",
+    "elapsed_ns": 200863,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:323",
+    "elapsed_ns": 145115,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:324",
+    "elapsed_ns": 148371,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:325",
+    "elapsed_ns": 122831,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:326",
+    "elapsed_ns": 142720,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:327",
+    "elapsed_ns": 131889,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:328",
+    "elapsed_ns": 145294,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:329",
+    "elapsed_ns": 137489,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:330",
+    "elapsed_ns": 138101,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:331",
+    "elapsed_ns": 133050,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:332",
+    "elapsed_ns": 122059,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:333",
+    "elapsed_ns": 146927,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:334",
+    "elapsed_ns": 160074,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:335",
+    "elapsed_ns": 142500,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:336",
+    "elapsed_ns": 152790,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:337",
+    "elapsed_ns": 126418,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:338",
+    "elapsed_ns": 131137,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:339",
+    "elapsed_ns": 119384,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:340",
+    "elapsed_ns": 119625,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:341",
+    "elapsed_ns": 125396,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:342",
+    "elapsed_ns": 144023,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:343",
+    "elapsed_ns": 144293,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:344",
+    "elapsed_ns": 129664,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:345",
+    "elapsed_ns": 123071,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:346",
+    "elapsed_ns": 150154,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:347",
+    "elapsed_ns": 136097,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:348",
+    "elapsed_ns": 150095,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:349",
+    "elapsed_ns": 181435,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:350",
+    "elapsed_ns": 126678,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:351",
+    "elapsed_ns": 161387,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:352",
+    "elapsed_ns": 109575,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:353",
+    "elapsed_ns": 109945,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:354",
+    "elapsed_ns": 128332,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:355",
+    "elapsed_ns": 119334,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:356",
+    "elapsed_ns": 137770,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:357",
+    "elapsed_ns": 127099,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:358",
+    "elapsed_ns": 135485,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:359",
+    "elapsed_ns": 147830,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:360",
+    "elapsed_ns": 159813,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:361",
+    "elapsed_ns": 156216,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:362",
+    "elapsed_ns": 142650,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:363",
+    "elapsed_ns": 178469,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:364",
+    "elapsed_ns": 141598,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:365",
+    "elapsed_ns": 159653,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:366",
+    "elapsed_ns": 113072,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:367",
+    "elapsed_ns": 148451,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:368",
+    "elapsed_ns": 126378,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:369",
+    "elapsed_ns": 136307,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:370",
+    "elapsed_ns": 131577,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:371",
+    "elapsed_ns": 127560,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:372",
+    "elapsed_ns": 120626,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:373",
+    "elapsed_ns": 152419,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:374",
+    "elapsed_ns": 131738,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:375",
+    "elapsed_ns": 185453,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:376",
+    "elapsed_ns": 156196,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:377",
+    "elapsed_ns": 166195,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:378",
+    "elapsed_ns": 124093,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:379",
+    "elapsed_ns": 98373,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:380",
+    "elapsed_ns": 126659,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:381",
+    "elapsed_ns": 143922,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:382",
+    "elapsed_ns": 172157,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:383",
+    "elapsed_ns": 140746,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:384",
+    "elapsed_ns": 182428,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:385",
+    "elapsed_ns": 140876,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:386",
+    "elapsed_ns": 126287,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:387",
+    "elapsed_ns": 128241,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:388",
+    "elapsed_ns": 172408,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:389",
+    "elapsed_ns": 171937,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:390",
+    "elapsed_ns": 156106,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:391",
+    "elapsed_ns": 169683,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:392",
+    "elapsed_ns": 161195,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:393",
+    "elapsed_ns": 151197,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:394",
+    "elapsed_ns": 146177,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:395",
+    "elapsed_ns": 140105,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:396",
+    "elapsed_ns": 141938,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:397",
+    "elapsed_ns": 146817,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:398",
+    "elapsed_ns": 168901,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:399",
+    "elapsed_ns": 157849,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:400",
+    "elapsed_ns": 123772,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:401",
+    "elapsed_ns": 155375,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:402",
+    "elapsed_ns": 133612,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:403",
+    "elapsed_ns": 187908,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:404",
+    "elapsed_ns": 170404,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:405",
+    "elapsed_ns": 162689,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:406",
+    "elapsed_ns": 155525,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:407",
+    "elapsed_ns": 137399,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:408",
+    "elapsed_ns": 165554,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:409",
+    "elapsed_ns": 195513,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:410",
+    "elapsed_ns": 149573,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:411",
+    "elapsed_ns": 150615,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:412",
+    "elapsed_ns": 155625,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:413",
+    "elapsed_ns": 205072,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:414",
+    "elapsed_ns": 136808,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:415",
+    "elapsed_ns": 144524,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:416",
+    "elapsed_ns": 137029,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:417",
+    "elapsed_ns": 142249,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:418",
+    "elapsed_ns": 141487,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:419",
+    "elapsed_ns": 133793,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:420",
+    "elapsed_ns": 140716,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:421",
+    "elapsed_ns": 151036,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:422",
+    "elapsed_ns": 130336,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:423",
+    "elapsed_ns": 167629,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:424",
+    "elapsed_ns": 112501,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:425",
+    "elapsed_ns": 148631,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:426",
+    "elapsed_ns": 147308,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:427",
+    "elapsed_ns": 138111,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:428",
+    "elapsed_ns": 154583,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:429",
+    "elapsed_ns": 140535,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:430",
+    "elapsed_ns": 165394,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:431",
+    "elapsed_ns": 168570,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:432",
+    "elapsed_ns": 146778,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:433",
+    "elapsed_ns": 180754,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:434",
+    "elapsed_ns": 153110,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:435",
+    "elapsed_ns": 139534,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:436",
+    "elapsed_ns": 162488,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:437",
+    "elapsed_ns": 135245,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:438",
+    "elapsed_ns": 157840,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:439",
+    "elapsed_ns": 149268,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:440",
+    "elapsed_ns": 168676,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:441",
+    "elapsed_ns": 216104,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:442",
+    "elapsed_ns": 133923,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:443",
+    "elapsed_ns": 160024,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:444",
+    "elapsed_ns": 146287,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:445",
+    "elapsed_ns": 135296,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:446",
+    "elapsed_ns": 140801,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:447",
+    "elapsed_ns": 141813,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:448",
+    "elapsed_ns": 148251,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:449",
+    "elapsed_ns": 137825,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:450",
+    "elapsed_ns": 161938,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:451",
+    "elapsed_ns": 127690,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:452",
+    "elapsed_ns": 135616,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:453",
+    "elapsed_ns": 132429,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:454",
+    "elapsed_ns": 151302,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:455",
+    "elapsed_ns": 195654,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:456",
+    "elapsed_ns": 144743,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:457",
+    "elapsed_ns": 131307,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:458",
+    "elapsed_ns": 161296,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:459",
+    "elapsed_ns": 142820,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:460",
+    "elapsed_ns": 165695,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:461",
+    "elapsed_ns": 128702,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:462",
+    "elapsed_ns": 136437,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:463",
+    "elapsed_ns": 180263,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:464",
+    "elapsed_ns": 211144,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:465",
+    "elapsed_ns": 174351,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:466",
+    "elapsed_ns": 133852,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:467",
+    "elapsed_ns": 136938,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:468",
+    "elapsed_ns": 133151,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:469",
+    "elapsed_ns": 145725,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:470",
+    "elapsed_ns": 161246,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:471",
+    "elapsed_ns": 128212,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:472",
+    "elapsed_ns": 139032,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:473",
+    "elapsed_ns": 150796,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:474",
+    "elapsed_ns": 123852,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:475",
+    "elapsed_ns": 135105,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:476",
+    "elapsed_ns": 137119,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:477",
+    "elapsed_ns": 124193,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:478",
+    "elapsed_ns": 130475,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:479",
+    "elapsed_ns": 164252,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:480",
+    "elapsed_ns": 154583,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:481",
+    "elapsed_ns": 121689,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:482",
+    "elapsed_ns": 151236,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:483",
+    "elapsed_ns": 130966,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:484",
+    "elapsed_ns": 154823,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:485",
+    "elapsed_ns": 138802,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:486",
+    "elapsed_ns": 157509,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:487",
+    "elapsed_ns": 148241,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:488",
+    "elapsed_ns": 149934,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:489",
+    "elapsed_ns": 153040,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:490",
+    "elapsed_ns": 149292,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:491",
+    "elapsed_ns": 151527,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:492",
+    "elapsed_ns": 159963,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:493",
+    "elapsed_ns": 130696,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:494",
+    "elapsed_ns": 146898,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:495",
+    "elapsed_ns": 143812,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:496",
+    "elapsed_ns": 140816,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:497",
+    "elapsed_ns": 175423,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:498",
+    "elapsed_ns": 132750,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:499",
+    "elapsed_ns": 134083,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:500",
+    "elapsed_ns": 124003,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:501",
+    "elapsed_ns": 135546,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:502",
+    "elapsed_ns": 132529,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:503",
+    "elapsed_ns": 130215,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:504",
+    "elapsed_ns": 151166,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:505",
+    "elapsed_ns": 134133,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:506",
+    "elapsed_ns": 129965,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:507",
+    "elapsed_ns": 147769,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:508",
+    "elapsed_ns": 137349,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:509",
+    "elapsed_ns": 132891,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:510",
+    "elapsed_ns": 162589,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:511",
+    "elapsed_ns": 147299,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:512",
+    "elapsed_ns": 136728,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:513",
+    "elapsed_ns": 188048,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:514",
+    "elapsed_ns": 148962,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:515",
+    "elapsed_ns": 142329,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:516",
+    "elapsed_ns": 135645,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:517",
+    "elapsed_ns": 158109,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:518",
+    "elapsed_ns": 129795,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:519",
+    "elapsed_ns": 140455,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:520",
+    "elapsed_ns": 141282,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:521",
+    "elapsed_ns": 136162,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:522",
+    "elapsed_ns": 173169,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:523",
+    "elapsed_ns": 132620,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:524",
+    "elapsed_ns": 142690,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:525",
+    "elapsed_ns": 160014,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:526",
+    "elapsed_ns": 122711,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:527",
+    "elapsed_ns": 131237,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:528",
+    "elapsed_ns": 125185,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:529",
+    "elapsed_ns": 156416,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:530",
+    "elapsed_ns": 138842,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:531",
+    "elapsed_ns": 136047,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:532",
+    "elapsed_ns": 130877,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:533",
+    "elapsed_ns": 142289,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:534",
+    "elapsed_ns": 137089,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:535",
+    "elapsed_ns": 165845,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:536",
+    "elapsed_ns": 139503,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:537",
+    "elapsed_ns": 210111,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:538",
+    "elapsed_ns": 182428,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:539",
+    "elapsed_ns": 149463,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:540",
+    "elapsed_ns": 153300,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:541",
+    "elapsed_ns": 161797,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:542",
+    "elapsed_ns": 142640,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:543",
+    "elapsed_ns": 146086,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:544",
+    "elapsed_ns": 146618,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:545",
+    "elapsed_ns": 136738,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:546",
+    "elapsed_ns": 130666,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:547",
+    "elapsed_ns": 131218,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:548",
+    "elapsed_ns": 147008,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:549",
+    "elapsed_ns": 147449,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:550",
+    "elapsed_ns": 137269,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:551",
+    "elapsed_ns": 152348,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:552",
+    "elapsed_ns": 123722,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:553",
+    "elapsed_ns": 125806,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:554",
+    "elapsed_ns": 128441,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:555",
+    "elapsed_ns": 116178,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:556",
+    "elapsed_ns": 108392,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:557",
+    "elapsed_ns": 112861,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:558",
+    "elapsed_ns": 124975,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:559",
+    "elapsed_ns": 139609,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:560",
+    "elapsed_ns": 159617,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:561",
+    "elapsed_ns": 151377,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:562",
+    "elapsed_ns": 144233,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:563",
+    "elapsed_ns": 150295,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:564",
+    "elapsed_ns": 123813,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:565",
+    "elapsed_ns": 145866,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:566",
+    "elapsed_ns": 135115,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:567",
+    "elapsed_ns": 194266,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:568",
+    "elapsed_ns": 175664,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:569",
+    "elapsed_ns": 136607,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:570",
+    "elapsed_ns": 141172,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:571",
+    "elapsed_ns": 159393,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:572",
+    "elapsed_ns": 129093,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:573",
+    "elapsed_ns": 131648,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:574",
+    "elapsed_ns": 161286,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:575",
+    "elapsed_ns": 151497,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:576",
+    "elapsed_ns": 135381,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:577",
+    "elapsed_ns": 124815,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:578",
+    "elapsed_ns": 137815,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:579",
+    "elapsed_ns": 168750,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:580",
+    "elapsed_ns": 139303,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:581",
+    "elapsed_ns": 121423,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:582",
+    "elapsed_ns": 136919,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:583",
+    "elapsed_ns": 111253,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:584",
+    "elapsed_ns": 117796,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:585",
+    "elapsed_ns": 112601,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:586",
+    "elapsed_ns": 147730,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:587",
+    "elapsed_ns": 200368,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:588",
+    "elapsed_ns": 141067,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:589",
+    "elapsed_ns": 141016,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:590",
+    "elapsed_ns": 136498,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:591",
+    "elapsed_ns": 143602,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:592",
+    "elapsed_ns": 146197,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:593",
+    "elapsed_ns": 148241,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:594",
+    "elapsed_ns": 156577,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:595",
+    "elapsed_ns": 135495,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:596",
+    "elapsed_ns": 147489,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:597",
+    "elapsed_ns": 137901,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:598",
+    "elapsed_ns": 150014,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:599",
+    "elapsed_ns": 143311,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:600",
+    "elapsed_ns": 144142,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:601",
+    "elapsed_ns": 144814,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:602",
+    "elapsed_ns": 121007,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:603",
+    "elapsed_ns": 132810,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:604",
+    "elapsed_ns": 140275,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:605",
+    "elapsed_ns": 139113,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:606",
+    "elapsed_ns": 127941,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:607",
+    "elapsed_ns": 118783,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:608",
+    "elapsed_ns": 142479,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:609",
+    "elapsed_ns": 153320,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:610",
+    "elapsed_ns": 158301,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:611",
+    "elapsed_ns": 177889,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:612",
+    "elapsed_ns": 179061,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:613",
+    "elapsed_ns": 165244,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:614",
+    "elapsed_ns": 145966,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:615",
+    "elapsed_ns": 137099,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:616",
+    "elapsed_ns": 210383,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:617",
+    "elapsed_ns": 158240,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:618",
+    "elapsed_ns": 161988,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:619",
+    "elapsed_ns": 190333,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:620",
+    "elapsed_ns": 158781,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:621",
+    "elapsed_ns": 141928,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:622",
+    "elapsed_ns": 150976,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:623",
+    "elapsed_ns": 136908,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:624",
+    "elapsed_ns": 135415,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:625",
+    "elapsed_ns": 135736,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:626",
+    "elapsed_ns": 189923,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:627",
+    "elapsed_ns": 152248,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:628",
+    "elapsed_ns": 168690,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:629",
+    "elapsed_ns": 151507,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:630",
+    "elapsed_ns": 154753,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:631",
+    "elapsed_ns": 173480,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:632",
+    "elapsed_ns": 175664,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:633",
+    "elapsed_ns": 144363,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:634",
+    "elapsed_ns": 139353,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:635",
+    "elapsed_ns": 138592,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:636",
+    "elapsed_ns": 144353,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:637",
+    "elapsed_ns": 135836,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:638",
+    "elapsed_ns": 157258,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:639",
+    "elapsed_ns": 135947,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:640",
+    "elapsed_ns": 131338,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:641",
+    "elapsed_ns": 133361,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:642",
+    "elapsed_ns": 139554,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:643",
+    "elapsed_ns": 137951,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:644",
+    "elapsed_ns": 143220,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:645",
+    "elapsed_ns": 208218,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:646",
+    "elapsed_ns": 130416,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:647",
+    "elapsed_ns": 136007,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:648",
+    "elapsed_ns": 128352,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:649",
+    "elapsed_ns": 147109,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:650",
+    "elapsed_ns": 156146,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:651",
+    "elapsed_ns": 152890,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:652",
+    "elapsed_ns": 144704,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:653",
+    "elapsed_ns": 194671,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:654",
+    "elapsed_ns": 157228,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:655",
+    "elapsed_ns": 163771,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:656",
+    "elapsed_ns": 141707,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:657",
+    "elapsed_ns": 162909,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:658",
+    "elapsed_ns": 149327,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:659",
+    "elapsed_ns": 133942,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:660",
+    "elapsed_ns": 108192,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:661",
+    "elapsed_ns": 144658,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:662",
+    "elapsed_ns": 146582,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:663",
+    "elapsed_ns": 188575,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:664",
+    "elapsed_ns": 150595,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:665",
+    "elapsed_ns": 137731,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:666",
+    "elapsed_ns": 149052,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:667",
+    "elapsed_ns": 155665,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:668",
+    "elapsed_ns": 121769,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:669",
+    "elapsed_ns": 138351,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:670",
+    "elapsed_ns": 130446,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:671",
+    "elapsed_ns": 124224,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:672",
+    "elapsed_ns": 179221,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:673",
+    "elapsed_ns": 144734,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:674",
+    "elapsed_ns": 166591,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:675",
+    "elapsed_ns": 134183,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:676",
+    "elapsed_ns": 126969,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:677",
+    "elapsed_ns": 133241,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:678",
+    "elapsed_ns": 129764,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:679",
+    "elapsed_ns": 121819,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:680",
+    "elapsed_ns": 134583,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:681",
+    "elapsed_ns": 166706,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:682",
+    "elapsed_ns": 155099,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:683",
+    "elapsed_ns": 145274,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:684",
+    "elapsed_ns": 150024,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:685",
+    "elapsed_ns": 170924,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:686",
+    "elapsed_ns": 131628,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:687",
+    "elapsed_ns": 163580,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:688",
+    "elapsed_ns": 158611,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:689",
+    "elapsed_ns": 146487,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:690",
+    "elapsed_ns": 161587,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:691",
+    "elapsed_ns": 182268,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:692",
+    "elapsed_ns": 238697,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:693",
+    "elapsed_ns": 180915,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:694",
+    "elapsed_ns": 154553,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:695",
+    "elapsed_ns": 199271,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:696",
+    "elapsed_ns": 201274,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:697",
+    "elapsed_ns": 269738,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:698",
+    "elapsed_ns": 177037,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:699",
+    "elapsed_ns": 162979,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:700",
+    "elapsed_ns": 161897,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:701",
+    "elapsed_ns": 185484,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:702",
+    "elapsed_ns": 150685,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:703",
+    "elapsed_ns": 163901,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:704",
+    "elapsed_ns": 124594,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:705",
+    "elapsed_ns": 126287,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:706",
+    "elapsed_ns": 148461,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:707",
+    "elapsed_ns": 138862,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:708",
+    "elapsed_ns": 124885,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:709",
+    "elapsed_ns": 192858,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:710",
+    "elapsed_ns": 162568,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:711",
+    "elapsed_ns": 129945,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:712",
+    "elapsed_ns": 124273,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:713",
+    "elapsed_ns": 206385,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:714",
+    "elapsed_ns": 139123,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:715",
+    "elapsed_ns": 148020,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:716",
+    "elapsed_ns": 150465,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:717",
+    "elapsed_ns": 162509,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:718",
+    "elapsed_ns": 158120,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:719",
+    "elapsed_ns": 159172,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:720",
+    "elapsed_ns": 144884,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:721",
+    "elapsed_ns": 140806,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:722",
+    "elapsed_ns": 181656,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:723",
+    "elapsed_ns": 158250,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:724",
+    "elapsed_ns": 142459,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:725",
+    "elapsed_ns": 117280,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:726",
+    "elapsed_ns": 143071,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:727",
+    "elapsed_ns": 137509,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:728",
+    "elapsed_ns": 141848,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:729",
+    "elapsed_ns": 129444,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:730",
+    "elapsed_ns": 155124,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:731",
+    "elapsed_ns": 158511,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:732",
+    "elapsed_ns": 139293,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:733",
+    "elapsed_ns": 127240,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:734",
+    "elapsed_ns": 148211,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:735",
+    "elapsed_ns": 117350,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:736",
+    "elapsed_ns": 156296,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:737",
+    "elapsed_ns": 182037,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:738",
+    "elapsed_ns": 134354,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:739",
+    "elapsed_ns": 140144,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:740",
+    "elapsed_ns": 119414,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:741",
+    "elapsed_ns": 146046,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:742",
+    "elapsed_ns": 130987,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:743",
+    "elapsed_ns": 112580,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:744",
+    "elapsed_ns": 116047,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:745",
+    "elapsed_ns": 117721,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:746",
+    "elapsed_ns": 101158,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:747",
+    "elapsed_ns": 133883,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:748",
+    "elapsed_ns": 141587,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:749",
+    "elapsed_ns": 130125,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:750",
+    "elapsed_ns": 147519,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:751",
+    "elapsed_ns": 207878,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:752",
+    "elapsed_ns": 149934,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:753",
+    "elapsed_ns": 134033,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:754",
+    "elapsed_ns": 134504,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:755",
+    "elapsed_ns": 139623,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:756",
+    "elapsed_ns": 124334,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:757",
+    "elapsed_ns": 133441,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:758",
+    "elapsed_ns": 119804,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:759",
+    "elapsed_ns": 111078,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:760",
+    "elapsed_ns": 116398,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:761",
+    "elapsed_ns": 124935,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:762",
+    "elapsed_ns": 144172,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:763",
+    "elapsed_ns": 230462,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:764",
+    "elapsed_ns": 147770,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:765",
+    "elapsed_ns": 152168,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:766",
+    "elapsed_ns": 163270,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:767",
+    "elapsed_ns": 154082,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:768",
+    "elapsed_ns": 128522,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:769",
+    "elapsed_ns": 132249,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:770",
+    "elapsed_ns": 178310,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:771",
+    "elapsed_ns": 145946,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:772",
+    "elapsed_ns": 157418,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:773",
+    "elapsed_ns": 186676,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:774",
+    "elapsed_ns": 154823,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:775",
+    "elapsed_ns": 117370,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:776",
+    "elapsed_ns": 136908,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:777",
+    "elapsed_ns": 170695,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:778",
+    "elapsed_ns": 124715,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:779",
+    "elapsed_ns": 132209,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:780",
+    "elapsed_ns": 127971,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:781",
+    "elapsed_ns": 137550,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:782",
+    "elapsed_ns": 160204,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:783",
+    "elapsed_ns": 133492,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:784",
+    "elapsed_ns": 119904,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:785",
+    "elapsed_ns": 139212,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:786",
+    "elapsed_ns": 258005,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:787",
+    "elapsed_ns": 205453,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:788",
+    "elapsed_ns": 143200,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:789",
+    "elapsed_ns": 144784,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:790",
+    "elapsed_ns": 177458,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:791",
+    "elapsed_ns": 177598,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:792",
+    "elapsed_ns": 153632,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:793",
+    "elapsed_ns": 132139,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:794",
+    "elapsed_ns": 150014,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:795",
+    "elapsed_ns": 135185,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:796",
+    "elapsed_ns": 130385,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:797",
+    "elapsed_ns": 144333,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:798",
+    "elapsed_ns": 129734,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:799",
+    "elapsed_ns": 129484,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:800",
+    "elapsed_ns": 117170,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:801",
+    "elapsed_ns": 121929,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:802",
+    "elapsed_ns": 144753,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:803",
+    "elapsed_ns": 134514,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:804",
+    "elapsed_ns": 149122,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:805",
+    "elapsed_ns": 134414,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:806",
+    "elapsed_ns": 122911,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:807",
+    "elapsed_ns": 140345,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:808",
+    "elapsed_ns": 144022,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:809",
+    "elapsed_ns": 144193,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:810",
+    "elapsed_ns": 132781,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:811",
+    "elapsed_ns": 150395,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:812",
+    "elapsed_ns": 180013,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:813",
+    "elapsed_ns": 207075,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:814",
+    "elapsed_ns": 144022,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:815",
+    "elapsed_ns": 181696,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:816",
+    "elapsed_ns": 166557,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:817",
+    "elapsed_ns": 172278,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:818",
+    "elapsed_ns": 130105,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:819",
+    "elapsed_ns": 129924,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:820",
+    "elapsed_ns": 124825,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:821",
+    "elapsed_ns": 105056,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:822",
+    "elapsed_ns": 136257,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:823",
+    "elapsed_ns": 138441,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:824",
+    "elapsed_ns": 129944,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:825",
+    "elapsed_ns": 129323,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:826",
+    "elapsed_ns": 155024,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:827",
+    "elapsed_ns": 138932,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:828",
+    "elapsed_ns": 131608,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:829",
+    "elapsed_ns": 131738,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:830",
+    "elapsed_ns": 157168,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:831",
+    "elapsed_ns": 126227,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:832",
+    "elapsed_ns": 133742,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:833",
+    "elapsed_ns": 132279,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:834",
+    "elapsed_ns": 118262,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:835",
+    "elapsed_ns": 135325,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:836",
+    "elapsed_ns": 124925,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:837",
+    "elapsed_ns": 138070,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:838",
+    "elapsed_ns": 133051,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:839",
+    "elapsed_ns": 222676,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:840",
+    "elapsed_ns": 183980,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:841",
+    "elapsed_ns": 149894,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:842",
+    "elapsed_ns": 215212,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:843",
+    "elapsed_ns": 165204,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:844",
+    "elapsed_ns": 183019,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:845",
+    "elapsed_ns": 147158,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:846",
+    "elapsed_ns": 131668,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:847",
+    "elapsed_ns": 128332,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:848",
+    "elapsed_ns": 114655,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:849",
+    "elapsed_ns": 110587,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:850",
+    "elapsed_ns": 133426,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:851",
+    "elapsed_ns": 175048,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:852",
+    "elapsed_ns": 146006,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:853",
+    "elapsed_ns": 177147,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:854",
+    "elapsed_ns": 181395,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:855",
+    "elapsed_ns": 169622,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:856",
+    "elapsed_ns": 139794,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:857",
+    "elapsed_ns": 209065,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:858",
+    "elapsed_ns": 206515,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:859",
+    "elapsed_ns": 159358,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:860",
+    "elapsed_ns": 148902,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:861",
+    "elapsed_ns": 144243,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:862",
+    "elapsed_ns": 132410,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:863",
+    "elapsed_ns": 202347,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:864",
+    "elapsed_ns": 152829,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:865",
+    "elapsed_ns": 141217,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:866",
+    "elapsed_ns": 126518,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:867",
+    "elapsed_ns": 175474,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:868",
+    "elapsed_ns": 135545,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:869",
+    "elapsed_ns": 127009,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:870",
+    "elapsed_ns": 521122,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:871",
+    "elapsed_ns": 140796,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:872",
+    "elapsed_ns": 154002,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:873",
+    "elapsed_ns": 122821,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:874",
+    "elapsed_ns": 132650,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:875",
+    "elapsed_ns": 128282,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:876",
+    "elapsed_ns": 135095,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:877",
+    "elapsed_ns": 113081,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:878",
+    "elapsed_ns": 114940,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:879",
+    "elapsed_ns": 138075,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:880",
+    "elapsed_ns": 140485,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:881",
+    "elapsed_ns": 129594,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:882",
+    "elapsed_ns": 155545,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:883",
+    "elapsed_ns": 144854,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:884",
+    "elapsed_ns": 128632,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:885",
+    "elapsed_ns": 141076,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:886",
+    "elapsed_ns": 142059,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:887",
+    "elapsed_ns": 134443,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:888",
+    "elapsed_ns": 133482,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:889",
+    "elapsed_ns": 120085,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:890",
+    "elapsed_ns": 157379,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:891",
+    "elapsed_ns": 204771,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:892",
+    "elapsed_ns": 158831,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:893",
+    "elapsed_ns": 136067,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:894",
+    "elapsed_ns": 152038,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:895",
+    "elapsed_ns": 144523,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:896",
+    "elapsed_ns": 142169,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:897",
+    "elapsed_ns": 153451,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:898",
+    "elapsed_ns": 128241,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:899",
+    "elapsed_ns": 129554,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:900",
+    "elapsed_ns": 142349,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:901",
+    "elapsed_ns": 133893,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:902",
+    "elapsed_ns": 128472,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:903",
+    "elapsed_ns": 170174,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:904",
+    "elapsed_ns": 148491,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:905",
+    "elapsed_ns": 134193,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:906",
+    "elapsed_ns": 152279,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:907",
+    "elapsed_ns": 126959,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:908",
+    "elapsed_ns": 136307,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:909",
+    "elapsed_ns": 201255,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:910",
+    "elapsed_ns": 143952,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:911",
+    "elapsed_ns": 138581,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:912",
+    "elapsed_ns": 166176,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:913",
+    "elapsed_ns": 190974,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:914",
+    "elapsed_ns": 149373,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:915",
+    "elapsed_ns": 157428,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:916",
+    "elapsed_ns": 144874,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:917",
+    "elapsed_ns": 159783,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:918",
+    "elapsed_ns": 124284,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:919",
+    "elapsed_ns": 123602,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:920",
+    "elapsed_ns": 125756,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:921",
+    "elapsed_ns": 149963,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:922",
+    "elapsed_ns": 134363,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:923",
+    "elapsed_ns": 134824,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:924",
+    "elapsed_ns": 144122,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:925",
+    "elapsed_ns": 165064,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:926",
+    "elapsed_ns": 136869,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:927",
+    "elapsed_ns": 132841,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:928",
+    "elapsed_ns": 133842,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:929",
+    "elapsed_ns": 112971,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:930",
+    "elapsed_ns": 137179,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:931",
+    "elapsed_ns": 168901,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:932",
+    "elapsed_ns": 186395,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:933",
+    "elapsed_ns": 191085,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:934",
+    "elapsed_ns": 153792,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:935",
+    "elapsed_ns": 176266,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:936",
+    "elapsed_ns": 178129,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:937",
+    "elapsed_ns": 146999,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:938",
+    "elapsed_ns": 159312,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:939",
+    "elapsed_ns": 160294,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:940",
+    "elapsed_ns": 149903,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:941",
+    "elapsed_ns": 147069,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:942",
+    "elapsed_ns": 140014,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:943",
+    "elapsed_ns": 177968,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:944",
+    "elapsed_ns": 164101,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:945",
+    "elapsed_ns": 148671,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:946",
+    "elapsed_ns": 173180,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:947",
+    "elapsed_ns": 176135,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:948",
+    "elapsed_ns": 178249,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:949",
+    "elapsed_ns": 163200,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:950",
+    "elapsed_ns": 144723,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:951",
+    "elapsed_ns": 156627,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:952",
+    "elapsed_ns": 125035,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:953",
+    "elapsed_ns": 117650,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:954",
+    "elapsed_ns": 132901,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:955",
+    "elapsed_ns": 121267,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:956",
+    "elapsed_ns": 122820,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:957",
+    "elapsed_ns": 109615,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:958",
+    "elapsed_ns": 118633,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:959",
+    "elapsed_ns": 121578,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:960",
+    "elapsed_ns": 129904,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:961",
+    "elapsed_ns": 122400,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:962",
+    "elapsed_ns": 118382,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:963",
+    "elapsed_ns": 167528,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:964",
+    "elapsed_ns": 119915,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:965",
+    "elapsed_ns": 133221,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:966",
+    "elapsed_ns": 156847,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:967",
+    "elapsed_ns": 144483,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:968",
+    "elapsed_ns": 145886,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:969",
+    "elapsed_ns": 147860,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:970",
+    "elapsed_ns": 153431,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:971",
+    "elapsed_ns": 145415,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:972",
+    "elapsed_ns": 161817,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:973",
+    "elapsed_ns": 117881,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:974",
+    "elapsed_ns": 155204,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:975",
+    "elapsed_ns": 132179,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:976",
+    "elapsed_ns": 121418,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:977",
+    "elapsed_ns": 110977,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:978",
+    "elapsed_ns": 133833,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:979",
+    "elapsed_ns": 112351,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:980",
+    "elapsed_ns": 120286,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:981",
+    "elapsed_ns": 131408,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:982",
+    "elapsed_ns": 110286,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:983",
+    "elapsed_ns": 137440,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:984",
+    "elapsed_ns": 133372,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:985",
+    "elapsed_ns": 129569,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:986",
+    "elapsed_ns": 128301,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:987",
+    "elapsed_ns": 112781,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:988",
+    "elapsed_ns": 108543,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:989",
+    "elapsed_ns": 123893,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:990",
+    "elapsed_ns": 102460,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:991",
+    "elapsed_ns": 114304,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:992",
+    "elapsed_ns": 151216,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:993",
+    "elapsed_ns": 130601,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:994",
+    "elapsed_ns": 119935,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:995",
+    "elapsed_ns": 171416,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:996",
+    "elapsed_ns": 131096,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:997",
+    "elapsed_ns": 119464,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:998",
+    "elapsed_ns": 123051,
+    "result": 1
+  },
+  {
+    "order_id": "bench-decision-cost:99c9756c-68f1-4d64-867c-d8415c67f34a:2:resume_claim:999",
+    "elapsed_ns": 158441,
+    "result": 1
+  }
+]

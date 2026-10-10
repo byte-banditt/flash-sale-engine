@@ -1,0 +1,30 @@
+{
+  "initial_stock": 100000,
+  "http_202": 48780,
+  "confirmed": 48787,
+  "confirmed_quantity": 48787,
+  "redis_stock": 51213,
+  "i1_delta_units": 0,
+  "i1_violation": false,
+  "i1_violation_units": 0,
+  "i1_related_keys": [],
+  "i2_violations": 0,
+  "i2_keys": [],
+  "lost": 0,
+  "lost_keys": [],
+  "duplicates": 0,
+  "duplicate_keys": [],
+  "stuck": 0,
+  "stuck_keys": [],
+  "stuck_decisions": 0,
+  "stuck_decision_keys": [],
+  "confirmed_without_http_202": [
+    "bench-rabbit-20-12-20403",
+    "bench-rabbit-20-19-20407",
+    "bench-rabbit-20-24-20410",
+    "bench-rabbit-20-28-20404",
+    "bench-rabbit-20-35-20405",
+    "bench-rabbit-20-4-20409",
+    "bench-rabbit-20-5-20406"
+  ]
+}

@@ -1,0 +1,1436 @@
+$ docker inspect 18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181 75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd flash_postgres flash_redis flash_rabbitmq
+started=2026-10-10T14:21:50.231049+00:00
+[
+    {
+        "Id": "18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181",
+        "Created": "2026-10-10T13:25:03.535404812Z",
+        "Path": "java",
+        "Args": [
+            "-jar",
+            "app.jar"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 3083,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-10T14:18:28.430541129Z",
+            "FinishedAt": "2026-10-10T14:18:07.576170047Z"
+        },
+        "Image": "sha256:9f239275ea2f9f1b2f83360e4fa03ab81989a5bac7b9b12162a33c053dd4b4b1",
+        "ResolvConfPath": "/var/lib/docker/containers/18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181/hostname",
+        "HostsPath": "/var/lib/docker/containers/18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181/hosts",
+        "LogPath": "/var/lib/docker/containers/18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181/18ca92a71e9ae9d83bad6b23e5276d3a436c526a7e45ef407de3d56b843ba181-json.log",
+        "Name": "/flash-sale-engine-app-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "flash-sale-engine_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 671088640,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 671088640,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "18ca92a71e9a",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SPRING_RABBITMQ_HOST=rabbitmq",
+                "JAVA_TOOL_OPTIONS=-Xmx256m",
+                "SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/flashsale_db",
+                "SPRING_DATA_REDIS_HOST=redis",
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-21.0.12.1+1"
+            ],
+            "Cmd": null,
+            "Image": "flash-sale-engine:local",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "java",
+                "-jar",
+                "app.jar"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "17b9e56a69777e8bb08fa61dce415113e5dbf4c991f7eb2e232b2ba720d5d782",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "redis:service_healthy:false,rabbitmq:service_healthy:false,postgres:service_healthy:false",
+                "com.docker.compose.image": "sha256:f2397a48a68a51f0671014738d2ef219a441db1411f896381031f216e9cb8e06",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "flash-sale-engine",
+                "com.docker.compose.project.config_files": "/home/ayussh/projects/flash-sale-engine/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/ayussh/projects/flash-sale-engine",
+                "com.docker.compose.replace": "app-1",
+                "com.docker.compose.service": "app",
+                "com.docker.compose.version": "5.5.1",
+                "desktop.docker.io/wsl-distro": "Debian"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "25d07bf798691d1edaf5e93830d2b205caa1849614a3baa49dadff391d08ae50",
+            "SandboxKey": "/var/run/docker/netns/25d07bf79869",
+            "Ports": {
+                "8080/tcp": null
+            },
+            "Networks": {
+                "flash-sale-engine_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "flash-sale-engine-app-1",
+                        "app"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "56331ce3176f3960c8a27768814fe9754e9d24616e0193c86c8f56e0ff600dbb",
+                    "EndpointID": "23eda0c723038916fdf2c2ba001baa4669b48f2919800ff3950d82b89f57b01c",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.6",
+                    "MacAddress": "ce:63:e1:c3:c5:8c",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "flash-sale-engine-app-1",
+                        "app",
+                        "18ca92a71e9a"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:f2397a48a68a51f0671014738d2ef219a441db1411f896381031f216e9cb8e06",
+            "size": 1624,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd",
+        "Created": "2026-10-10T13:25:03.535524679Z",
+        "Path": "java",
+        "Args": [
+            "-jar",
+            "app.jar"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 20577,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-10T13:25:08.791632697Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:9f239275ea2f9f1b2f83360e4fa03ab81989a5bac7b9b12162a33c053dd4b4b1",
+        "ResolvConfPath": "/var/lib/docker/containers/75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd/hostname",
+        "HostsPath": "/var/lib/docker/containers/75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd/hosts",
+        "LogPath": "/var/lib/docker/containers/75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd/75393ed4e7e86c33d9b31d131efe5216cd3cce18f8c8b8c2073e715652af89cd-json.log",
+        "Name": "/flash-sale-engine-app-2",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "flash-sale-engine_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 671088640,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 671088640,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "75393ed4e7e8",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SPRING_RABBITMQ_HOST=rabbitmq",
+                "JAVA_TOOL_OPTIONS=-Xmx256m",
+                "SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/flashsale_db",
+                "SPRING_DATA_REDIS_HOST=redis",
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-21.0.12.1+1"
+            ],
+            "Cmd": null,
+            "Image": "flash-sale-engine:local",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "java",
+                "-jar",
+                "app.jar"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "17b9e56a69777e8bb08fa61dce415113e5dbf4c991f7eb2e232b2ba720d5d782",
+                "com.docker.compose.container-number": "2",
+                "com.docker.compose.depends_on": "postgres:service_healthy:false,redis:service_healthy:false,rabbitmq:service_healthy:false",
+                "com.docker.compose.image": "sha256:f2397a48a68a51f0671014738d2ef219a441db1411f896381031f216e9cb8e06",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "flash-sale-engine",
+                "com.docker.compose.project.config_files": "/home/ayussh/projects/flash-sale-engine/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/ayussh/projects/flash-sale-engine",
+                "com.docker.compose.replace": "app-2",
+                "com.docker.compose.service": "app",
+                "com.docker.compose.version": "5.5.1",
+                "desktop.docker.io/wsl-distro": "Debian"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "448f8455a3cbe58a2429bda6b0b2c19c4a81bbc503ddddaed56ac6bab1822888",
+            "SandboxKey": "/var/run/docker/netns/448f8455a3cb",
+            "Ports": {
+                "8080/tcp": null
+            },
+            "Networks": {
+                "flash-sale-engine_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "flash-sale-engine-app-2",
+                        "app"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "56331ce3176f3960c8a27768814fe9754e9d24616e0193c86c8f56e0ff600dbb",
+                    "EndpointID": "23e762fb04521087453591b6d5ae2463ad06b2a603c3016e4af4ab8d361720c6",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.5",
+                    "MacAddress": "be:17:8d:91:66:8f",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "flash-sale-engine-app-2",
+                        "app",
+                        "75393ed4e7e8"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:f2397a48a68a51f0671014738d2ef219a441db1411f896381031f216e9cb8e06",
+            "size": 1624,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811",
+        "Created": "2026-10-09T07:47:21.252000273Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "postgres"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 4250,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-09T07:47:25.152216835Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-10T14:21:26.572053148Z",
+                        "End": "2026-10-10T14:21:26.647432263Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:31.648109901Z",
+                        "End": "2026-10-10T14:21:31.688302001Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:36.689308371Z",
+                        "End": "2026-10-10T14:21:36.725413068Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:41.726748068Z",
+                        "End": "2026-10-10T14:21:41.761671277Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:46.762261583Z",
+                        "End": "2026-10-10T14:21:46.803432522Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685",
+        "ResolvConfPath": "/var/lib/docker/containers/ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811/hostname",
+        "HostsPath": "/var/lib/docker/containers/ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811/hosts",
+        "LogPath": "/var/lib/docker/containers/ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811/ff2f6134a6b2d9c54168109974f0c16b9ac04701f56a5c50f1c2b7c60a098811-json.log",
+        "Name": "/flash_postgres",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "flash-sale-engine_default",
+            "PortBindings": {
+                "5432/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5432"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 402653184,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 402653184,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "1b96ca6071ff2138f9f2570b44aff38a2f796c40b014d595f8f53cc86c3a85ce",
+                    "Target": "/var/lib/postgresql/data"
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "1b96ca6071ff2138f9f2570b44aff38a2f796c40b014d595f8f53cc86c3a85ce",
+                "Source": "/var/lib/docker/volumes/1b96ca6071ff2138f9f2570b44aff38a2f796c40b014d595f8f53cc86c3a85ce/_data",
+                "Destination": "/var/lib/postgresql/data",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "ff2f6134a6b2",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "POSTGRES_USER=postgres",
+                "POSTGRES_PASSWORD=password",
+                "POSTGRES_DB=flashsale_db",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=16",
+                "PG_VERSION=16.15",
+                "PG_SHA256=c1575341fa7bd40f5274ea465b34390f4dc64cdd0770af327005caaeb9f6b7ed",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "pg_isready -U postgres -d flashsale_db"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "Retries": 30
+            },
+            "Image": "postgres:16-alpine",
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "f173774965081a85081c4a1ac7864e3f40799f6262cc1b1e68b802bb15127712",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:075f7ba66bc9b3ce7d6b8b635208ff61cd7cf1a67d71ec530eec5d7ae0cbe571",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "flash-sale-engine",
+                "com.docker.compose.project.config_files": "/home/ayussh/projects/flash-sale-engine/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/ayussh/projects/flash-sale-engine",
+                "com.docker.compose.replace": "flash_postgres",
+                "com.docker.compose.service": "postgres",
+                "com.docker.compose.version": "5.5.1",
+                "desktop.docker.io/wsl-distro": "Debian"
+            },
+            "StopSignal": "SIGINT"
+        },
+        "NetworkSettings": {
+            "SandboxID": "a399b59234e39a62a6f16d0b9b65487a7d2305931e730015cc6360f9a20d67ed",
+            "SandboxKey": "/var/run/docker/netns/a399b59234e3",
+            "Ports": {
+                "5432/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5432"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5432"
+                    }
+                ]
+            },
+            "Networks": {
+                "flash-sale-engine_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "flash_postgres",
+                        "postgres"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "56331ce3176f3960c8a27768814fe9754e9d24616e0193c86c8f56e0ff600dbb",
+                    "EndpointID": "caf946172bc5e5f8c69f1dbadfdd007fad0fde55c8c3f947bea17ed864010672",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.4",
+                    "MacAddress": "fe:ce:aa:5e:1d:a9",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "flash_postgres",
+                        "postgres",
+                        "ff2f6134a6b2"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:075f7ba66bc9b3ce7d6b8b635208ff61cd7cf1a67d71ec530eec5d7ae0cbe571",
+            "size": 3054,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:79ff19e9084a00eece421b2523fb93e22d730e2c0e525905de047e848e56d95f",
+                "org.opencontainers.image.base.name": "alpine:3.24",
+                "org.opencontainers.image.created": "2026-08-13T19:16:04Z",
+                "org.opencontainers.image.revision": "9d15534160ade17f2b6c455a39ee967c49b1937d",
+                "org.opencontainers.image.source": "https://github.com/docker-library/postgres.git#9d15534160ade17f2b6c455a39ee967c49b1937d:16/alpine3.24",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/postgres",
+                "org.opencontainers.image.version": "16.15-alpine3.24"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4",
+        "Created": "2026-10-09T07:47:21.256323612Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "redis-server"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 65957,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-09T08:26:35.981465872Z",
+            "FinishedAt": "2026-10-09T08:26:34.637552099Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-10T14:21:28.585811301Z",
+                        "End": "2026-10-10T14:21:28.619909141Z",
+                        "ExitCode": 0,
+                        "Output": "PONG\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:33.621353503Z",
+                        "End": "2026-10-10T14:21:33.656313158Z",
+                        "ExitCode": 0,
+                        "Output": "PONG\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:38.657233658Z",
+                        "End": "2026-10-10T14:21:38.695096283Z",
+                        "ExitCode": 0,
+                        "Output": "PONG\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:43.69569167Z",
+                        "End": "2026-10-10T14:21:43.728012514Z",
+                        "ExitCode": 0,
+                        "Output": "PONG\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:48.728842947Z",
+                        "End": "2026-10-10T14:21:48.782951256Z",
+                        "ExitCode": 0,
+                        "Output": "PONG\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:ff02b58f971e7d7d156a1267e283fcbbeee91773b6aa36c49dac28ecfe28eadf",
+        "ResolvConfPath": "/var/lib/docker/containers/4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4/hostname",
+        "HostsPath": "/var/lib/docker/containers/4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4/hosts",
+        "LogPath": "/var/lib/docker/containers/4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4/4dbbf4ae879e24880b513e3c91ebfd8dc7230f2497f31f7cade7f16492a4dbb4-json.log",
+        "Name": "/flash_redis",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "flash-sale-engine_default",
+            "PortBindings": {
+                "6379/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "6379"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 402653184,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 402653184,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "2c50c3d6439f56cc652d6f34838dc12c9794bd8cb4c23880572e5f98dd0261ae",
+                    "Target": "/data"
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "2c50c3d6439f56cc652d6f34838dc12c9794bd8cb4c23880572e5f98dd0261ae",
+                "Source": "/var/lib/docker/volumes/2c50c3d6439f56cc652d6f34838dc12c9794bd8cb4c23880572e5f98dd0261ae/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "4dbbf4ae879e",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "REDIS_VERSION=7.4.11"
+            ],
+            "Cmd": [
+                "redis-server"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "redis-cli",
+                    "ping"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "Retries": 30
+            },
+            "Image": "redis:7-alpine",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "c1e1f85cab1ec5b1981679de809852371f3afa12375de591de863504c3489e9c",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:1db42ccef14898aa29bae778452d567534b59c107129cbc1163fb552de184d3c",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "flash-sale-engine",
+                "com.docker.compose.project.config_files": "/home/ayussh/projects/flash-sale-engine/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/ayussh/projects/flash-sale-engine",
+                "com.docker.compose.replace": "flash_redis",
+                "com.docker.compose.service": "redis",
+                "com.docker.compose.version": "5.5.1",
+                "desktop.docker.io/wsl-distro": "Debian"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "5c2600a37bbeaeb84ae1a53bc514b3359d1b79f55ecc6f98d49211e9cc78b967",
+            "SandboxKey": "/var/run/docker/netns/5c2600a37bbe",
+            "Ports": {
+                "6379/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "6379"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "6379"
+                    }
+                ]
+            },
+            "Networks": {
+                "flash-sale-engine_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "flash_redis",
+                        "redis"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "56331ce3176f3960c8a27768814fe9754e9d24616e0193c86c8f56e0ff600dbb",
+                    "EndpointID": "91962eb91467eefc47369ad1206570735319ecdde9b8b6d5fae3d55b5c751002",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.3",
+                    "MacAddress": "de:7f:d9:36:f5:19",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "flash_redis",
+                        "redis",
+                        "4dbbf4ae879e"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:1db42ccef14898aa29bae778452d567534b59c107129cbc1163fb552de184d3c",
+            "size": 2288,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:f27cad9117495d32d067133afff942cb2dc745dfe9163e949f6bfe8a6a245339",
+                "org.opencontainers.image.base.name": "alpine:3.21",
+                "org.opencontainers.image.created": "2026-08-18T16:55:58Z",
+                "org.opencontainers.image.revision": "74654c612ee06275377d483dc4e134e57b463e9e",
+                "org.opencontainers.image.source": "https://github.com/redis/docker-library-redis.git#74654c612ee06275377d483dc4e134e57b463e9e:alpine",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/redis",
+                "org.opencontainers.image.version": "7.4.11-alpine"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97",
+        "Created": "2026-10-09T07:47:21.261218028Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "rabbitmq-server"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 91386,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-10T14:11:03.282818878Z",
+            "FinishedAt": "2026-10-10T14:11:02.396349264Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-10T14:21:25.678130415Z",
+                        "End": "2026-10-10T14:21:26.403992948Z",
+                        "ExitCode": 0,
+                        "Output": "Ping succeeded\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:31.404964129Z",
+                        "End": "2026-10-10T14:21:32.051622771Z",
+                        "ExitCode": 0,
+                        "Output": "Ping succeeded\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:37.052611451Z",
+                        "End": "2026-10-10T14:21:37.592610557Z",
+                        "ExitCode": 0,
+                        "Output": "Ping succeeded\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:42.594157462Z",
+                        "End": "2026-10-10T14:21:43.165874051Z",
+                        "ExitCode": 0,
+                        "Output": "Ping succeeded\n"
+                    },
+                    {
+                        "Start": "2026-10-10T14:21:48.167871597Z",
+                        "End": "2026-10-10T14:21:48.75698966Z",
+                        "ExitCode": 0,
+                        "Output": "Ping succeeded\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:606d8c0d6b3c18d1da9afc53bc7cdb2a8d5486df91b5a9830e9e07626c9ae281",
+        "ResolvConfPath": "/var/lib/docker/containers/af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97/hostname",
+        "HostsPath": "/var/lib/docker/containers/af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97/hosts",
+        "LogPath": "/var/lib/docker/containers/af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97/af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97-json.log",
+        "Name": "/flash_rabbitmq",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "flash-sale-engine_default",
+            "PortBindings": {
+                "15672/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "15672"
+                    }
+                ],
+                "5672/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5672"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 402653184,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 402653184,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "77543a0e1f654d67f4e2963b749aa7c296280cfc49d90a9aedd97c12f7a8dfdf",
+                    "Target": "/var/lib/rabbitmq"
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "77543a0e1f654d67f4e2963b749aa7c296280cfc49d90a9aedd97c12f7a8dfdf",
+                "Source": "/var/lib/docker/volumes/77543a0e1f654d67f4e2963b749aa7c296280cfc49d90a9aedd97c12f7a8dfdf/_data",
+                "Destination": "/var/lib/rabbitmq",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "af42eb2bb203",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "15671/tcp": {},
+                "15672/tcp": {},
+                "15691/tcp": {},
+                "15692/tcp": {},
+                "25672/tcp": {},
+                "4369/tcp": {},
+                "5671/tcp": {},
+                "5672/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "RABBITMQ_DEFAULT_PASS=guest",
+                "RABBITMQ_DEFAULT_USER=guest",
+                "PATH=/opt/rabbitmq/sbin:/opt/erlang/bin:/opt/openssl/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "ERLANG_INSTALL_PATH_PREFIX=/opt/erlang",
+                "OPENSSL_INSTALL_PATH_PREFIX=/opt/openssl",
+                "RABBITMQ_DATA_DIR=/var/lib/rabbitmq",
+                "RABBITMQ_VERSION=3.13.7",
+                "RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA",
+                "RABBITMQ_HOME=/opt/rabbitmq",
+                "HOME=/var/lib/rabbitmq",
+                "LANG=C.UTF-8",
+                "LANGUAGE=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "RUNNING_UNDER_SYSTEMD=true"
+            ],
+            "Cmd": [
+                "rabbitmq-server"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "rabbitmq-diagnostics",
+                    "-q",
+                    "ping"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 5000000000,
+                "Retries": 30
+            },
+            "Image": "rabbitmq:3.13-management-alpine",
+            "Volumes": {
+                "/var/lib/rabbitmq": {}
+            },
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "44a63014e3cf3e95835201b7d85e9a5327d7272e0fbd6601342b567bec0388b0",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:3c498e636fd64462480c5f9ff842eb224ab84160a8ada1ded5375e9569e9230c",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "flash-sale-engine",
+                "com.docker.compose.project.config_files": "/home/ayussh/projects/flash-sale-engine/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/ayussh/projects/flash-sale-engine",
+                "com.docker.compose.replace": "flash_rabbitmq",
+                "com.docker.compose.service": "rabbitmq",
+                "com.docker.compose.version": "5.5.1",
+                "desktop.docker.io/wsl-distro": "Debian"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "a165bd3bfcbdfd1e8dc21d7757f4e3a373d6ce9700572dfd763567de10ab5a88",
+            "SandboxKey": "/var/run/docker/netns/a165bd3bfcbd",
+            "Ports": {
+                "15672/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "15672"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "15672"
+                    }
+                ],
+                "5672/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5672"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5672"
+                    }
+                ]
+            },
+            "Networks": {
+                "flash-sale-engine_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "flash_rabbitmq",
+                        "rabbitmq"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "56331ce3176f3960c8a27768814fe9754e9d24616e0193c86c8f56e0ff600dbb",
+                    "EndpointID": "001f07fc2a3de7f97426e0e92b794bf1b082d3ae2228aa635b9e35941363b89f",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "MacAddress": "82:40:56:ae:f7:57",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "flash_rabbitmq",
+                        "rabbitmq",
+                        "af42eb2bb203"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:3c498e636fd64462480c5f9ff842eb224ab84160a8ada1ded5375e9569e9230c",
+            "size": 2904,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:85908ad0de1dc0668114e9549c4a0ade7af92351c7b0e5608bdcc1e016fe1d26",
+                "org.opencontainers.image.base.name": "rabbitmq:3.13-alpine",
+                "org.opencontainers.image.created": "2025-12-02T03:08:18Z",
+                "org.opencontainers.image.revision": "36e4d246e934a96b1c3a920e398f96434f3fc34c",
+                "org.opencontainers.image.source": "https://github.com/docker-library/rabbitmq.git#36e4d246e934a96b1c3a920e398f96434f3fc34c:3.13/alpine/management",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/rabbitmq",
+                "org.opencontainers.image.version": "3.13.7-management-alpine"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+exit_code=0
+ended=2026-10-10T14:21:50.293653+00:00

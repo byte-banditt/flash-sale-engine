@@ -1,0 +1,6 @@
+{
+  "cohort": "after-rabbit",
+  "min_http_error_fraction": 0.10708205963647013,
+  "max_http_error_fraction": 0.3659522769984244,
+  "worst_run": "rabbit-6"
+}

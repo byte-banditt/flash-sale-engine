@@ -6,3 +6,6 @@ bench/results/**/app.log -diff
 bench/results/**/orders.csv -diff
 bench/results/**/reservations.txt -diff
 bench/results/**/inspect.log -diff
+bench/results/**/postgres-details.json -diff
+bench/results/**/redis-state.json -diff
+bench/results/**/decision-cost/*-raw.json -diff

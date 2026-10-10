@@ -1,0 +1,3 @@
+DRAFT: Reproduced inventory-conservation failures in 4/10 broker-restart runs (25 affected orders); after Redis decision arbitration, 0/20 broker-restart runs violated the audited invariants.
+DRAFT: Post-fix broker-restart cohort: lost orders 0, duplicates 0, stuck reservations 0, orphan consumer decisions 0; SIGKILL cohort: 0/3 runs violated audited invariants.
+DRAFT: Integration tests: 13 passed, failures 0, errors 0, skipped 0; original test bodies unchanged.

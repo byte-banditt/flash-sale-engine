@@ -1,0 +1,22 @@
+{
+  "initial_stock": 100000,
+  "http_202": 43429,
+  "confirmed": 43429,
+  "confirmed_quantity": 43429,
+  "redis_stock": 56571,
+  "i1_delta_units": 0,
+  "i1_violation": false,
+  "i1_violation_units": 0,
+  "i1_related_keys": [],
+  "i2_violations": 0,
+  "i2_keys": [],
+  "lost": 0,
+  "lost_keys": [],
+  "duplicates": 0,
+  "duplicate_keys": [],
+  "stuck": 0,
+  "stuck_keys": [],
+  "stuck_decisions": 0,
+  "stuck_decision_keys": [],
+  "confirmed_without_http_202": []
+}

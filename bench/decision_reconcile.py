@@ -17,7 +17,8 @@ i2=[]
 for o in confirmed:
  key=o['idempotency_key'];oid=o['order_id'];reservation=state.get('idempotency:'+key);decision=state.get('order:'+oid+':decision')
  if reservation!=oid and decision!='CONSUMER':i2.append({'key':key,'order_id':oid,'quantity':o['quantity'],'reservation':reservation,'decision':decision,'rolled_back':state.get('order:'+oid+':rolled-back'),'created_at':o['created_at']})
-stuck=sorted(k.removeprefix('idempotency:') for k in state if k.startswith('idempotency:') and k.removeprefix('idempotency:') not in keys)
+matches={(o['idempotency_key'],o['order_id']) for o in confirmed}
+stuck=sorted(k.removeprefix('idempotency:') for k,v in state.items() if k.startswith('idempotency:') and (k.removeprefix('idempotency:'),v) not in matches)
 stuck_decisions=sorted(k for k,v in state.items() if k.endswith(':decision') and v=='CONSUMER' and k.split(':')[1] not in ids)
 lost=sorted(set(accepted)-keys);duplicates=sorted(k for k,v in collections.Counter(o['idempotency_key'] for o in confirmed).items() if v>1)
 delta=None if stock is None else qty+stock-100000

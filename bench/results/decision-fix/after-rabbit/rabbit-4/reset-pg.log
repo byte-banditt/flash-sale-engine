@@ -1,0 +1,6 @@
+$ docker exec flash_postgres psql -U postgres -d flashsale_db -c TRUNCATE orders
+started=2026-10-10T13:32:18.871096+00:00
+TRUNCATE TABLE
+
+exit_code=0
+ended=2026-10-10T13:32:19.101466+00:00
