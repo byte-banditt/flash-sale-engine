@@ -61,3 +61,27 @@ campaign exposed persisted orders whose reservations had been released.
 Redis restart is observational, not a pass/fail HA test. Inspect runtime persistence
 settings and logs rather than assuming absent Compose persistence configuration
 disables image-default RDB behavior.
+
+## Refund/persistence decision follow-up
+
+Keep `experiment.py` and `load.js` unchanged for comparisons. Use the distributed
+profile with the same replicas and JVM/container limits, running each campaign
+sequentially. `decision_reconcile.py OUTPUT_DIR` adds raw PostgreSQL order IDs,
+quantities, creation timestamps and an atomic Redis key/value snapshot, plus
+I1/I2/I3 audits and every violating key. REFUND markers cannot satisfy I2.
+A CONSUMER marker without a persisted order is counted separately as stuck.
+
+`decision_timeline.py OUTPUT_DIR` extracts actual per-key trace events. Original
+unlogged sequences remain explicitly unobserved. `trace-compose.yml` enables
+DEBUG only for diagnostic runs; remove that override for performance comparisons.
+DB creation timestamps never substitute for transaction afterCommit observations.
+
+`verify_original_tests.py` checks each original test body against the recorded
+source HEAD. `decision_report.py` writes exact metrics, campaign counts, sampled
+resources, and normal-ramp deltas. `decision_document.py` requires completed
+campaigns and embeds their evidence into REPORT.md and RESULTS.md.
+
+`decision_cost.py NEW_OUTPUT_DIR` measures cached decision-Lua RPCs with k6
+stopped, using its own temporary Redis keys. This Python/localhost component
+measurement is distinct from HTTP overhead through the app's Lettuce connection.
+Raw samples, errors, and cleanup scope are recorded; no Redis database is flushed.
