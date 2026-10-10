@@ -1,59 +1,27 @@
 package com.flashsale.engine.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.transaction.support.TransactionSynchronization;
-import org.springframework.transaction.support.TransactionSynchronizationManager;
+import com.flashsale.engine.dto.OrderRequest;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.flashsale.engine.dto.OrderRequest;
-import com.flashsale.engine.entity.Order;
-import com.flashsale.engine.repository.OrderRepository;
-
 @Service
 public class OrderProcessingService {
-    private static final Logger log = LoggerFactory.getLogger(OrderProcessingService.class);
-
-    private final OrderRepository orderRepository;
-    private final InventoryService inventoryService;
-
-    public OrderProcessingService(OrderRepository orderRepository, InventoryService inventoryService) {
-        this.orderRepository = orderRepository;
-        this.inventoryService = inventoryService;
-    }
+    private final JdbcTemplate db;
+    public OrderProcessingService(JdbcTemplate db) { this.db = db; }
 
     @Transactional
     public void processOrder(OrderRequest request) {
-        if (!inventoryService.claimForPersistence(request.getOrderId(), request.getIdempotencyKey())) {
-            log.debug("Refund won; discard delivery. key={} orderId={}",
-                    request.getIdempotencyKey(), request.getOrderId());
-            return;
-        }
-        boolean alreadyProcessed = orderRepository
-                .findByIdempotencyKey(request.getIdempotencyKey())
-                .isPresent();
-
-        if (alreadyProcessed) {
-            return; // duplicate delivery — not an error
-        }
-
-        Order order = new Order();
-        order.setOrderId(request.getOrderId());
-        order.setProductId(request.getProductId());
-        order.setQuantity(request.getQuantity());
-        order.setIdempotencyKey(request.getIdempotencyKey());
-        order.setStatus("CONFIRMED");
-
-        orderRepository.save(order);
-        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
-            @Override
-            public void afterCommit() {
-                log.debug("ORDER_TRACE event=PERSIST_COMMIT key={} orderId={} epochMs={}",
-                        request.getIdempotencyKey(), request.getOrderId(), System.currentTimeMillis());
-            }
-        });
-        // No try/catch — a real failure should propagate to the listener
-        // container so the retry interceptor / DLQ can act on it.
+        var rows = db.queryForList("select * from orders where order_id=? for update", request.getOrderId());
+        if (rows.isEmpty()) throw new IllegalArgumentException("No durable order intent for delivery");
+        var order = rows.getFirst();
+        if (!request.getIdempotencyKey().equals(order.get("idempotency_key"))
+                || request.getProductId().longValue() != ((Number) order.get("product_id")).longValue()
+                || request.getQuantity().intValue() != ((Number) order.get("quantity")).intValue())
+            throw new IllegalArgumentException("Delivery does not match immutable order intent");
+        // CONFIRMED and CANCELLED are terminal. This lock also fences reconciliation,
+        // so a refund can never race a later transition to CONFIRMED.
+        if (!"PENDING".equals(order.get("status"))) return;
+        db.update("update orders set status='CONFIRMED' where order_id=?", request.getOrderId());
     }
 }

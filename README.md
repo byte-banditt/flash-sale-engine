@@ -1,36 +1,40 @@
 # Flash Sale Engine
 
-A small Spring Boot service demonstrating flash-sale order flow. Reserves
-inventory in Redis, queues accepted orders in RabbitMQ, persists processed
-orders in PostgreSQL.
+Spring Boot flash-sale demo with PostgreSQL inventory, durable order intent,
+a transactional outbox, and RabbitMQ consumers. Learning project; shared
+infrastructure remains a failure domain.
 
-Learning/demo project; not production-ready commerce system.
+## Write and recovery flow
 
-Broker-restart reproduction exposed a refund/persistence race after publisher
-confirms: a negative confirm caused inventory restoration, then the delivered
-message became CONFIRMED. Redis decision arbitration now makes refund and
-persistence mutually exclusive while decision state remains intact. Executed
-reproduction, follow-up trials, latency costs and remaining limitations are in
-[bench/REPORT.md](bench/REPORT.md) and [RESULTS.md](RESULTS.md).
+- Sale initialization records total stock, available stock, and sale start time
+  in `products`. It rejects reinitialization while any orders exist for that sale.
+- The HTTP transaction locks the idempotency key and product row, checks/decrements
+  stock, inserts a `PENDING` order and its JSONB outbox event, then commits.
+  It calls neither Redis nor RabbitMQ. Failure rolls back all these writes.
+- Each replica runs a relay. `FOR UPDATE SKIP LOCKED` selects pending events in
+  creation order. A routed publisher ack permits `PUBLISHED`; failure leaves
+  `PENDING` for retry. The relay never refunds stock.
+- Consumers lock the durable order and transition `PENDING` to `CONFIRMED`.
+  Duplicate messages cannot repeat consumption; immutable payload fields are checked.
+- The scheduled sweep locks expired `PENDING` orders, cancels them, restores stock,
+  and marks their events `FAILED` in a single transaction. This is the only refund
+  path. The same order lock prevents a late consumer from confirming a cancelled order.
+  The database row provides the actual consumer-side outcome; RabbitMQ cannot prove
+  that an individual in-flight message does not exist.
 
-## What it does
-
-1. Operator initializes Redis stock key for a product ID.
-2. `POST /api/v1/orders` runs Redis Lua script to atomically check/decrement stock.
-3. Successful reservation publishes request to RabbitMQ and waits for a routed publisher confirm, then returns `202 Accepted` with generated order ID.
-4. RabbitMQ consumer claims Redis persistence ownership, then stores `CONFIRMED` in PostgreSQL. A refund-winning delivery is discarded.
-5. Consumer failures retry twice, delays two then four seconds. Exhausted retries republish to dead-letter queue; unclaimed orders refund once, while consumer-owned orders resume persistence.
-
-Order endpoint response means reservation accepted for async processing; not that order already exists in PostgreSQL.
+Stock and durable delivery intent cannot commit separately. Broker publication
+remains asynchronous and at least once: a crash after broker ack but before the
+relay commits can republish. This design guarantees a single database terminal
+transition, not exactly-once physical broker delivery or immediate publication.
 
 ## Components
 
-| Component | Current role |
+| Component | Role |
 | --- | --- |
-| Spring Boot / Java 21 | HTTP API, app wiring, consumers |
-| Redis 7 | Holds `product:{productId}:stock`; Lua atomic reservation |
-| RabbitMQ 3.13 | Order messages; order/dead-letter queues |
-| PostgreSQL 16 | Processed orders; JPA also maps `products` table |
+| Apps | HTTP API, outbox relay, sweep, order/DLQ consumers |
+| PostgreSQL | Authoritative stock, sale start, orders and outbox |
+| RabbitMQ | Durable queues with publisher confirms and mandatory returns |
+| Redis | Retained in local Compose for compatibility; unused by the order path |
 
 ## Local setup
 
@@ -51,125 +55,99 @@ docker compose down
 
 ## Distributed local profile
 
-The default Compose invocation still starts only infrastructure for the host JVM.
-Stop that JVM before starting the distributed profile, which uses the same port.
-Build the jar before building the image:
+Build the jar, then use the existing distributed profile:
 
 ```bash
 JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw package
 docker compose --profile distributed up -d --build --scale app=2
 ```
 
-Change `--scale app=N` to choose replica count. Every app replica runs both HTTP
-handlers and order/DLQ consumers. nginx resolves the scaled service through Docker
-DNS and distributes requests round-robin; `X-Replica` identifies the upstream.
-POSTs already sent are not retried by the proxy.
+Every replica runs HTTP, relay, sweep and consumers. nginx uses Docker DNS and
+round-robin routing; `X-Replica` identifies the upstream. Heaps and container
+memory remain capped in Compose. The load generator, nginx, apps and infrastructure
+share the same laptop in these experiments.
 
 ```text
-k6 / HTTP clients (same laptop)
-             |
-       nginx :8080
-       /     |     \\
-    app     app    app ...     HTTP API + consumers in each
-       \\     |     /
-        Redis / RabbitMQ / PostgreSQL
-             shared single instances
+HTTP / k6 -> nginx -> app replicas
+                         | accept / sweep / consumer terminal transaction
+                         v
+                     PostgreSQL
+                     products + orders + outbox_events
+                         |
+                 replica relays (SKIP LOCKED)
+                         | confirms, retry without refund
+                         v
+                     RabbitMQ -> replica consumers
+
+Redis: local infrastructure retained; no authoritative stock or reservation.
 ```
 
-App heaps and container memory are capped in Compose. This is app replication,
-not infrastructure HA: the shared services remain failure domains.
-See `bench/` and [RESULTS.md](RESULTS.md) for executed experiments and limitations.
-
-## Try flow
-
-Initialize stock. Current API treats `productId` as Redis-key component; does not look up PostgreSQL product record.
+## API
 
 ```bash
 curl -X POST 'http://localhost:8080/api/v1/orders/init?productId=101&stock=10'
-```
-
-Place order:
-
-```bash
 curl -i -X POST http://localhost:8080/api/v1/orders \
   -H 'Content-Type: application/json' \
-  -d '{
-    "productId": 101,
-    "quantity": 1,
-    "idempotencyKey": "demo-order-001"
-  }'
+  -d '{"productId":101,"quantity":1,"idempotencyKey":"demo-order"}'
 ```
 
-| Status | Meaning |
+| Response | Meaning |
 | --- | --- |
-| `202 Accepted` | Redis reservation succeeded; broker confirmed a routed publish. Order `PENDING` for async processing. |
-| `409 Conflict` / `OUT_OF_STOCK` | Redis key exists, insufficient stock. |
-| `409 Conflict` / `NOT_FOUND` | Redis stock key uninitialized. |
-| `503 Service Unavailable` | Publish failure, nack, return or confirm timeout. Redis arbitration refunds an unclaimed order; a consumer-owned order retains its reservation and can still become CONFIRMED. Retry with the same idempotency key. |
-| `200 OK` | Persisted order already uses supplied idempotency key. |
-| `400 Bad Request` | Missing or blank idempotency key, missing product ID, or nonpositive quantity. |
+| `202 PENDING` | Stock, order and outbox intent committed; broker ack is asynchronous |
+| `200` | Existing idempotency key, including terminal `CANCELLED` |
+| `409 OUT_OF_STOCK / NOT_FOUND` | Stock unavailable or sale uninitialized |
+| `400` | Invalid order input |
 
-Concurrent requests with the same key receive the existing reservation ID with `200 OK` while it is pending.
+A cancelled key remains a tombstone. Retry that key returns its terminal outcome;
+use a new key for a new purchase. Broker failure no longer triggers controller
+refund or synchronous publish failure. Database failures still fail the HTTP request.
 
-## Design notes
+## Configuration and limitations
 
-- Redis Lua checks the idempotency key and decrements stock atomically. Concurrent requests with the same key reserve once.
-- RabbitMQ separates fast reservation from DB persistence.
-- `idempotencyKey` unique in PostgreSQL. Consumer checks it before save; duplicate delivery after persistence creates no second row. Redis keeps the reservation key until a failed order is rolled back.
-- Redis arbitrates persistence versus refund using `order:<orderId>:decision`.
-  Atomic Lua selects `CONSUMER` or `REFUND`. Refund first prevents a later
-  consumer from writing PostgreSQL; consumer first prevents stock restoration.
-  Both scripts keep the decision so redelivery can resume a consumer claim or
-  discard a refunded order. PostgreSQL uniqueness still protects duplicate inserts.
-- A claimed dead letter resumes persistence. An unclaimed dead letter refunds once;
-  duplicate dead letters cannot increment stock twice. Permanent database failure
-  can leave a claimed order pending rather than falsely releasing its inventory.
-- Order queue durable; configured with dead-letter exchange/queue.
-- Publisher confirms are correlated and publishes mandatory. A returned message
-  cannot qualify as accepted even if the exchange acknowledges it. Configure the
-  wait with `flashsale.publish-confirm-timeout-ms`; DLQ republish also waits for
-  confirms before recovering the failed delivery.
+Configure `flashsale.outbox.batch-size`, `poll-delay-ms`, `pending-timeout-ms`,
+`sweep-delay-ms`, and `scheduling-enabled`; publisher waits use
+`flashsale.publish-confirm-timeout-ms`. Defaults live in the worker constructors
+and scheduling annotations. Tests disable scheduling when invoking workers directly.
 
-## Current limitations
+- Stock, order and event are atomically durable only to the extent PostgreSQL is
+  durable. This demo has no replicated database, broker or infrastructure HA.
+- A pending deadline can cancel an accepted order during a prolonged outage.
+  `202` means durable intent, not an unconditional eventual `CONFIRMED` promise.
+  Reconciliation fences late messages; it cannot infer broker non-delivery.
+- PostgreSQL product row locks serialize sales for a hot product. Throughput and
+  latency changes must be measured; this outbox is not a scaling claim.
+- The relay holds DB locks while awaiting confirms. A failed batch retries;
+  scheduling/connection failures may delay recovery. A surviving replica or
+  restarted worker is required for progress.
+- Redis has no coordinated persistence/recovery design. Redis loss no longer changes
+  authoritative order stock; it remains separate local infrastructure.
+- Initialization is unauthenticated. New sale generations and historical order
+  retention need an explicit production design; do not reset a live sale.
+- Hibernate `ddl-auto=update` is a demo schema mechanism. Review
+  [scripts/outbox_schema.sql](scripts/outbox_schema.sql), use versioned migrations
+  in production, and backfill legacy sale start from audited records. Do not invent
+  start times or migrate Redis-only reservations silently: drain the old generation
+  before switching writers. Mixed old/new app generations are unsupported.
 
-- Stock init unauthenticated, may overwrite Redis stock.
-- `products` entity/table unused for inventory initialization/validation; orders use Redis only.
-- App replication shares single Redis, RabbitMQ and PostgreSQL instances; these
-  are not replicated infrastructure. Publisher confirms are broker acceptance,
-  not proof that the consumer has committed a database row.
-- Redis has image-default RDB snapshots and an anonymous data volume, with no
-  explicit AOF or coordinated recovery policy. The observed normal restart saved
-  and reloaded RDB; hard state loss and stale snapshots remain limitations.
-- Reservation, publish, decision and persistence remain separate operations.
-  Redis arbitration fixes the reproduced refund/late-persistence race while Redis
-  state is intact. It is not a distributed transaction or proof of general fault
-  tolerance. See [bench/REPORT.md](bench/REPORT.md) for executed trials and bounds.
-- Consumer-first confirmation failure still produces an ambiguous HTTP outcome:
-  an order may persist despite HTTP failure. Retry with the same idempotency key.
-  Broker outage HTTP failures remain; this task does not remove them.
-- Losing Redis reservations/decision keys, or restoring stale RDB data, invalidates
-  the arbitration foundation. No coordinated Redis/PostgreSQL recovery or durable
-  decision journal was added. Never treat a normal Redis restart as an HA proof.
-- A crash after reserving but before publishing can leave an orphan reservation.
-  Permanent DB failure can leave `CONSUMER` ownership pending; no background
-  reconciliation or bounded final compensation was added. An unclaimed permanently
-  failed delivery retains the existing DLQ refund behavior and can lack a DB order
-  despite its earlier HTTP acceptance.
-- Decision and rollback markers do not expire. Safe cleanup requires an inventory
-  generation/recovery policy, which is not implemented. No outbox was added.
-- No independent recovery path if Redis claim/refund keeps failing.
-  `scripts/seed_data.sql` remains empty.
-
-## Tests
+## Tests and evidence
 
 ```bash
 JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw test
+# Build the app image before enabling capped, multi-replica Testcontainers faults:
+JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw -DskipTests package
+docker build -t flash-sale-engine:local .
+JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw -Dflashsale.run-container-faults=true test
 ```
 
-Tests use capped Testcontainers for PostgreSQL, Redis, and RabbitMQ; Docker must be running. They cover concurrent oversell, same-key reservations, DLQ redelivery, publish failure, nack, a real unroutable return, and confirm timeout. Added real-delivery/lost-confirm tests cover both arbitration
-outcomes, same-key retry after nack, claimed redelivery and claimed-DLQ continuation.
-Original test bodies remain unchanged. Run `k6 run scripts/load_test.js` against a running stack for load results. See [`RESULTS.md`](RESULTS.md) for measured output.
+The previous test snapshot and this session's baseline are retained under
+`bench/results/outbox-session/baseline/`. Publisher/refund tests now assert durable
+acceptance, retry and sweep cancellation, as explicitly authorized. Oversell and
+same-key stock/count assertions retain their protection. Container fault tests
+reuse `bench/experiment.py`, `bench/load.js` and `bench/http_concurrency.py`.
+The deterministic poller crash test blocks a DB update after a real broker ack,
+kills the app, terminates its abandoned DB session, and restarts both workers;
+it verifies actual republish with a single confirmed order.
 
-For distributed experiments, see [bench/README.md](bench/README.md). Scripts save
-raw accepted-key ledgers, database/Redis reconciliation, Docker resource snapshots,
-and failed load thresholds. Experiments run sequentially on the same laptop.
+Historical measurements remain in [RESULTS.md](RESULTS.md) and
+[bench/REPORT.md](bench/REPORT.md). New results are appended separately; historical
+Redis arbitration measurements are not evidence for the outbox implementation.

@@ -11,6 +11,11 @@ import jakarta.persistence.Table;
 @Table(name = "products")
 
 public class Product {  
+    @Column(nullable = false)
+    private java.time.LocalDateTime saleStartedAt;
+
+    public java.time.LocalDateTime getSaleStartedAt() { return saleStartedAt; }
+    public void setSaleStartedAt(java.time.LocalDateTime value) { saleStartedAt = value; }
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
