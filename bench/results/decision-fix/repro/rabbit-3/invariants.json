@@ -1,0 +1,102 @@
+{
+  "initial_stock": 100000,
+  "http_202": 50461,
+  "confirmed": 50468,
+  "confirmed_quantity": 50468,
+  "redis_stock": 49539,
+  "i1_delta_units": 7,
+  "i1_violation": true,
+  "i1_violation_units": 7,
+  "i1_related_keys": [
+    "bench-rabbit-3-11-20874",
+    "bench-rabbit-3-22-20876",
+    "bench-rabbit-3-26-20878",
+    "bench-rabbit-3-28-20880",
+    "bench-rabbit-3-30-20879",
+    "bench-rabbit-3-41-20877",
+    "bench-rabbit-3-9-20875"
+  ],
+  "i2_violations": 7,
+  "i2_keys": [
+    {
+      "key": "bench-rabbit-3-11-20874",
+      "order_id": "ab723a25-3e21-4847-b4c3-661ea16d5e2b",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:46.463466"
+    },
+    {
+      "key": "bench-rabbit-3-22-20876",
+      "order_id": "7c0467a9-2b65-4226-8cdc-63287445c20a",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:46.460888"
+    },
+    {
+      "key": "bench-rabbit-3-26-20878",
+      "order_id": "509f6925-8ac6-4574-ad0c-39840f90de01",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:46.466375"
+    },
+    {
+      "key": "bench-rabbit-3-28-20880",
+      "order_id": "0b690fce-62b5-4428-afa1-9b09375d04d8",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:46.468233"
+    },
+    {
+      "key": "bench-rabbit-3-30-20879",
+      "order_id": "dd978cfc-884c-45df-ade5-00adf4d41084",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:31.669828"
+    },
+    {
+      "key": "bench-rabbit-3-41-20877",
+      "order_id": "d5391fba-488b-4bc8-8559-883d605e6cfb",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:31.667675"
+    },
+    {
+      "key": "bench-rabbit-3-9-20875",
+      "order_id": "f460ee58-0352-4d0e-a48d-db1e4bf05e25",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T12:50:46.465176"
+    }
+  ],
+  "lost": 0,
+  "lost_keys": [],
+  "duplicates": 0,
+  "duplicate_keys": [],
+  "stuck": 0,
+  "stuck_keys": [],
+  "stuck_decisions": 0,
+  "stuck_decision_keys": [],
+  "confirmed_without_http_202": [
+    "bench-rabbit-3-11-20874",
+    "bench-rabbit-3-22-20876",
+    "bench-rabbit-3-26-20878",
+    "bench-rabbit-3-28-20880",
+    "bench-rabbit-3-30-20879",
+    "bench-rabbit-3-41-20877",
+    "bench-rabbit-3-9-20875"
+  ]
+}

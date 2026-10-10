@@ -1,0 +1,47 @@
+{
+  "initial_stock": 100000,
+  "http_202": 50978,
+  "confirmed": 50980,
+  "confirmed_quantity": 50980,
+  "redis_stock": 49022,
+  "i1_delta_units": 2,
+  "i1_violation": true,
+  "i1_violation_units": 2,
+  "i1_related_keys": [
+    "bench-rabbit-8-10-20717",
+    "bench-rabbit-8-26-20718"
+  ],
+  "i2_violations": 2,
+  "i2_keys": [
+    {
+      "key": "bench-rabbit-8-10-20717",
+      "order_id": "4bcbf6ed-5730-44ed-a0ef-5141715ceade",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T13:01:26.848817"
+    },
+    {
+      "key": "bench-rabbit-8-26-20718",
+      "order_id": "b6089fb9-294b-4cc6-9772-b96339323bf9",
+      "quantity": 1,
+      "reservation": null,
+      "decision": null,
+      "rolled_back": "1",
+      "created_at": "2026-10-10T13:01:26.84722"
+    }
+  ],
+  "lost": 0,
+  "lost_keys": [],
+  "duplicates": 0,
+  "duplicate_keys": [],
+  "stuck": 0,
+  "stuck_keys": [],
+  "stuck_decisions": 0,
+  "stuck_decision_keys": [],
+  "confirmed_without_http_202": [
+    "bench-rabbit-8-10-20717",
+    "bench-rabbit-8-26-20718"
+  ]
+}

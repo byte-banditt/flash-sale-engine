@@ -1,0 +1,20 @@
+$ docker exec 761fd7ffbd2664debbd11c47b1627a25d499e38b232b1a52f3e96e5f35317556 sh -c cat /sys/fs/cgroup/cpu.stat; cat /sys/fs/cgroup/memory.events
+started=2026-10-10T12:51:57.515402+00:00
+usage_usec 248132461
+user_usec 176894075
+system_usec 71238385
+nice_usec 0
+nr_periods 0
+nr_throttled 0
+throttled_usec 0
+nr_bursts 0
+burst_usec 0
+low 0
+high 0
+max 0
+oom 0
+oom_kill 0
+oom_group_kill 0
+
+exit_code=0
+ended=2026-10-10T12:51:57.602400+00:00

@@ -1,0 +1,6 @@
+$ docker events --since 1791636979 --until 1791637107 --filter event=oom --filter event=die --format {{json .}}
+started=2026-10-10T12:58:27.968091+00:00
+{"Type":"container","Action":"die","Actor":{"ID":"af42eb2bb2032f7fed0ed0b666bbf448de3158f15f5146841a8ad6b88ca31e97","Attributes":{"com.docker.compose.config-hash":"44a63014e3cf3e95835201b7d85e9a5327d7272e0fbd6601342b567bec0388b0","com.docker.compose.container-number":"1","com.docker.compose.depends_on":"","com.docker.compose.image":"sha256:3c498e636fd64462480c5f9ff842eb224ab84160a8ada1ded5375e9569e9230c","com.docker.compose.oneoff":"False","com.docker.compose.project":"flash-sale-engine","com.docker.compose.project.config_files":"/home/ayussh/projects/flash-sale-engine/docker-compose.yml","com.docker.compose.project.working_dir":"/home/ayussh/projects/flash-sale-engine","com.docker.compose.replace":"flash_rabbitmq","com.docker.compose.service":"rabbitmq","com.docker.compose.version":"5.5.1","desktop.docker.io/ports.scheme":"v2","desktop.docker.io/ports/15672/tcp":":15672","desktop.docker.io/ports/5672/tcp":":5672","desktop.docker.io/wsl-distro":"Debian","execDuration":"130","exitCode":"0","image":"rabbitmq:3.13-management-alpine","name":"flash_rabbitmq"}},"scope":"local","time":1791637026,"timeNano":1791637026779683713}
+
+exit_code=0
+ended=2026-10-10T12:58:27.992127+00:00
