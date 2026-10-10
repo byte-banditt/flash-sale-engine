@@ -1,0 +1,17 @@
+Error response from daemon: No such container: f6a425892f6cba8589e7338513dddb09f05fc0b9ccee56d411504308d288c8a2
+Traceback (most recent call last):
+  File "/home/ayussh/projects/flash-sale-engine/bench/experiment.py", line 78, in <module>
+    state=raw(['docker','exec','flash_postgres','psql','-U','postgres','-d','flashsale_db','-tAc',
+        "select (select count(*) from orders where status='PENDING')+(select count(*) from outbox_events where status='PENDING')"])
+  File "/home/ayussh/projects/flash-sale-engine/bench/experiment.py", line 20, in raw
+    def raw(args): return subprocess.check_output(resolve(args),text=True).strip()
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.5/lib/python3.14/subprocess.py", line 473, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.5/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'exec', 'f6a425892f6cba8589e7338513dddb09f05fc0b9ccee56d411504308d288c8a2', 'psql', '-U', 'postgres', '-d', 'flashsale_db', '-tAc', "select (select count(*) from orders where status='PENDING')+(select count(*) from outbox_events where status='PENDING')"]' returned non-zero exit status 1.

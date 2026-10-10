@@ -1,0 +1,5 @@
+$ docker events --since 1791665399 --until 1791665657 --filter event=oom --filter event=die --format {{json .}}
+started=2026-10-10T20:54:17.354971+00:00
+
+exit_code=0
+ended=2026-10-10T20:54:17.432122+00:00

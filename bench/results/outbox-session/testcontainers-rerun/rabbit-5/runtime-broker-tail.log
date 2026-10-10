@@ -1,0 +1,35 @@
+2026-10-10 20:07:23.861878+00:00 [info] <0.254.0> Running boot step definition_import_worker_pool defined by app rabbit[0m
+2026-10-10 20:07:23.862120+00:00 [info] <0.341.0> Starting worker pool 'definition_import_pool' with 16 processes in it[0m
+2026-10-10 20:07:23.866207+00:00 [info] <0.254.0> Running boot step cluster_name defined by app rabbit[0m
+2026-10-10 20:07:23.866486+00:00 [info] <0.254.0> Running boot step virtual_host_reconciliation defined by app rabbit[0m
+2026-10-10 20:07:23.867023+00:00 [info] <0.254.0> Running boot step direct_client defined by app rabbit[0m
+2026-10-10 20:07:23.868798+00:00 [info] <0.254.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation[0m
+2026-10-10 20:07:23.870550+00:00 [info] <0.254.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management[0m
+2026-10-10 20:07:23.872043+00:00 [info] <0.562.0> Resetting node maintenance status[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0> By default, this feature can still be used for now.[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0>     "deprecated_features.permit.management_metrics_collection = true"[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0> To test RabbitMQ as if the feature was removed, set this in your configuration:[0m
+[38;5;214m2026-10-10 20:07:24.424067+00:00 [warning] <0.591.0>     "deprecated_features.permit.management_metrics_collection = false"[0m
+2026-10-10 20:07:32.589990+00:00 [info] <0.628.0> Management plugin: HTTP (non-TLS) listener started on port 15672[0m
+2026-10-10 20:07:32.591146+00:00 [info] <0.658.0> Statistics database started.[0m
+2026-10-10 20:07:32.591291+00:00 [info] <0.657.0> Starting worker pool 'management_worker_pool' with 3 processes in it[0m
+2026-10-10 20:07:32.607428+00:00 [info] <0.676.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692[0m
+2026-10-10 20:07:32.608045+00:00 [info] <0.562.0> Ready to start client connection listeners[0m
+2026-10-10 20:07:32.612498+00:00 [info] <0.720.0> started TCP listener on [::]:5672[0m
+2026-10-10 20:07:32.655765+00:00 [info] <0.723.0> accepting AMQP connection <0.723.0> (172.19.0.5:39526 -> 172.19.0.4:5672)[0m
+2026-10-10 20:07:32.656643+00:00 [info] <0.726.0> accepting AMQP connection <0.726.0> (172.19.0.6:34942 -> 172.19.0.4:5672)[0m
+2026-10-10 20:07:32.727407+00:00 [info] <0.723.0> connection <0.723.0> (172.19.0.5:39526 -> 172.19.0.4:5672) has a client-provided name: rabbitConnectionFactory#3f7aa4f8:4044[0m
+2026-10-10 20:07:32.729747+00:00 [info] <0.726.0> connection <0.726.0> (172.19.0.6:34942 -> 172.19.0.4:5672) has a client-provided name: rabbitConnectionFactory#700b035b:4040[0m
+2026-10-10 20:07:32.753424+00:00 [info] <0.723.0> connection <0.723.0> (172.19.0.5:39526 -> 172.19.0.4:5672 - rabbitConnectionFactory#3f7aa4f8:4044): user 'guest' authenticated and granted access to vhost '/'[0m
+2026-10-10 20:07:32.753409+00:00 [info] <0.726.0> connection <0.726.0> (172.19.0.6:34942 -> 172.19.0.4:5672 - rabbitConnectionFactory#700b035b:4040): user 'guest' authenticated and granted access to vhost '/'[0m
+ completed with 5 plugins.
+2026-10-10 20:07:32.835963+00:00 [info] <0.562.0> Server startup complete; 5 plugins started.[0m
+2026-10-10 20:07:32.835963+00:00 [info] <0.562.0>  * rabbitmq_prometheus[0m
+2026-10-10 20:07:32.835963+00:00 [info] <0.562.0>  * rabbitmq_federation[0m
+2026-10-10 20:07:32.835963+00:00 [info] <0.562.0>  * rabbitmq_management[0m
+2026-10-10 20:07:32.835963+00:00 [info] <0.562.0>  * rabbitmq_management_agent[0m
+2026-10-10 20:07:32.835963+00:00 [info] <0.562.0>  * rabbitmq_web_dispatch[0m
+2026-10-10 20:07:32.948320+00:00 [info] <0.9.0> Time to start RabbitMQ: 31268 ms[0m

@@ -1,0 +1,377 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.flashsale:flash-sale-engine >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ flash-sale-engine ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ flash-sale-engine ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ flash-sale-engine ---
+[INFO] skip non existing resourceDirectory /home/ayussh/projects/flash-sale-engine/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ flash-sale-engine ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Some input files use or override a deprecated API.
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ flash-sale-engine ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Running com.flashsale.engine.OutboxFaultInjectionTests
+20:20:35.547 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+20:20:35.557 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+20:20:35.593 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+20:20:36.704 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+20:20:38.429 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+20:20:38.431 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+20:20:38.474 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 4918 MB
+  Labels: 
+    com.docker.desktop.address=unix:///var/run/docker-cli.sock
+20:20:38.766 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+20:20:39.262 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop.exe) does not have credentials for https://index.docker.io/v1/
+20:20:39.595 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: 730749f37c5c2b669169e4931cc7b84de063f1b4fb35c3b7fc6457a2bbc7bd73
+20:20:40.696 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT1.929764824S
+20:20:40.712 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+20:20:40.713 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+20:20:40.714 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+20:20:40.715 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+20:20:40.939 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: aa9f6532332186879eefe27fd76e7f8ca0340eaef95771112dc19ce449f1906e
+20:20:47.409 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT6.693268813S
+20:20:47.411 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:57089/flashsale_db?loggerLevel=OFF)
+20:20:47.413 [main] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+20:20:47.587 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: 4c4339856c65e0b0acf49c06e06ffa73b7fd3dd771cba1277d014774964f873c
+20:20:48.497 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT1.084597599S
+20:20:48.498 [main] INFO tc.rabbitmq:3.13-management-alpine -- Creating container for image: rabbitmq:3.13-management-alpine
+20:20:48.610 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine is starting: b7b333b3ba44ff2abec1366cbdd9db530d1544da3367bf5f05aaa30b28db6210
+20:21:08.059 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine started in PT19.557068472S
+20:21:08.223 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+20:21:08.906 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 55cbc3f7b47010ab0f4a35174e0b6e5f9d7f8d8259363e1055f62cfe5d603bc6
+20:21:23.016 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT14.793530359S
+20:21:23.017 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+20:21:23.212 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 4a7a8c974abe91907ed905611291a4a0d03c45b958a09d84129bcc8c50b6a8d8
+20:21:35.522 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT12.503256281S
+20:21:35.555 [main] INFO tc.nginx:1.28-alpine -- Creating container for image: nginx:1.28-alpine
+20:21:36.973 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine is starting: 7ebb7eb8316c702f6571bf693ac4e94221a25895b6c4bd04306d195c5ca473a5
+20:21:39.004 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine started in PT3.448362468S
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-1 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 47490,
+  "http_202": 52510,
+  "confirmed": 52510,
+  "confirmed_qty": 52510,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-2 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 44203,
+  "http_202": 55797,
+  "confirmed": 55797,
+  "confirmed_qty": 55797,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-3 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 45609,
+  "http_202": 54391,
+  "confirmed": 54391,
+  "confirmed_qty": 54391,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-4 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43748,
+  "http_202": 56252,
+  "confirmed": 56252,
+  "confirmed_qty": 56252,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-5 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 44226,
+  "http_202": 55774,
+  "confirmed": 55774,
+  "confirmed_qty": 55774,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-6 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43343,
+  "http_202": 56657,
+  "confirmed": 56657,
+  "confirmed_qty": 56657,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-7 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 42292,
+  "http_202": 57708,
+  "confirmed": 57708,
+  "confirmed_qty": 57708,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-8 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 48510,
+  "http_202": 51490,
+  "confirmed": 51490,
+  "confirmed_qty": 51490,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-9 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43798,
+  "http_202": 56202,
+  "confirmed": 56202,
+  "confirmed_qty": 56202,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/rabbit-10 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43481,
+  "http_202": 56519,
+  "confirmed": 56519,
+  "confirmed_qty": 56519,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/kill-1 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 45939,
+  "http_202": 54061,
+  "confirmed": 54061,
+  "confirmed_qty": 54061,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/kill-2 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 44726,
+  "http_202": 55274,
+  "confirmed": 55274,
+  "confirmed_qty": 55274,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-final/kill-3 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 46668,
+  "http_202": 53332,
+  "confirmed": 53332,
+  "confirmed_qty": 53332,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+[ERROR] java.lang.OutOfMemoryError: Java heap space
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  58:16 min
+[INFO] Finished at: 2026-10-10T21:18:40Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project flash-sale-engine: 
+[ERROR] 
+[ERROR] See /home/ayussh/projects/flash-sale-engine/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] There was an error in the forked process
+[ERROR] java.lang.OutOfMemoryError: Java heap space
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: There was an error in the forked process
+[ERROR] java.lang.OutOfMemoryError: Java heap space
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:631)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:285)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:250)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1356)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1154)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:988)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+[ERROR] 	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:919)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:285)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:207)
+[ERROR] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[ERROR] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:362)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -85,3 +85,27 @@ campaigns and embeds their evidence into REPORT.md and RESULTS.md.
 stopped, using its own temporary Redis keys. This Python/localhost component
 measurement is distinct from HTTP overhead through the app's Lettuce connection.
 Raw samples, errors, and cleanup scope are recorded; no Redis database is flushed.
+
+
+## Transactional outbox follow-up
+
+The order path now uses PostgreSQL stock, pending orders and outbox intent in
+one transaction. Use the explicit mode when running the existing harness:
+
+```bash
+OUTBOX_MODE=true python3 bench/experiment.py bench/results/outbox-session/after-comparison none
+python3 bench/outbox_reconcile.py bench/results/outbox-session/after-comparison
+```
+
+`bench/load.js` is unchanged. Testcontainers supply their mapped nginx endpoint
+and actual container IDs through the harness environment. Queue observations
+retain failed CLI output and can use management counters through a surviving
+app when Docker exec against the broker fails. Management statistics have their
+refresh delay; PostgreSQL settlement and repeated quiet polls are both required.
+Missing resource observations remain null rather than invented zeroes.
+
+The outbox oracle streams rows within one repeatable-read snapshot. Its failed
+aggregate-JSON predecessor and interrupted campaigns remain under
+`results/outbox-session/`. Historical Redis reconciliation tools describe the
+older source; use the outbox oracle for the new implementation. Results are in
+[OUTBOX_REPORT.md](OUTBOX_REPORT.md) and the appended root RESULTS.md section.

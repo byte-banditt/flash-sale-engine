@@ -1,0 +1,7 @@
+$ docker exec a41197ca328691af49c07e08ab8aee69ec88bc85f6d3837e88940623f797bb81 psql -U postgres -d flashsale_db -qAt -v ON_ERROR_STOP=1 -c begin isolation level repeatable read read only;
+select jsonb_build_object('kind','products','row',to_jsonb(p)) from products p;
+select jsonb_build_object('kind','orders','row',to_jsonb(o)) from orders o;
+select jsonb_build_object('kind','events','row',to_jsonb(e)) from outbox_events e;
+commit;
+stdout=postgres-snapshot.jsonl
+exit=0

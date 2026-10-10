@@ -1,0 +1,2 @@
+time="2026-10-10T21:22:57Z" level=warning msg="/home/ayussh/projects/flash-sale-engine/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+{"http_202": 29201, "confirmed": 29201, "redis_stock": null, "oversold_count": 0, "duplicate_orders": 0, "lost_orders": 0, "stuck_reservations": 0, "unacknowledged_confirmed": 0, "stock_accounting_excess": 0, "drained": true, "k6_exit": 0, "postgres_stock": 70799, "stock_source": "PostgreSQL", "pending_orders": 0, "cancelled_orders": 0}

@@ -1,0 +1,1 @@
+{"initial_stock": 100000, "postgres_stock": 50793, "http_202": 49207, "confirmed": 49207, "confirmed_qty": 49207, "pending_orders": 0, "pending_qty": 0, "pending_events": 0, "cancelled_keys": [], "stock_ledger_delta": 0, "settled_stock_delta": 0, "lost_keys": [], "duplicate_keys": [], "stuck_pending_keys": [], "missing_or_mismatched_intent_keys": [], "pass": true}

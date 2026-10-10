@@ -1,0 +1,7 @@
+$ docker exec aa9f6532332186879eefe27fd76e7f8ca0340eaef95771112dc19ce449f1906e psql -U postgres -d flashsale_db -c TRUNCATE orders CASCADE
+started=2026-10-10T20:49:58.175037+00:00
+NOTICE:  truncate cascades to table "outbox_events"
+TRUNCATE TABLE
+
+exit_code=0
+ended=2026-10-10T20:49:58.374386+00:00

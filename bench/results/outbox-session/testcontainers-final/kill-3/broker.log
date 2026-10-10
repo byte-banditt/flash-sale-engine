@@ -1,0 +1,7 @@
+[38;5;214m2026-10-10 21:13:46.479449+00:00 [warning] <0.2047.0> closing AMQP connection <0.2047.0> (172.19.0.5:40300 -> 172.19.0.4:5672 - rabbitConnectionFactory#73f6ffb1:0, vhost: '/', user: 'guest'):[0m
+[38;5;214m2026-10-10 21:13:46.479449+00:00 [warning] <0.2047.0> client unexpectedly closed TCP connection[0m
+2026-10-10 21:14:30.634906+00:00 [info] <0.2727.0> accepting AMQP connection <0.2727.0> (172.19.0.5:50934 -> 172.19.0.4:5672)[0m
+2026-10-10 21:14:30.733206+00:00 [info] <0.2727.0> connection <0.2727.0> (172.19.0.5:50934 -> 172.19.0.4:5672) has a client-provided name: rabbitConnectionFactory#5b2c9a69:0[0m
+2026-10-10 21:14:30.781849+00:00 [info] <0.2727.0> connection <0.2727.0> (172.19.0.5:50934 -> 172.19.0.4:5672 - rabbitConnectionFactory#5b2c9a69:0): user 'guest' authenticated and granted access to vhost '/'[0m
+[38;5;87m2026-10-10 21:15:00.939834+00:00 [notice] <0.86.0>     alarm_handler: {set,{system_memory_high_watermark,[]}}[0m
+[38;5;87m2026-10-10 21:17:00.992791+00:00 [notice] <0.86.0>     alarm_handler: {clear,system_memory_high_watermark}[0m

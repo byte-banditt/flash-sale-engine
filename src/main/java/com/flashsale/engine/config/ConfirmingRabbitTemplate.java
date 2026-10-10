@@ -12,7 +12,7 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
-/** The order API only accepts a reservation after a routed broker acknowledgement. */
+/** Waits for routed broker acknowledgements; outbox retry policy belongs to the caller. */
 public class ConfirmingRabbitTemplate extends RabbitTemplate {
     private static final Logger log = LoggerFactory.getLogger(ConfirmingRabbitTemplate.class);
     private final long confirmTimeoutMillis;

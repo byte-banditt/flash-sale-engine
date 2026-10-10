@@ -1,0 +1,54 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.flashsale:flash-sale-engine >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ flash-sale-engine ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ flash-sale-engine ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 20 source files with javac [debug parameters release 21] to target/classes
+[WARNING] /home/ayussh/projects/flash-sale-engine/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java:[46,25] isAck() in org.springframework.amqp.rabbit.connection.CorrelationData.Confirm has been deprecated and marked for removal
+[WARNING] /home/ayussh/projects/flash-sale-engine/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java:[47,48] getReason() in org.springframework.amqp.rabbit.connection.CorrelationData.Confirm has been deprecated and marked for removal
+[WARNING] /home/ayussh/projects/flash-sale-engine/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java:[48,78] getReason() in org.springframework.amqp.rabbit.connection.CorrelationData.Confirm has been deprecated and marked for removal
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ flash-sale-engine ---
+[INFO] skip non existing resourceDirectory /home/ayussh/projects/flash-sale-engine/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ flash-sale-engine ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java uses or overrides a deprecated API.
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java:[321,19] reference to convertAndSend is ambiguous
+  both method convertAndSend(java.lang.String,java.lang.String,java.lang.Object) in org.springframework.amqp.rabbit.core.RabbitTemplate and method convertAndSend(java.lang.String,java.lang.Object,org.springframework.amqp.core.MessagePostProcessor) in org.springframework.amqp.rabbit.core.RabbitTemplate match
+[ERROR] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java:[343,19] reference to convertAndSend is ambiguous
+  both method convertAndSend(java.lang.String,java.lang.String,java.lang.Object) in org.springframework.amqp.rabbit.core.RabbitTemplate and method convertAndSend(java.lang.String,java.lang.Object,org.springframework.amqp.core.MessagePostProcessor) in org.springframework.amqp.rabbit.core.RabbitTemplate match
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.040 s
+[INFO] Finished at: 2026-10-10T19:31:13Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:testCompile (default-testCompile) on project flash-sale-engine: Compilation failure: Compilation failure: 
+[ERROR] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java:[321,19] reference to convertAndSend is ambiguous
+[ERROR]   both method convertAndSend(java.lang.String,java.lang.String,java.lang.Object) in org.springframework.amqp.rabbit.core.RabbitTemplate and method convertAndSend(java.lang.String,java.lang.Object,org.springframework.amqp.core.MessagePostProcessor) in org.springframework.amqp.rabbit.core.RabbitTemplate match
+[ERROR] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java:[343,19] reference to convertAndSend is ambiguous
+[ERROR]   both method convertAndSend(java.lang.String,java.lang.String,java.lang.Object) in org.springframework.amqp.rabbit.core.RabbitTemplate and method convertAndSend(java.lang.String,java.lang.Object,org.springframework.amqp.core.MessagePostProcessor) in org.springframework.amqp.rabbit.core.RabbitTemplate match
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,71 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.flashsale:flash-sale-engine >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ flash-sale-engine ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ flash-sale-engine ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ flash-sale-engine ---
+[INFO] skip non existing resourceDirectory /home/ayussh/projects/flash-sale-engine/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ flash-sale-engine ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Some input files use or override a deprecated API.
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ flash-sale-engine ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Running com.flashsale.engine.OutboxFaultInjectionTests
+19:42:38.870 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+19:42:38.883 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+19:42:38.953 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+19:42:39.623 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+19:42:40.811 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+19:42:40.813 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+19:42:40.858 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 4918 MB
+  Labels: 
+    com.docker.desktop.address=unix:///var/run/docker-cli.sock
+19:42:41.009 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+19:42:41.386 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop.exe) does not have credentials for https://index.docker.io/v1/
+19:42:41.751 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: e1d3234d050e92ac6691e5bc95741f813ba934263589c792db9f0b9fa1d92a48
+19:42:42.615 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT1.605993763S
+19:42:42.632 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+19:42:42.633 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+19:42:42.633 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+19:42:42.634 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+19:42:42.911 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: f6a425892f6cba8589e7338513dddb09f05fc0b9ccee56d411504308d288c8a2
+19:42:48.140 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT5.506331413S
+19:42:48.142 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:63145/flashsale_db?loggerLevel=OFF)
+19:42:48.143 [main] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+19:42:48.263 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: 8b612cf67e9f3554d639e2cb43cbd6e3b9c3652f05f96aeb01b663ed7f4ae205
+19:42:48.823 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT0.679848927S
+19:42:48.823 [main] INFO tc.rabbitmq:3.13-management-alpine -- Creating container for image: rabbitmq:3.13-management-alpine
+19:42:48.910 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine is starting: f09a3473536f0851ac1a2a8ac10144950ea30ba56d95f3eed857da00d33724ac
+19:43:01.538 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine started in PT12.714922781S
+19:43:01.559 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+19:43:01.712 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 2868debdab056001630b9dfcfc26921a48059080f774fe002cc8f1a9bf042751
+19:43:13.509 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT11.950203236S
+19:43:13.514 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+19:43:13.671 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 28ebbaeb41fb09137cf02649c94b7aeaced4c0c6de3be8c539a734b85f2aa22e
+19:43:22.480 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT8.965402253S
+19:43:22.483 [main] INFO tc.nginx:1.28-alpine -- Creating container for image: nginx:1.28-alpine
+19:43:22.938 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine is starting: ceeaffab390389b06bd775745014fdf3348c6dc19c6fb3a817d1237f92ddb01a
+19:43:23.422 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine started in PT0.9391084S

@@ -1,0 +1,2 @@
+2026-10-10T19:49:50.157024+00:00
+Stopped evidence campaign after PostgreSQL backend OOM in aggregate JSON collector. This run is incomplete, not a settled invariant result.

@@ -1,0 +1,6 @@
+$ docker exec c6dc3c56a1c30d02d7ce47637d232588e940718e3b8cd8e1024cd9913cb975e9 redis-cli FLUSHDB
+started=2026-10-10T20:02:13.384843+00:00
+OK
+
+exit_code=0
+ended=2026-10-10T20:02:13.490881+00:00

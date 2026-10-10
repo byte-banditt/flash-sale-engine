@@ -1,0 +1,6 @@
+$ docker exec d77c3c11b31647d87cb8d61536468c3b555b38034ff9872bf092fdd9fb5f2ad5 sh -c cat /sys/fs/cgroup/cpu.stat; cat /sys/fs/cgroup/memory.events
+started=2026-10-10T20:13:05.090868+00:00
+OCI runtime exec failed: exec failed: unable to start container process: error starting setns process: fork/exec /proc/self/fd/6: no such file or directory
+
+exit_code=127
+ended=2026-10-10T20:13:05.222439+00:00

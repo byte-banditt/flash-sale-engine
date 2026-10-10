@@ -1,0 +1,10 @@
+eager_vaughan nginx:1.28-alpine
+loving_jennings flash-sale-engine:local
+gallant_buck flash-sale-engine:local
+quirky_stonebraker rabbitmq:3.13-management-alpine
+brave_cannon redis:7-alpine
+elegant_jackson postgres:16-alpine
+testcontainers-ryuk-dd9624b6-9251-4ff5-816d-d559623e85a7 testcontainers/ryuk:0.14.0
+flash_rabbitmq rabbitmq:3.13-management-alpine
+flash_redis redis:7-alpine
+flash_postgres postgres:16-alpine

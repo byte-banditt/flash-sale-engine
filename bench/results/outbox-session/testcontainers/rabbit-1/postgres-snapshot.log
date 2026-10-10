@@ -1,0 +1,10 @@
+$ docker exec f6a425892f6cba8589e7338513dddb09f05fc0b9ccee56d411504308d288c8a2 psql -U postgres -d flashsale_db -tAc select jsonb_build_object(
+ 'products',(select coalesce(jsonb_agg(to_jsonb(p)),'[]'::jsonb) from products p),
+ 'orders',(select coalesce(jsonb_agg(to_jsonb(o)),'[]'::jsonb) from orders o),
+ 'events',(select coalesce(jsonb_agg(to_jsonb(e)),'[]'::jsonb) from outbox_events e))
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+connection to server was lost
+
+exit=2

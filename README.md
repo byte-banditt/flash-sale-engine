@@ -151,3 +151,6 @@ it verifies actual republish with a single confirmed order.
 Historical measurements remain in [RESULTS.md](RESULTS.md) and
 [bench/REPORT.md](bench/REPORT.md). New results are appended separately; historical
 Redis arbitration measurements are not evidence for the outbox implementation.
+
+This session's commands, per-run recovery results, retained failed attempts and
+before/after HTTP measurements are in [bench/OUTBOX_REPORT.md](bench/OUTBOX_REPORT.md).

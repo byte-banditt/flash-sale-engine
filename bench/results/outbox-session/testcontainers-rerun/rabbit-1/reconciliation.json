@@ -1,0 +1,17 @@
+{
+  "http_202": 55845,
+  "confirmed": 55845,
+  "redis_stock": null,
+  "oversold_count": 0,
+  "duplicate_orders": 0,
+  "lost_orders": 0,
+  "stuck_reservations": 0,
+  "unacknowledged_confirmed": 0,
+  "stock_accounting_excess": 0,
+  "drained": true,
+  "k6_exit": 0,
+  "postgres_stock": 44155,
+  "stock_source": "PostgreSQL",
+  "pending_orders": 0,
+  "cancelled_orders": 0
+}

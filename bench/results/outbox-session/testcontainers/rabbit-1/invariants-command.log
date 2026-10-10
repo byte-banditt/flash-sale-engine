@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ayussh/projects/flash-sale-engine/bench/outbox_reconcile.py", line 12, in <module>
+    if p.returncode: raise RuntimeError(p.stdout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+connection to server was lost
+

@@ -1,0 +1,6 @@
+$ docker exec flash_redis redis-cli FLUSHDB
+started=2026-10-10T19:34:32.505480+00:00
+OK
+
+exit_code=0
+ended=2026-10-10T19:34:33.064765+00:00

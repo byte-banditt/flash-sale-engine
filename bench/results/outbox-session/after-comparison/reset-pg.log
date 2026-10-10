@@ -1,0 +1,6 @@
+$ docker exec flash_postgres psql -U postgres -d flashsale_db -c TRUNCATE orders CASCADE
+started=2026-10-10T21:22:58.711134+00:00
+TRUNCATE TABLE
+
+exit_code=0
+ended=2026-10-10T21:22:59.471907+00:00

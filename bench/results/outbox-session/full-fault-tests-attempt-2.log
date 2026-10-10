@@ -1,0 +1,185 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.flashsale:flash-sale-engine >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ flash-sale-engine ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ flash-sale-engine ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ flash-sale-engine ---
+[INFO] skip non existing resourceDirectory /home/ayussh/projects/flash-sale-engine/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ flash-sale-engine ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Some input files use or override a deprecated API.
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ flash-sale-engine ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Running com.flashsale.engine.OutboxFaultInjectionTests
+19:50:37.672 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+19:50:37.680 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+19:50:37.723 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+19:50:38.571 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+19:50:39.966 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+19:50:39.968 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+19:50:40.098 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 4918 MB
+  Labels: 
+    com.docker.desktop.address=unix:///var/run/docker-cli.sock
+19:50:40.413 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+19:50:40.867 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop.exe) does not have credentials for https://index.docker.io/v1/
+19:50:41.166 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: d4835fb1031b50a80eab16feb27003c17eff61123c38df4b39ec7b20a4a3f4d9
+19:50:42.319 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT1.905169665S
+19:50:42.339 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+19:50:42.339 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+19:50:42.340 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+19:50:42.341 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+19:50:42.596 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: a41197ca328691af49c07e08ab8aee69ec88bc85f6d3837e88940623f797bb81
+19:50:47.915 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT5.574067269S
+19:50:47.916 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:58597/flashsale_db?loggerLevel=OFF)
+19:50:47.917 [main] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+19:50:48.058 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: c6dc3c56a1c30d02d7ce47637d232588e940718e3b8cd8e1024cd9913cb975e9
+19:50:48.712 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT0.79479171S
+19:50:48.712 [main] INFO tc.rabbitmq:3.13-management-alpine -- Creating container for image: rabbitmq:3.13-management-alpine
+19:50:48.815 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine is starting: d77c3c11b31647d87cb8d61536468c3b555b38034ff9872bf092fdd9fb5f2ad5
+19:51:03.507 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine started in PT14.79357272S
+19:51:03.529 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+19:51:03.748 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: f0734ab2c391494956c93bee4df063832bbe6ba4d1d80abff648673e996faf2f
+19:51:15.417 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT11.888178398S
+19:51:15.418 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+19:51:15.544 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 909f6f856edf61a13dcb36be18bf400780e8a459209d5f7f0cbb3490d454fc99
+19:51:24.572 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT9.154657786S
+19:51:24.574 [main] INFO tc.nginx:1.28-alpine -- Creating container for image: nginx:1.28-alpine
+19:51:25.571 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine is starting: 0b60d3a14d1ef55f8b4fc48da9d4b23938efe19635054472995c8d245eabbf62
+19:51:26.491 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine started in PT1.917129914S
+OUTBOX_RUN bench/results/outbox-session/testcontainers-rerun/rabbit-1 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 44155,
+  "http_202": 55845,
+  "confirmed": 55845,
+  "confirmed_qty": 55845,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-rerun/rabbit-2 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43137,
+  "http_202": 56863,
+  "confirmed": 56863,
+  "confirmed_qty": 56863,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-rerun/rabbit-3 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43053,
+  "http_202": 56947,
+  "confirmed": 56947,
+  "confirmed_qty": 56947,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-rerun/rabbit-4 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 43584,
+  "http_202": 56416,
+  "confirmed": 56416,
+  "confirmed_qty": 56416,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-rerun/rabbit-5 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 50793,
+  "http_202": 49207,
+  "confirmed": 49207,
+  "confirmed_qty": 49207,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+
+OUTBOX_RUN bench/results/outbox-session/testcontainers-rerun/rabbit-6 PASS {
+  "initial_stock": 100000,
+  "postgres_stock": 44359,
+  "http_202": 55641,
+  "confirmed": 55641,
+  "confirmed_qty": 55641,
+  "pending_orders": 0,
+  "pending_qty": 0,
+  "pending_events": 0,
+  "cancelled_keys": [],
+  "stock_ledger_delta": 0,
+  "settled_stock_delta": 0,
+  "lost_keys": [],
+  "duplicate_keys": [],
+  "stuck_pending_keys": [],
+  "missing_or_mismatched_intent_keys": [],
+  "pass": true
+}
+

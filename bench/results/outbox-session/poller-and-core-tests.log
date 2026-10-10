@@ -1,0 +1,269 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.flashsale:flash-sale-engine >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ flash-sale-engine ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ flash-sale-engine ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ flash-sale-engine ---
+[INFO] skip non existing resourceDirectory /home/ayussh/projects/flash-sale-engine/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ flash-sale-engine ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Some input files use or override a deprecated API.
+[INFO] /home/ayussh/projects/flash-sale-engine/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ flash-sale-engine ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Xmx256m
+[INFO] Running com.flashsale.engine.OutboxFaultInjectionTests
+21:19:38.235 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+21:19:38.271 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+21:19:38.439 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+21:19:39.729 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+21:19:41.371 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+21:19:41.373 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+21:19:41.439 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop (containerized)
+  Total Memory: 4918 MB
+  Labels: 
+    com.docker.desktop.address=unix:///var/run/docker-cli.sock
+21:19:41.886 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+21:19:43.176 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop.exe) does not have credentials for https://index.docker.io/v1/
+21:19:43.924 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: 319bb5abe3a330561b1fe942e99904e6b3c6b824fbe29938a6cee6c5b42d1f8f
+21:19:45.516 [main] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT3.629584486S
+21:19:45.554 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+21:19:45.554 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+21:19:45.555 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+21:19:45.557 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+21:19:45.911 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 7a37fd78d2083a8fdfe45a0bea3f1d18f83aa761e235cd6af66755d992f87ca3
+21:19:53.827 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT8.270164548S
+21:19:53.837 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:55427/flashsale_db?loggerLevel=OFF)
+21:19:53.843 [main] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+21:19:54.060 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: bfdb62149e1a170c2892b6881fee35e33efaa623cdc14dca0ff5f6ca3e7287ac
+21:19:55.149 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT1.305768149S
+21:19:55.150 [main] INFO tc.rabbitmq:3.13-management-alpine -- Creating container for image: rabbitmq:3.13-management-alpine
+21:19:55.275 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine is starting: 5ae7469cffb00db0ba602b9e01348404227c86e6c8ac70c4475d2e98ba9a1f62
+21:20:13.821 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine started in PT18.670401478S
+21:20:13.829 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+21:20:13.976 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 3cbd33d436085269196f4a72dabfd38e7406baeb639ba85da6146a5fc95dc18c
+21:20:33.743 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT19.913080354S
+21:20:33.754 [main] INFO tc.flash-sale-engine:local -- Creating container for image: flash-sale-engine:local
+21:20:34.151 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local is starting: 2ba777afb311d7f77185db5e83925d3a09e1d274c59f07d49fd760324251a1d7
+21:20:49.101 [main] INFO tc.flash-sale-engine:local -- Container flash-sale-engine:local started in PT15.346928534S
+21:20:49.109 [main] INFO tc.nginx:1.28-alpine -- Creating container for image: nginx:1.28-alpine
+21:20:50.378 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine is starting: 0627144ad00ff050d8e2a5977b9928e11dd5a5069cc8f66865ff74a48bccdd7b
+21:20:51.236 [main] INFO tc.nginx:1.28-alpine -- Container nginx:1.28-alpine started in PT2.126971717S
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 110.7 s -- in com.flashsale.engine.OutboxFaultInjectionTests
+[INFO] Running com.flashsale.engine.OutboxUnitTests
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/ayussh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.11/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+21:21:34.570 [main] WARN com.flashsale.engine.service.OutboxRelay -- Outbox publish pending retry eventId=1175b78e-9290-41d6-a8e2-6aad502973be orderId=order cause=org.springframework.amqp.AmqpException: missing confirm
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.097 s -- in com.flashsale.engine.OutboxUnitTests
+[INFO] Running com.flashsale.engine.OrderFlowIntegrationTests
+21:21:34.699 [main] INFO tc.rabbitmq:3.13-management-alpine -- Creating container for image: rabbitmq:3.13-management-alpine
+21:21:34.921 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine is starting: 03970c2240bdd57727493db1413f2e7fdae2a91021cc21c18b8686c6e1788d5d
+21:21:51.618 [main] INFO tc.rabbitmq:3.13-management-alpine -- Container rabbitmq:3.13-management-alpine started in PT16.917926168S
+21:21:51.638 [main] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+21:21:51.955 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: d462c16af22b081f9e8260a3c9672b9148d6ab080a95f8e253b7d8089ec2689d
+21:21:52.970 [main] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT1.332399613S
+21:21:52.974 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+21:21:53.165 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 6abce6d79ab498f0110e63ad4f98ba401f87a62a55a12d067bd8b6341a208cc2
+21:21:56.712 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT3.737966649S
+21:21:56.713 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:61037/test?loggerLevel=OFF)
+21:21:57.322 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.flashsale.engine.OrderFlowIntegrationTests]: OrderFlowIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:21:57.876 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.flashsale.engine.FlashSaleEngineApplication for test class com.flashsale.engine.OrderFlowIntegrationTests
+21:21:58.178 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.flashsale.engine.OrderFlowIntegrationTests]: OrderFlowIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:21:58.181 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.flashsale.engine.FlashSaleEngineApplication for test class com.flashsale.engine.OrderFlowIntegrationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-10T21:21:59.229Z  INFO 177799 --- [flash-sale-engine] [           main] c.f.engine.OrderFlowIntegrationTests     : Starting OrderFlowIntegrationTests using Java 21.0.12.1 with PID 177799 (started by ayussh in /home/ayussh/projects/flash-sale-engine)
+2026-10-10T21:21:59.232Z  INFO 177799 --- [flash-sale-engine] [           main] c.f.engine.OrderFlowIntegrationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-10-10T21:22:00.263Z  INFO 177799 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-10T21:22:00.266Z  INFO 177799 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-10T21:22:00.463Z  INFO 177799 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 2 JPA repository interfaces.
+2026-10-10T21:22:00.572Z  INFO 177799 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-10T21:22:00.573Z  INFO 177799 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-10T21:22:00.605Z  INFO 177799 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-10T21:22:00.605Z  INFO 177799 --- [flash-sale-engine] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.flashsale.engine.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-10T21:22:00.605Z  INFO 177799 --- [flash-sale-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2026-10-10T21:22:01.723Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-10T21:22:01.747Z  INFO 177799 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-10T21:22:01.747Z  INFO 177799 --- [flash-sale-engine] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-10T21:22:01.845Z  INFO 177799 --- [flash-sale-engine] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2584 ms
+2026-10-10T21:22:02.276Z  INFO 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-10T21:22:02.643Z  INFO 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-10T21:22:03.295Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-10T21:22:03.372Z  INFO 177799 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-10T21:22:03.745Z  INFO 177799 --- [flash-sale-engine] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@610640e3
+2026-10-10T21:22:03.748Z  INFO 177799 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-10T21:22:03.859Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-10T21:22:03.941Z  INFO 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:61037/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-10T21:22:06.372Z  INFO 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-10T21:22:06.527Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-10-10T21:22:06.527Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : constraint "ukd1kkvl4hi9hp3peub1umk2xeo" of relation "orders" does not exist, skipping
+2026-10-10T21:22:06.532Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-10-10T21:22:06.532Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : constraint "ukhmsk25beh6atojvle1xuymjj0" of relation "orders" does not exist, skipping
+2026-10-10T21:22:06.544Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-10-10T21:22:06.545Z  WARN 177799 --- [flash-sale-engine] [           main] org.hibernate.orm.jdbc.warn              : constraint "ukboimg8cm0crpeex5dymfofo81" of relation "outbox_events" does not exist, skipping
+2026-10-10T21:22:06.574Z  INFO 177799 --- [flash-sale-engine] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-10T21:22:07.588Z  WARN 177799 --- [flash-sale-engine] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-10T21:22:08.117Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-10T21:22:09.072Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 40171 (http) with context path '/'
+2026-10-10T21:22:09.076Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:61029]
+2026-10-10T21:22:09.167Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#562a4bac:0/SimpleConnection@5dbbfa05 [delegate=amqp://guest@127.0.0.1:61029/, localPort=39854]
+2026-10-10T21:22:09.434Z  INFO 177799 --- [flash-sale-engine] [           main] c.f.engine.OrderFlowIntegrationTests     : Started OrderFlowIntegrationTests in 10.973 seconds (process running for 153.079)
+2026-10-10T21:22:10.765Z  INFO 177799 --- [flash-sale-engine] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-10T21:22:10.766Z  INFO 177799 --- [flash-sale-engine] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-10T21:22:10.769Z  INFO 177799 --- [flash-sale-engine] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-10T21:22:22.025Z  WARN 177799 --- [flash-sale-engine] [ntContainer#1-1] .r.RepublishMessageRecovererWithConfirms : Republishing failed message to exchange 'order.dlx' with routing key order.failed
+2026-10-10T21:22:22.542Z  WARN 177799 --- [flash-sale-engine] [           main] c.flashsale.engine.service.OutboxRelay   : Outbox publish pending retry eventId=a28d0dc3-7928-4344-94b3-4efea1d65467 orderId=2d452572-8fab-444f-a9c3-d3b53663087f cause=org.springframework.amqp.AmqpException: forced publish failure
+2026-10-10T21:22:22.599Z  WARN 177799 --- [flash-sale-engine] [           main] c.f.e.config.ConfirmingRabbitTemplate    : ORDER_TRACE event=CONFIRM_FAILURE type=NACK key=nack-f62da4ef-be4f-42a7-997c-6bbd4225330d orderId=128569a0-23b0-4f20-8f11-14949e13f55e epochMs=1791667342599 reason=forced nack
+2026-10-10T21:22:22.601Z  WARN 177799 --- [flash-sale-engine] [           main] c.flashsale.engine.service.OutboxRelay   : Outbox publish pending retry eventId=29642c4f-e402-4062-95ba-46994b14485d orderId=128569a0-23b0-4f20-8f11-14949e13f55e cause=org.springframework.amqp.AmqpException: Broker rejected publish: forced nack
+2026-10-10T21:22:22.676Z  WARN 177799 --- [flash-sale-engine] [nectionFactory1] c.f.e.config.ConfirmingRabbitTemplate    : Returned message but no callback available
+2026-10-10T21:22:22.676Z  WARN 177799 --- [flash-sale-engine] [           main] c.f.e.config.ConfirmingRabbitTemplate    : ORDER_TRACE event=CONFIRM_FAILURE type=RETURN key=return-a859ebaa-e6d5-4eaf-9148-8687ac9fe588 orderId=dd4baba0-3aa2-436c-8eaa-382137054035 epochMs=1791667342676 reason=NO_ROUTE
+2026-10-10T21:22:22.677Z  WARN 177799 --- [flash-sale-engine] [           main] c.flashsale.engine.service.OutboxRelay   : Outbox publish pending retry eventId=61552c1e-d5f8-47ed-9d94-98732e209d37 orderId=dd4baba0-3aa2-436c-8eaa-382137054035 cause=org.springframework.amqp.AmqpException: Broker returned publish: NO_ROUTE
+2026-10-10T21:22:24.727Z  WARN 177799 --- [flash-sale-engine] [           main] c.f.e.config.ConfirmingRabbitTemplate    : ORDER_TRACE event=CONFIRM_FAILURE type=TIMEOUT key=timeout-f8f5ed37-f224-44ab-8240-ccb70e27b65d orderId=5634a5f9-a971-47df-8e24-06c582b09aa2 epochMs=1791667344727 reason=java.util.concurrent.TimeoutException
+2026-10-10T21:22:24.728Z  WARN 177799 --- [flash-sale-engine] [           main] c.flashsale.engine.service.OutboxRelay   : Outbox publish pending retry eventId=d108288d-cdc4-4103-8883-2c950b56830c orderId=5634a5f9-a971-47df-8e24-06c582b09aa2 cause=org.springframework.amqp.AmqpException: Publisher confirm timed out
+2026-10-10T21:22:27.001Z  WARN 177799 --- [flash-sale-engine] [           main] c.f.e.config.ConfirmingRabbitTemplate    : ORDER_TRACE event=CONFIRM_FAILURE type=TIMEOUT key=lost-confirm-consumer-27faa673-2ea1-4a0f-a431-27c54f6e3e4d orderId=addc2437-4e6f-41ed-bc71-93c3e658804b epochMs=1791667347001 reason=java.util.concurrent.TimeoutException
+2026-10-10T21:22:27.002Z  WARN 177799 --- [flash-sale-engine] [           main] c.flashsale.engine.service.OutboxRelay   : Outbox publish pending retry eventId=ecc0cbb9-8809-4ff5-84a7-c0c8fc5d4f5a orderId=addc2437-4e6f-41ed-bc71-93c3e658804b cause=org.springframework.amqp.AmqpException: Publisher confirm timed out
+2026-10-10T21:22:29.072Z  WARN 177799 --- [flash-sale-engine] [           main] c.f.e.config.ConfirmingRabbitTemplate    : ORDER_TRACE event=CONFIRM_FAILURE type=TIMEOUT key=lost-confirm-cancel-e329bd44-4941-4429-8d50-db918eaa386c orderId=77b22464-910e-4e6d-ab6a-0da5d38fe7c4 epochMs=1791667349072 reason=java.util.concurrent.TimeoutException
+2026-10-10T21:22:29.073Z  WARN 177799 --- [flash-sale-engine] [           main] c.flashsale.engine.service.OutboxRelay   : Outbox publish pending retry eventId=e6a82b82-ef80-4685-90d6-c6fe325d3d19 orderId=77b22464-910e-4e6d-ab6a-0da5d38fe7c4 cause=org.springframework.amqp.AmqpException: Publisher confirm timed out
+2026-10-10T21:22:29.778Z ERROR 177799 --- [flash-sale-engine] [-auto-1-exec-58] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [insert into outbox_events(event_id,order_id,event_type,payload,status,created_at)
+values (?,?,'ORDER_CREATED',jsonb_build_object('orderId',?::text,'productId',?::bigint,
+  'quantity',?::integer,'idempotencyKey',?::text),'PENDING',current_timestamp)
+]; SQL state [P0001]; error code [0]; ERROR: forced outbox insert failure
+  Where: PL/pgSQL function fail_outbox_test() line 1 at RAISE] with root cause
+
+org.postgresql.util.PSQLException: ERROR: forced outbox insert failure
+  Where: PL/pgSQL function fail_outbox_test() line 1 at RAISE
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993) ~[postgresql-42.7.13.jar:42.7.13]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656) ~[postgresql-42.7.13.jar:42.7.13]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446) ~[postgresql-42.7.13.jar:42.7.13]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533) ~[postgresql-42.7.13.jar:42.7.13]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449) ~[postgresql-42.7.13.jar:42.7.13]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:197) ~[postgresql-42.7.13.jar:42.7.13]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:158) ~[postgresql-42.7.13.jar:42.7.13]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$0(JdbcTemplate.java:971) ~[spring-jdbc-7.0.9.jar:7.0.9]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:670) ~[spring-jdbc-7.0.9.jar:7.0.9]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:966) ~[spring-jdbc-7.0.9.jar:7.0.9]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1010) ~[spring-jdbc-7.0.9.jar:7.0.9]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1020) ~[spring-jdbc-7.0.9.jar:7.0.9]
+	at com.flashsale.engine.service.OrderAcceptanceService.accept(OrderAcceptanceService.java:55) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.flashsale.engine.service.OrderAcceptanceService$$SpringCGLIB$$0.accept(<generated>) ~[classes/:na]
+	at com.flashsale.engine.controller.OrderController.placeOrder(OrderController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-10-10T21:22:30.003Z  INFO 177799 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-10-10T21:22:30.004Z  INFO 177799 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-10-10T21:22:30.515Z  INFO 177799 --- [flash-sale-engine] [ntContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-10-10T21:22:30.980Z  INFO 177799 --- [flash-sale-engine] [ntContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-10-10T21:22:30.983Z  INFO 177799 --- [flash-sale-engine] [           main] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-10T21:22:30.999Z  INFO 177799 --- [flash-sale-engine] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-10T21:22:31.058Z  INFO 177799 --- [flash-sale-engine] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-10T21:22:31.069Z  INFO 177799 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-10T21:22:31.073Z  INFO 177799 --- [flash-sale-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 61.28 s -- in com.flashsale.engine.OrderFlowIntegrationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:11 min
+[INFO] Finished at: 2026-10-10T21:22:37Z
+[INFO] ------------------------------------------------------------------------

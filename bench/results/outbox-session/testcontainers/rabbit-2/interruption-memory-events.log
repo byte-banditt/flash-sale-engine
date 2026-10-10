@@ -1,0 +1,8 @@
+$ docker exec f6a425892f6cba8589e7338513dddb09f05fc0b9ccee56d411504308d288c8a2 cat /sys/fs/cgroup/memory.events
+low 0
+high 0
+max 122
+oom 3
+oom_kill 1
+oom_group_kill 0
+exit=0

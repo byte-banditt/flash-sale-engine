@@ -53,6 +53,7 @@ import com.flashsale.engine.repository.OrderRepository;
 import com.flashsale.engine.service.OrderProcessingService;
 
 @Testcontainers
+@org.springframework.test.annotation.DirtiesContext(classMode = org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_CLASS)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = "flashsale.outbox.scheduling-enabled=false")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class OrderFlowIntegrationTests {

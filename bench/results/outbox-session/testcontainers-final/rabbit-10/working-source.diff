@@ -1,0 +1,98 @@
+$ git diff -- src docker-compose.yml deploy Dockerfile
+started=2026-10-10T20:59:06.959813+00:00
+diff --git a/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java b/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java
+index b13cf44..912eacb 100644
+--- a/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java
++++ b/src/main/java/com/flashsale/engine/config/ConfirmingRabbitTemplate.java
+@@ -12,7 +12,7 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+ import org.springframework.amqp.rabbit.connection.CorrelationData;
+ import org.springframework.amqp.rabbit.core.RabbitTemplate;
+ 
+-/** The order API only accepts a reservation after a routed broker acknowledgement. */
++/** Waits for routed broker acknowledgements; outbox retry policy belongs to the caller. */
+ public class ConfirmingRabbitTemplate extends RabbitTemplate {
+     private static final Logger log = LoggerFactory.getLogger(ConfirmingRabbitTemplate.class);
+     private final long confirmTimeoutMillis;
+diff --git a/src/main/java/com/flashsale/engine/config/RabbitMQConfig.java b/src/main/java/com/flashsale/engine/config/RabbitMQConfig.java
+index f190a95..4743779 100644
+--- a/src/main/java/com/flashsale/engine/config/RabbitMQConfig.java
++++ b/src/main/java/com/flashsale/engine/config/RabbitMQConfig.java
+@@ -1,38 +1,24 @@
+ package com.flashsale.engine.config;
+ 
+-
+ import org.springframework.amqp.core.Queue;
+ import org.springframework.amqp.core.Binding;
+ import org.springframework.amqp.core.BindingBuilder;
+ import org.springframework.amqp.core.DirectExchange;
+ import org.springframework.amqp.core.QueueBuilder;
+ import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
+-// import org.springframework.amqp.rabbit.config.StatelessRetryOperationsInterceptor;
+-// import org.springframework.amqp.rabbit.config.StatelessRetryOperationsInterceptorFactoryBean;
+ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+ import org.springframework.amqp.rabbit.core.RabbitTemplate;
+ import org.springframework.amqp.rabbit.retry.RepublishMessageRecovererWithConfirms;
+ import org.springframework.amqp.rabbit.connection.CachingConnectionFactory.ConfirmType;
+ import org.springframework.beans.factory.annotation.Value;
+-// import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+ import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
+ import org.springframework.context.annotation.Bean;
+ import org.springframework.context.annotation.Configuration;
+-// import org.springframework.core.retry.RetryPolicy;
+-// import org.springframework.core.retry.RetryTemplate;
+-// import org.springframework.retry.support.RetryTemplate;
+ import org.springframework.amqp.support.converter.MessageConverter;
+-
+ import org.springframework.amqp.rabbit.config.StatelessRetryOperationsInterceptorFactoryBean;
+ import org.springframework.amqp.rabbit.config.StatelessRetryOperationsInterceptor;
+ import org.springframework.core.retry.RetryPolicy;
+ import java.time.Duration;
+-// import ch.qos.logback.classic.pattern.MessageConverter;
+-
+-// import org.springframework.retry.backoff.ExponentialBackOffPolicy;
+-// import org.springframework.retry.interceptor.RetryOperationsInterceptor;
+-// import org.springframework.retry.policy.SimpleRetryPolicy;
+-// import org.springframework.retry.interceptor.RetryInterceptorBuilder;
+ 
+ @Configuration 
+ public class RabbitMQConfig {
+@@ -89,24 +75,6 @@ public class RabbitMQConfig {
+         return new JacksonJsonMessageConverter();
+     }
+ 
+-    // @Bean
+-    // public RetryOperationsInterceptor retryInterceptor(){
+-    //     RetryTemplate retryTemplate = new RetryTemplate();
+-
+-    //     retryTemplate.setRetryPolicy( new SimpleRetryPolicy());
+-
+-    //     retryTemplate.setBackOffPolicy(new ExponentialBackOffPolicy());
+-
+-    //      return org.springframework.retry.interceptor.RetryInterceptorBuilder
+-    //             .stateless()
+-    //             .retryOperations(retryTemplate)
+-    //             .recoverer(new RepublishMessageRecoverer(
+-    //                     rabbitTemplateForRecovery(),
+-    //                     DLX_EXCHANGE,
+-    //                     DLQ_ROUTING_KEY))
+-    //             .build();
+-    // }
+-
+     @Bean
+     public StatelessRetryOperationsInterceptor retryInterceptor(
+             ConnectionFactory connectionFactory,
+diff --git a/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java b/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java
+index cfc2940..d4bd942 100644
+--- a/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java
++++ b/src/test/java/com/flashsale/engine/OrderFlowIntegrationTests.java
+@@ -53,6 +53,7 @@ import com.flashsale.engine.repository.OrderRepository;
+ import com.flashsale.engine.service.OrderProcessingService;
+ 
+ @Testcontainers
++@org.springframework.test.annotation.DirtiesContext(classMode = org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_CLASS)
+ @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = "flashsale.outbox.scheduling-enabled=false")
+ @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+ class OrderFlowIntegrationTests {
+
+exit_code=0
+ended=2026-10-10T20:59:07.003371+00:00

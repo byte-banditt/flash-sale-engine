@@ -1,0 +1,5 @@
+$ docker exec f6a425892f6cba8589e7338513dddb09f05fc0b9ccee56d411504308d288c8a2 psql -U postgres -d flashsale_db -tAc select status,count(*),sum(quantity) from orders group by status; select total_stock,available_stock from products where id=101
+PENDING|13267|13267
+CONFIRMED|44007|44007
+100000|42726
+exit=0
