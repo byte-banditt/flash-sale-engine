@@ -52,6 +52,7 @@ start=time.monotonic();event_since=str(int(time.time()))
 (root/'run-started.txt').write_text(event_since+'\n')
 with (root/'k6.log').open('w') as f:
     args=['k6','run','--quiet','--summary-export',str(root/'summary.json'),'-e','BASE_URL='+base_url,'-e',f'RUN_ID={root.name}','bench/load.js']
+    if os.environ.get('CI_BENCH')=='true': args[2:2]=['-e','CI_BENCH=true']
     if fault!='none': args[2:2]=['-e','FAULT_LOAD=true']
     f.write('$ '+' '.join(args)+'\n');f.flush()
     proc=subprocess.Popen(args,stdout=f,stderr=f)
