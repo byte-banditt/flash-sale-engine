@@ -31,6 +31,16 @@ jobs:
         run: ./mvnw -DskipTests package
       - name: Start Compose services
         run: docker compose --profile distributed up -d --build --scale app=1
+      - name: Wait for application schema readiness
+        run: |
+          for attempt in $(seq 1 120); do
+            if curl --silent --show-error --fail --request POST 'http://localhost:8080/api/v1/orders/init?productId=101&stock=100000'; then
+              exit 0
+            fi
+            sleep 1
+          done
+          echo 'Application did not become ready' >&2
+          exit 1
       - name: Run baseline smoke benchmark and invariants
         env:
           CI_BENCH: 'true'
