@@ -6,7 +6,9 @@ const accepted = new Counter('accepted_orders');
 const unexpected = new Rate('unexpected_responses');
 http.setResponseCallback(http.expectedStatuses(200,202,409));
 export const options = {
-  scenarios: { orders: __ENV.FAULT_LOAD === 'true'
+  scenarios: { orders: __ENV.CI_BENCH === 'true'
+    ? {executor:'constant-vus', vus:20, duration:'25s'}
+    : __ENV.FAULT_LOAD === 'true'
     ? {executor:'constant-vus', vus:50, duration:'2m'}
     : { executor: 'ramping-vus', startVUs: 0,
       stages: [{duration:'30s',target:20},{duration:'1m',target:100},{duration:'30s',target:0}] } },
