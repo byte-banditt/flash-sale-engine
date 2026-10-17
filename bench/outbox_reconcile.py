@@ -41,5 +41,8 @@ result={'initial_stock':product['total_stock'],'postgres_stock':product['availab
  'stuck_pending_keys':sorted(o['idempotency_key'] for o in pending), 'missing_or_mismatched_intent_keys':sorted(missing)}
 result['pass']=not any([result['stock_ledger_delta'],result['settled_stock_delta'],result['lost_keys'],duplicates,
  result['stuck_pending_keys'],missing,result['pending_events'],result['cancelled_keys']])
+if os.environ.get('CI_BENCH')=='true':
+ result['oversold_count']=max(0,qty-product['total_stock'])
+ result['pass']=result['pass'] and result['oversold_count']==0
 (root/'outbox-invariants.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result),flush=True)
 sys.exit(0 if result['pass'] else 1)
