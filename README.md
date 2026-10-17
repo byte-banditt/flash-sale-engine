@@ -1,5 +1,7 @@
 # Flash Sale Engine
 
+[![CI](https://github.com/byte-banditt/flash-sale-engine/actions/workflows/ci.yml/badge.svg?branch=feat/ci)](https://github.com/byte-banditt/flash-sale-engine/actions/workflows/ci.yml)
+
 Spring Boot flash-sale demo with PostgreSQL inventory, durable order intent,
 a transactional outbox, and RabbitMQ consumers. Learning project; shared
 infrastructure remains a failure domain.
