@@ -27,6 +27,8 @@ jobs:
           java-version: '21'
           cache: maven
       - uses: grafana/setup-k6-action@v1
+      - name: Package application image
+        run: ./mvnw -DskipTests package
       - name: Start Compose services
         run: docker compose --profile distributed up -d --build --scale app=1
       - name: Run baseline smoke benchmark and invariants
