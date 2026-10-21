@@ -38,6 +38,8 @@ services:
       retries: 30
 
   app:
+    deploy:
+      replicas: 2
     build:
       context: .
       dockerfile: Dockerfile
