@@ -1,6 +1,7 @@
 package com.flashsale.engine.service;
 
 import com.flashsale.engine.dto.OrderRequest;
+import com.flashsale.engine.entity.OrderStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +22,15 @@ public class OrderProcessingService {
             throw new IllegalArgumentException("Delivery does not match immutable order intent");
         // CONFIRMED and CANCELLED are terminal. This lock also fences reconciliation,
         // so a refund can never race a later transition to CONFIRMED.
-        if (!"PENDING".equals(order.get("status"))) return;
+        if (!canTransition(order.get("status").toString(), OrderStatus.CONFIRMED)) return;
         db.update("update orders set status='CONFIRMED' where order_id=?", request.getOrderId());
+    }
+
+    private boolean canTransition(String current, OrderStatus next) {
+        try {
+            return OrderStatus.valueOf(current).canTransitionTo(next);
+        } catch (IllegalArgumentException ignored) {
+            return false;
+        }
     }
 }

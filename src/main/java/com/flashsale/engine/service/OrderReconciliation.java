@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.flashsale.engine.entity.OrderStatus;
 
 @Service
 public class OrderReconciliation {
@@ -27,6 +28,7 @@ public class OrderReconciliation {
             // Consumer and sweep lock the same row: either CONFIRMED already won,
             // or cancellation wins and fences all late deliveries before refund.
             // Thus no speculative refund can later coexist with CONFIRMED.
+            if (!OrderStatus.PENDING.canTransitionTo(OrderStatus.CANCELLED)) continue;
             db.update("update orders set status='CANCELLED' where order_id=?", order.get("order_id"));
             db.update("update products set available_stock=available_stock+? where id=?",
                     order.get("quantity"), order.get("product_id"));
