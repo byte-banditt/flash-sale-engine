@@ -136,6 +136,22 @@ class OrderFlowIntegrationTests {
         return db.queryForObject("select available_stock from products where id=?", Integer.class, PRODUCT_ID);
     }
 
+    @Test
+    @Order(0)
+    void actuatorExposesOnlyHealthAndMetrics() throws Exception {
+        HttpResponse<String> health = HTTP.send(HttpRequest.newBuilder(
+                URI.create("http://localhost:" + port + "/actuator/health")).GET().build(),
+                HttpResponse.BodyHandlers.ofString());
+        assertEquals(200, health.statusCode());
+        assertTrue(health.body().contains("\"status\":\"UP\""));
+        assertEquals(200, HTTP.send(HttpRequest.newBuilder(
+                URI.create("http://localhost:" + port + "/actuator/metrics")).GET().build(),
+                HttpResponse.BodyHandlers.ofString()).statusCode());
+        assertEquals(404, HTTP.send(HttpRequest.newBuilder(
+                URI.create("http://localhost:" + port + "/actuator/env")).GET().build(),
+                HttpResponse.BodyHandlers.ofString()).statusCode());
+    }
+
     private void await(BooleanSupplier condition) throws InterruptedException {
         long deadline = System.nanoTime() + Duration.ofMinutes(2).toNanos();
         while (System.nanoTime() < deadline) {
