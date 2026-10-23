@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: ./mvnw test
+
+  smoke-bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - uses: grafana/setup-k6-action@v1
+      - name: Start Compose services
+        run: docker compose --profile distributed up -d --build --scale app=1
+      - name: Run smoke benchmark and invariants
+        env:
+          CI_BENCH: 'true'
+          OUTBOX_MODE: 'true'
+        run: |
+          mkdir -p bench/results/ci-smoke
+          python3 bench/experiment.py bench/results/ci-smoke none
+          python3 bench/outbox_reconcile.py bench/results/ci-smoke | tee bench/results/ci-smoke/invariants.stdout
+      - name: Stop Compose services
+        if: always()
+        run: docker compose --profile distributed down -v

@@ -5,7 +5,7 @@ fault=sys.argv[2] if len(sys.argv)>2 else 'none'
 outbox_mode=os.environ.get('OUTBOX_MODE')=='true'
 base_url=os.environ.get('BASE_URL','http://localhost:8080')
 app_override=os.environ.get('BENCH_APP_CONTAINERS','').split()
-aliases={name:os.environ.get(env,name) for name,env in [('flash_postgres','BENCH_POSTGRES'),('flash_redis','BENCH_REDIS'),('flash_rabbitmq','BENCH_RABBITMQ')]}
+aliases={name:os.environ.get(env,name) for name,env in [('flash_postgres','BENCH_POSTGRES'),('flash_redis','BENCH_REDIS'),('flash_kafka','BENCH_KAFKA')]}
 def resolve(args): return [aliases.get(arg,arg) for arg in args]
 
 def cmd(args,name,check=True):
@@ -19,7 +19,7 @@ def cmd(args,name,check=True):
 
 def raw(args): return subprocess.check_output(resolve(args),text=True).strip()
 apps=app_override or raw(['docker','compose','--profile','distributed','ps','-q','app']).splitlines()
-containers=apps+[aliases[name] for name in ['flash_postgres','flash_redis','flash_rabbitmq']]
+containers=apps+[aliases[name] for name in ['flash_postgres','flash_redis','flash_kafka']]
 cmd(['git','rev-parse','HEAD'],'git.txt')
 cmd(['git','diff','--','src','docker-compose.yml','deploy','Dockerfile'],'working-source.diff')
 cmd(['sha256sum','bench/load.js','bench/experiment.py'],'harness-sha256.txt')
@@ -61,44 +61,27 @@ with (root/'k6.log').open('w') as f:
             cmd(['docker','kill','-s','KILL',apps[0]],'fault-kill.log')
             time.sleep(20)
             cmd(['docker','start',apps[0]],'fault-start.log')
-        elif fault=='rabbit': cmd(['docker','restart','flash_rabbitmq'],'fault-restart.log')
+        elif fault=='kafka': cmd(['docker','restart','flash_kafka'],'fault-restart.log')
         elif fault=='redis': cmd(['docker','restart','flash_redis'],'fault-restart.log')
         else: raise ValueError(fault)
     code=proc.wait(); f.write(f'\nexit_code={code}\n')
 stop.set();thread.join()
-# Require ready + unacked zero, continuously, before reconciliation. Keep every poll.
+# Require pending database state zero, continuously, before reconciliation. Keep every poll.
 quiet=0
 with (root/'drain.log').open('w') as f:
     for _ in range(120):
-        p=subprocess.run(resolve(['docker','exec','flash_rabbitmq','rabbitmqctl','list_queues','name','messages_ready','messages_unacknowledged']),text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
-        f.write(p.stdout);f.flush()
-        rows=[l.split() for l in p.stdout.splitlines() if l.startswith('order.')]
+        p=subprocess.run(resolve(['docker','exec','flash_postgres','psql','-U','postgres','-d','flashsale_db','-tAc',
+                                  "select (select count(*) from orders where status='PENDING')+(select count(*) from outbox_events where status='PENDING')"]),
+                         text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+        f.write('pending orders+events='+p.stdout);f.flush()
+        rows=[['postgres_pending',p.stdout.strip()]]
         queue_observed=p.returncode==0
-        if not queue_observed and outbox_mode:
-            # Docker restart can leave exec diagnostics broken while AMQP works.
-            # Observe the actual management counters through a surviving app's
-            # network, retaining both the failed CLI and unmodified API response.
-            args=['docker','exec',apps[-1],'wget','-T','5','-qO-',
-                  '--header','Authorization: Basic Z3Vlc3Q6Z3Vlc3Q=',
-                  'http://rabbitmq:15672/api/queues/%2F']
-            try:
-                api=subprocess.run(args,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=10)
-                with (root/'management-queue-polls.jsonl').open('a') as evidence:
-                    evidence.write(json.dumps({'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'command':args,'exit':api.returncode,'response':api.stdout})+'\n')
-                if api.returncode==0:
-                    queues=json.loads(api.stdout)
-                    rows=[[q['name'],str(q['messages_ready']),str(q['messages_unacknowledged'])]
-                          for q in queues if q['name'].startswith('order.')]
-                    queue_observed=True
-                    f.write('Observed management counters: '+json.dumps(rows)+'\n');f.flush()
-            except (subprocess.TimeoutExpired,ValueError,KeyError) as error:
-                f.write('Management observation failed: '+repr(error)+'\n');f.flush()
         settled=True
         if outbox_mode:
             state=raw(['docker','exec','flash_postgres','psql','-U','postgres','-d','flashsale_db','-tAc',
                 "select (select count(*) from orders where status='PENDING')+(select count(*) from outbox_events where status='PENDING')"])
             f.write('pending orders+events='+state+'\n');f.flush();settled=state=='0'
-        quiet=quiet+1 if settled and queue_observed and rows and all(r[1:]==['0','0'] for r in rows) else 0
+        quiet=quiet+1 if settled and queue_observed and rows and rows[0][1]=='0' else 0
         if quiet>=3: break
         time.sleep(2)
     else: f.write('DRAIN TIMEOUT\n')

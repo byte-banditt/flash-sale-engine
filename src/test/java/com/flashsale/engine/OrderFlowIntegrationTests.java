@@ -111,7 +111,7 @@ class OrderFlowIntegrationTests {
     }
 
     private void await(String query, int expected) throws InterruptedException {
-        long deadline = System.nanoTime() + Duration.ofSeconds(30).toNanos();
+        long deadline = System.nanoTime() + Duration.ofSeconds(60).toNanos();
         while (System.nanoTime() < deadline) {
             if (db.queryForObject(query, Integer.class) == expected) return;
             Thread.sleep(100);

@@ -3,7 +3,7 @@ root=pathlib.Path(sys.argv[1] if len(sys.argv)>1 else 'bench/results/replicas/ht
 outbox=os.environ.get('OUTBOX_MODE')=='true'
 base=os.environ.get('BASE_URL','http://localhost:8080')
 target=urllib.parse.urlparse(base)
-aliases={name:os.environ.get(env,name) for name,env in [('flash_postgres','BENCH_POSTGRES'),('flash_redis','BENCH_REDIS'),('flash_rabbitmq','BENCH_RABBITMQ')]}
+aliases={name:os.environ.get(env,name) for name,env in [('flash_postgres','BENCH_POSTGRES'),('flash_redis','BENCH_REDIS'),('flash_kafka','BENCH_KAFKA')]}
 def docker(container,*args): return subprocess.check_output(['docker','exec',aliases.get(container,container),*args],text=True).strip()
 async def requests(count,same):
     gate=asyncio.Event()
@@ -37,11 +37,10 @@ for label,count,stock,same in [('oversell',2000,100,False),('same-key',40,10,Tru
     counts=collections.Counter(r.get('status','error') for r in responses)
     upstreams=collections.Counter(r['headers'].split('X-Replica: ')[-1] for r in responses if 'headers' in r)
     for _ in range(120):
-        queues=docker('flash_rabbitmq','rabbitmqctl','list_queues','name','messages_ready','messages_unacknowledged')
-        rows=[line.split() for line in queues.splitlines() if line.startswith('order.')]
-        if rows and all(row[1:]==['0','0'] for row in rows): break
+        pending=docker('flash_postgres','psql','-U','postgres','-d','flashsale_db','-tAc',"select (select count(*) from orders where status='PENDING')+(select count(*) from outbox_events where status='PENDING')")
+        if pending == '0': break
         time.sleep(1)
-    (root/f'{label}-queues.log').write_text(queues+'\n')
+    (root/f'{label}-drain.log').write_text(pending+'\n')
     if outbox:
         intents=docker('flash_postgres','psql','-U','postgres','-d','flashsale_db','-tAc',"select count(*) from orders o left join outbox_events e on e.order_id=o.order_id where e.event_id is null or e.payload->>'idempotencyKey'<>o.idempotency_key")
         (root/f'{label}-missing-intents.txt').write_text(intents+'\n')
@@ -55,5 +54,5 @@ for label,count,stock,same in [('oversell',2000,100,False),('same-key',40,10,Tru
     assert pg==f'{expected}|{expected}|{expected}',summary
     assert remaining==stock-expected,summary
     assert len(upstreams)>=2,summary
-    assert rows and all(row[1:]==['0','0'] for row in rows),queues
+    assert pending == '0', pending
 print('HTTP assertions passed',flush=True)

@@ -66,8 +66,9 @@ public class KafkaConfig {
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JacksonJsonSerializer.class);
         properties.put(ProducerConfig.ACKS_CONFIG, "all");
         properties.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);
-        properties.put(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG, deliveryTimeoutMillis);
-        properties.put(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, Math.min(deliveryTimeoutMillis, 5000L));
+        properties.put(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG, Math.toIntExact(deliveryTimeoutMillis));
+        properties.put(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG,
+                Math.toIntExact(Math.min(deliveryTimeoutMillis, 5000L)));
         return new DefaultKafkaProducerFactory<>(properties);
     }
 

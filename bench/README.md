@@ -12,7 +12,7 @@ response and upstream. It checks accepted, confirmed and distinct-key counts,
 remaining stock, multiple upstreams and drained queues. Stop load before running it.
 An optional output-directory argument preserves separate pre/post-confirm results.
 
-`experiment.py OUTPUT_DIR [none|kill|rabbit|redis]` runs instrumented k6 load.
+`experiment.py OUTPUT_DIR [none|kill|kafka|redis]` runs instrumented k6 load.
 Normal runs use the original ramp. Fault runs use constant VUs for sustained load.
 Normal stages, VU targets, request contents, thresholds and sleep match the original
 scenario; fault load stays constant throughout injection and recovery. Instrumentation logs each accepted key. Every replicated ramp and fault
@@ -20,12 +20,12 @@ run uses this logging, so scaling and before/after confirms comparisons use matc
 instrumentation. It differs from the original host baseline.
 
 The runner starts faults at the same elapsed point in sustained load. For kill, it waits after
-SIGKILL before starting the same container. Broker and Redis experiments use
+SIGKILL before starting the same container. Kafka and Redis experiments use
 `docker restart`. It does not restart or reset services before reconciliation.
 Threshold failures are preserved, not discarded from the campaign.
 
-Reconciliation waits for both queues' ready and unacknowledged counts to remain
-empty across successive polls; timeout is reported. It records Postgres rows and
+Reconciliation waits for pending Postgres orders and outbox events to remain
+zero across successive polls; timeout is reported. It records Postgres rows and
 Redis idempotency keys, compares accepted keys with CONFIRMED keys, and saves
 lost/stuck key lists.
 

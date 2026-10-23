@@ -5468,3 +5468,5 @@ comparison uses its separate original PostgreSQL container.
 DRAFT: HTTP oversell test: 2000 requests, stock 100, accepted 100, PostgreSQL `100|100|100`, remaining stock 0. Source: [oversell-reconciliation.json](bench/results/outbox-session/testcontainers-final/http/oversell-reconciliation.json).
 
 DRAFT: completed broker-restart reruns 10; invariant passes 10. Per-run source files listed above; retained collector failure and interrupted attempt remain disclosed.
+> RabbitMQ-era benchmark sections and raw artifacts in this file are
+> pre-migration evidence. They are not Kafka measurements.

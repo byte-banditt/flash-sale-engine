@@ -1,7 +1,7 @@
 # Flash Sale Engine
 
 Spring Boot flash-sale demo with PostgreSQL inventory, durable order intent,
-a transactional outbox, and RabbitMQ consumers. Learning project; shared
+a transactional outbox, and Kafka consumers. Learning project; shared
 infrastructure remains a failure domain.
 
 ## Write and recovery flow
@@ -10,7 +10,7 @@ infrastructure remains a failure domain.
   in `products`. It rejects reinitialization while any orders exist for that sale.
 - The HTTP transaction locks the idempotency key and product row, checks/decrements
   stock, inserts a `PENDING` order and its JSONB outbox event, then commits.
-  It calls neither Redis nor RabbitMQ. Failure rolls back all these writes.
+  It calls neither Redis nor Kafka. Failure rolls back all these writes.
 - Each replica runs a relay. `FOR UPDATE SKIP LOCKED` selects pending events in
   creation order. A routed publisher ack permits `PUBLISHED`; failure leaves
   `PENDING` for retry. The relay never refunds stock.
@@ -19,7 +19,7 @@ infrastructure remains a failure domain.
 - The scheduled sweep locks expired `PENDING` orders, cancels them, restores stock,
   and marks their events `FAILED` in a single transaction. This is the only refund
   path. The same order lock prevents a late consumer from confirming a cancelled order.
-  The database row provides the actual consumer-side outcome; RabbitMQ cannot prove
+  The database row provides the actual consumer-side outcome; Kafka cannot prove
   that an individual in-flight message does not exist.
 
 Stock and durable delivery intent cannot commit separately. Broker publication
@@ -33,7 +33,7 @@ transition, not exactly-once physical broker delivery or immediate publication.
 | --- | --- |
 | Apps | HTTP API, outbox relay, sweep, order/DLQ consumers |
 | PostgreSQL | Authoritative stock, sale start, orders and outbox |
-| RabbitMQ | Durable queues with publisher confirms and mandatory returns |
+| Kafka | `orders` topic, keyed by `orderId`, plus `orders.dlq` |
 | Redis | Retained in local Compose for compatibility; unused by the order path |
 
 ## Local setup
@@ -45,7 +45,7 @@ docker compose up -d
 ./mvnw spring-boot:run
 ```
 
-App runs `8080`. Defaults in [`application.yaml`](src/main/resources/application.yaml). Docker exposes PostgreSQL `5432`, Redis `6379`, RabbitMQ AMQP `5672`, management UI `15672` (`guest` / `guest`). Credentials local-demo only; do not reuse outside local environment.
+App runs `8080`. Defaults in [`application.yaml`](src/main/resources/application.yaml). Docker exposes PostgreSQL `5432`, Redis `6379`, and Kafka `9092` locally. Kafka is not exposed by the production Compose file.
 
 Hibernate uses `ddl-auto: update`, creating/updating mapped tables at startup.
 
@@ -77,7 +77,7 @@ HTTP / k6 -> nginx -> app replicas
                  replica relays (SKIP LOCKED)
                          | confirms, retry without refund
                          v
-                     RabbitMQ -> replica consumers
+                     Kafka `orders` -> replica consumers
 
 Redis: local infrastructure retained; no authoritative stock or reservation.
 ```
@@ -105,8 +105,8 @@ refund or synchronous publish failure. Database failures still fail the HTTP req
 ## Configuration and limitations
 
 Configure `flashsale.outbox.batch-size`, `poll-delay-ms`, `pending-timeout-ms`,
-`sweep-delay-ms`, and `scheduling-enabled`; publisher waits use
-`flashsale.publish-confirm-timeout-ms`. Defaults live in the worker constructors
+`sweep-delay-ms`, and `scheduling-enabled`; Kafka waits use
+`flashsale.kafka.delivery-timeout-ms`. Defaults live in the worker constructors
 and scheduling annotations. Tests disable scheduling when invoking workers directly.
 
 - Stock, order and event are atomically durable only to the extent PostgreSQL is
@@ -139,18 +139,24 @@ docker build -t flash-sale-engine:local .
 JAVA_TOOL_OPTIONS=-Xmx256m ./mvnw -Dflashsale.run-container-faults=true test
 ```
 
-The previous test snapshot and this session's baseline are retained under
+The previous RabbitMQ-era test snapshot and this session's baseline are retained under
 `bench/results/outbox-session/baseline/`. Publisher/refund tests now assert durable
 acceptance, retry and sweep cancellation, as explicitly authorized. Oversell and
 same-key stock/count assertions retain their protection. Container fault tests
 reuse `bench/experiment.py`, `bench/load.js` and `bench/http_concurrency.py`.
-The deterministic poller crash test blocks a DB update after a real broker ack,
+The deterministic poller crash test blocks a DB update after a real Kafka ack,
 kills the app, terminates its abandoned DB session, and restarts both workers;
 it verifies actual republish with a single confirmed order.
 
 Historical measurements remain in [RESULTS.md](RESULTS.md) and
 [bench/REPORT.md](bench/REPORT.md). New results are appended separately; historical
 Redis arbitration measurements are not evidence for the outbox implementation.
+
+The Kafka migration benchmark is recorded in
+[bench/KAFKA_MIGRATION.md](bench/KAFKA_MIGRATION.md). Its RabbitMQ values are
+explicitly pre-migration; Kafka was measured once on the same capped machine and
+with the same paced k6 workload, so the figures are observational rather than
+independent trials.
 
 This session's commands, per-run recovery results, retained failed attempts and
 before/after HTTP measurements are in [bench/OUTBOX_REPORT.md](bench/OUTBOX_REPORT.md).

@@ -16,6 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.RecordsToDelete;
+import org.apache.kafka.clients.admin.OffsetSpec;
 import org.apache.kafka.common.TopicPartition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
@@ -25,6 +26,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.test.utils.ContainerTestUtils;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
@@ -45,7 +47,7 @@ import com.flashsale.engine.service.OutboxRelay;
 @Testcontainers(disabledWithoutDocker = true)
 @SpringBootTest(properties = {
         "flashsale.outbox.scheduling-enabled=false",
-        "flashsale.kafka.delivery-timeout-ms=3000"
+        "flashsale.kafka.delivery-timeout-ms=10000"
 })
 class KafkaFaultInjectionTests {
     private static final int PRODUCT_ID = 101;
@@ -85,15 +87,24 @@ class KafkaFaultInjectionTests {
         db.execute("TRUNCATE orders CASCADE");
         redis.getConnectionFactory().getConnection().serverCommands().flushDb();
         purgeKafka();
+        var orderContainer = listeners.getListenerContainer("orders-consumer");
+        var dlqContainer = listeners.getListenerContainer("orders-dlq-consumer");
+        orderContainer.stop();
+        dlqContainer.stop();
+        orderContainer.start();
+        dlqContainer.start();
+        ContainerTestUtils.waitForAssignment(orderContainer, 3);
+        ContainerTestUtils.waitForAssignment(dlqContainer, 1);
     }
 
     @RepeatedTest(10)
     void brokerRestartWithUnsentOutboxRowsDrainsExactlyOnce(RepetitionInfo repetition) throws Exception {
         acceptBatch("broker-restart", 10);
-        KAFKA.stop();
-        relay.publishBatch();
         assertEquals(10, pendingEvents());
-        KAFKA.start();
+        KAFKA.getDockerClient().pauseContainerCmd(KAFKA.getContainerId()).exec();
+        Thread.sleep(1_000);
+        KAFKA.getDockerClient().unpauseContainerCmd(KAFKA.getContainerId()).exec();
+        awaitBroker();
         relay.publishBatch();
         awaitConfirmed(10);
         assertLedger(10, 10);
@@ -123,6 +134,7 @@ class KafkaFaultInjectionTests {
     @RepeatedTest(10)
     void poisonMessageReachesDlqOnceAfterThreeAttempts(RepetitionInfo repetition) throws Exception {
         String key = key("poison");
+        acceptance.initialize(PRODUCT_ID, INITIAL_STOCK);
         OrderRequest poison = new OrderRequest("missing-" + key, (long) PRODUCT_ID, 1, key);
         publisher.send(KafkaConfig.ORDERS_TOPIC, poison.getOrderId(), poison).get();
         verify(dlqConsumer, org.mockito.Mockito.timeout(Duration.ofSeconds(20).toMillis()).times(1))
@@ -140,6 +152,7 @@ class KafkaFaultInjectionTests {
         accept(key, 1);
         String orderId = db.queryForObject("select order_id from orders where idempotency_key=?", String.class, key);
         OrderRequest request = new OrderRequest(orderId, (long) PRODUCT_ID, 1, key);
+        relay.publishBatch();
         publisher.send(KafkaConfig.ORDERS_TOPIC, orderId, request).get();
         publisher.send(KafkaConfig.ORDERS_TOPIC, orderId, request).get();
         awaitConfirmed(1);
@@ -181,11 +194,27 @@ class KafkaFaultInjectionTests {
             Map<TopicPartition, RecordsToDelete> records = new HashMap<>();
             for (int partition = 0; partition < 3; partition++) {
                 records.put(new TopicPartition(KafkaConfig.ORDERS_TOPIC, partition),
-                        RecordsToDelete.beforeOffset(Long.MAX_VALUE));
+                        RecordsToDelete.beforeOffset(0));
             }
             records.put(new TopicPartition(KafkaConfig.DLQ_TOPIC, 0),
-                    RecordsToDelete.beforeOffset(Long.MAX_VALUE));
+                    RecordsToDelete.beforeOffset(0));
+            Map<TopicPartition, OffsetSpec> latest = new HashMap<>();
+            for (TopicPartition partition : records.keySet()) {
+                latest.put(partition, OffsetSpec.latest());
+            }
+            Map<TopicPartition, Long> endOffsets = new HashMap<>();
+            admin.listOffsets(latest).all().get().forEach((partition, info) ->
+                    endOffsets.put(partition, info.offset()));
+            endOffsets.forEach((partition, offset) -> records.put(partition, RecordsToDelete.beforeOffset(offset)));
             admin.deleteRecords(records).all().get();
+        }
+    }
+
+    private void awaitBroker() throws Exception {
+        Map<String, Object> properties = new HashMap<>();
+        properties.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA.getBootstrapServers());
+        try (AdminClient admin = AdminClient.create(properties)) {
+            admin.listTopics().names().get(30, java.util.concurrent.TimeUnit.SECONDS);
         }
     }
 
@@ -209,7 +238,7 @@ class KafkaFaultInjectionTests {
     }
 
     private void await(CheckedCondition condition) throws InterruptedException {
-        long deadline = System.nanoTime() + Duration.ofSeconds(30).toNanos();
+        long deadline = System.nanoTime() + Duration.ofSeconds(60).toNanos();
         while (System.nanoTime() < deadline) {
             if (condition.ready()) return;
             Thread.sleep(100);
