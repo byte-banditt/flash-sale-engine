@@ -153,10 +153,13 @@ Historical measurements remain in [RESULTS.md](RESULTS.md) and
 Redis arbitration measurements are not evidence for the outbox implementation.
 
 The Kafka migration benchmark is recorded in
-[bench/KAFKA_MIGRATION.md](bench/KAFKA_MIGRATION.md). Its RabbitMQ values are
-explicitly pre-migration; Kafka was measured once on the same capped machine and
-with the same paced k6 workload, so the figures are observational rather than
-independent trials.
+[bench/KAFKA_MIGRATION.md](bench/KAFKA_MIGRATION.md). The historical RabbitMQ
+run is explicitly marked **NOT COMPARABLE** because it used a host JVM, no app
+containers, and no nginx. The controlled K4 comparison uses three runs per
+setup in order `K,R,K,R,R,K`; its raw summaries and compressed Docker stats are
+in [bench/k4](bench/k4/). These are repeated runs on one machine, not
+independent trials. Tail latency varied between sessions, so differences under
+roughly 40% should not be read as real; no claim that Kafka is faster is made.
 
 This session's commands, per-run recovery results, retained failed attempts and
 before/after HTTP measurements are in [bench/OUTBOX_REPORT.md](bench/OUTBOX_REPORT.md).
