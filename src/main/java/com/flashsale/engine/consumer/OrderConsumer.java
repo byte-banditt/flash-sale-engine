@@ -1,9 +1,9 @@
 package com.flashsale.engine.consumer;
 
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import com.flashsale.engine.config.RabbitMQConfig;
+import com.flashsale.engine.config.KafkaConfig;
 import com.flashsale.engine.dto.OrderRequest;
 import com.flashsale.engine.service.OrderProcessingService;
 
@@ -16,14 +16,9 @@ public class OrderConsumer {
         this.orderProcessingService = orderProcessingService;
     }
 
-    @RabbitListener(
-            queues = RabbitMQConfig.ORDER_QUEUE,
-            containerFactory = "rabbitListenerContainerFactory"
-    )
+    @KafkaListener(topics = KafkaConfig.ORDERS_TOPIC, containerFactory = "kafkaListenerContainerFactory")
     public void handleOrder(OrderRequest request) {
         orderProcessingService.processOrder(request);
-        // No try/catch: let failures propagate so the retry interceptor
-        // and RepublishMessageRecoverer on rabbitListenerContainerFactory
-        // can do their job.
+        // Let failures propagate to DefaultErrorHandler.
     }
 }

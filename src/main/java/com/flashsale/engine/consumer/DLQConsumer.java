@@ -1,19 +1,25 @@
 package com.flashsale.engine.consumer;
 
-import com.flashsale.engine.config.RabbitMQConfig;
+import com.flashsale.engine.config.KafkaConfig;
 import com.flashsale.engine.dto.OrderRequest;
 import com.flashsale.engine.service.OrderProcessingService;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DLQConsumer {
     private final OrderProcessingService processing;
+    private static final Logger log = LoggerFactory.getLogger(DLQConsumer.class);
     public DLQConsumer(OrderProcessingService processing) { this.processing = processing; }
-    @RabbitListener(queues=RabbitMQConfig.DLQ_QUEUE, containerFactory="rabbitListenerContainerFactory")
+    @KafkaListener(topics=KafkaConfig.DLQ_TOPIC, containerFactory="kafkaListenerContainerFactory")
     public void handleFailedOrder(OrderRequest request) {
         // Retry the durable intent; only the scheduled sweep may cancel/refund.
-        // A DB error propagates rather than acknowledging an unresolved delivery.
-        processing.processOrder(request);
+        try {
+            processing.processOrder(request);
+        } catch (RuntimeException failure) {
+            log.error("Terminal DLQ processing failed for orderId={}", request.getOrderId(), failure);
+        }
     }
 }

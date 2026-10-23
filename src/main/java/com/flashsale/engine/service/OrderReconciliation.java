@@ -23,7 +23,7 @@ public class OrderReconciliation {
                 """, pendingTimeoutMs);
         for (var order : stale) {
             // This locked PostgreSQL row IS the durable consumer-side outcome.
-            // RabbitMQ cannot prove absence of an individual in-flight message.
+            // Kafka cannot prove absence of an individual in-flight message.
             // Consumer and sweep lock the same row: either CONFIRMED already won,
             // or cancellation wins and fences all late deliveries before refund.
             // Thus no speculative refund can later coexist with CONFIRMED.

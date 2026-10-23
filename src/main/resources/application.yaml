@@ -26,11 +26,18 @@ spring:
       port: 6379
       timeout: 2000ms
 
-  # RabbitMQ Configuration
-  rabbitmq:
-    publisher-confirm-type: correlated
-    publisher-returns: true
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: flash-sale-engine
+      enable-auto-commit: false
+    producer:
+      acks: all
+      enable-idempotence: true
+      delivery-timeout-ms: 10000
+
+flashsale:
+  kafka:
+    orders-partitions: 3
+    orders-replication-factor: 1
+    delivery-timeout-ms: 10000
