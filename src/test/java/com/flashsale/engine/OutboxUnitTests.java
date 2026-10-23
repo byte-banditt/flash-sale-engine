@@ -3,8 +3,8 @@ package com.flashsale.engine;
 import com.flashsale.engine.dto.OrderRequest;
 import com.flashsale.engine.service.*;
 import org.junit.jupiter.api.Test;
-import org.springframework.amqp.AmqpException;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.kafka.core.KafkaTemplate;
+import java.util.concurrent.CompletableFuture;
 import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.List;
 import java.util.Map;
@@ -33,18 +33,20 @@ class OutboxUnitTests {
                 "quantity", "1", "idempotency_key", "unit-key");
     }
     @Test void relayMarksPublishedOnlyAfterAck() {
-        var db = mock(JdbcTemplate.class); var publisher = mock(RabbitTemplate.class); var event = event();
+        var db = mock(JdbcTemplate.class); var publisher = mock(KafkaTemplate.class); var event = event();
         when(db.queryForList(anyString(), any(Object[].class))).thenReturn(List.of(event));
+        when(publisher.send(anyString(), anyString(), any(OrderRequest.class)))
+                .thenReturn(CompletableFuture.completedFuture(null));
         new OutboxRelay(db, publisher, 1).publishBatch();
         var sequence = inOrder(db, publisher);
-        sequence.verify(publisher).convertAndSend(anyString(), anyString(), any(OrderRequest.class));
+        sequence.verify(publisher).send(anyString(), anyString(), any(OrderRequest.class));
         sequence.verify(db).update(startsWith("update outbox_events"), eq(event.get("event_id")));
     }
     @Test void failedConfirmRemainsPendingAndNeverRefunds() {
-        var db = mock(JdbcTemplate.class); var publisher = mock(RabbitTemplate.class);
+        var db = mock(JdbcTemplate.class); var publisher = mock(KafkaTemplate.class);
         when(db.queryForList(anyString(), any(Object[].class))).thenReturn(List.of(event()));
-        doThrow(new AmqpException("missing confirm")).when(publisher)
-                .convertAndSend(anyString(), anyString(), any(OrderRequest.class));
+        when(publisher.send(anyString(), anyString(), any(OrderRequest.class)))
+                .thenReturn(CompletableFuture.failedFuture(new IllegalStateException("missing ack")));
         new OutboxRelay(db, publisher, 1).publishBatch();
         verify(db, never()).update(anyString(), any(Object[].class));
     }
