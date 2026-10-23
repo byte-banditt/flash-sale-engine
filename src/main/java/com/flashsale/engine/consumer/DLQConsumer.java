@@ -13,7 +13,8 @@ public class DLQConsumer {
     private final OrderProcessingService processing;
     private static final Logger log = LoggerFactory.getLogger(DLQConsumer.class);
     public DLQConsumer(OrderProcessingService processing) { this.processing = processing; }
-    @KafkaListener(topics=KafkaConfig.DLQ_TOPIC, containerFactory="kafkaListenerContainerFactory")
+    @KafkaListener(id="orders-dlq-consumer", topics=KafkaConfig.DLQ_TOPIC,
+            containerFactory="kafkaListenerContainerFactory")
     public void handleFailedOrder(OrderRequest request) {
         // Retry the durable intent; only the scheduled sweep may cancel/refund.
         try {

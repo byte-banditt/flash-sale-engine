@@ -16,7 +16,8 @@ public class OrderConsumer {
         this.orderProcessingService = orderProcessingService;
     }
 
-    @KafkaListener(topics = KafkaConfig.ORDERS_TOPIC, containerFactory = "kafkaListenerContainerFactory")
+    @KafkaListener(id = "orders-consumer", topics = KafkaConfig.ORDERS_TOPIC,
+            containerFactory = "kafkaListenerContainerFactory")
     public void handleOrder(OrderRequest request) {
         orderProcessingService.processOrder(request);
         // Let failures propagate to DefaultErrorHandler.
